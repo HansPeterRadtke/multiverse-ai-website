@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hanspeterradtke.github.io/multiverse-ai-website/sitemap.xml
