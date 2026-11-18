@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640" role="img" aria-label="KMD symbol: source pages linked to an evidence core">
+<rect width="640" height="640" rx="142" fill="#091A2B"/>
+<circle cx="320" cy="317" r="230" fill="none" stroke="#26495A" stroke-width="2"/>
+<circle cx="320" cy="317" r="172" fill="none" stroke="#3B7280" stroke-opacity=".55" stroke-width="2" stroke-dasharray="10 17"/>
+<path d="M160 208Q250 170 315 233L320 449Q251 387 160 420Z" fill="#123B4D" stroke="#9AF8DF" stroke-width="12" stroke-linejoin="round"/>
+<path d="M480 208Q390 170 325 233L320 449Q389 387 480 420Z" fill="#123B4D" stroke="#9AF8DF" stroke-width="12" stroke-linejoin="round"/>
+<path d="M196 259Q257 245 286 285M196 303Q257 289 286 329M444 259Q383 245 354 285M444 303Q383 289 354 329" fill="none" stroke="#547A8D" stroke-width="9" stroke-linecap="round"/>
+<path d="M320 258L320 420" stroke="#FFCB95" stroke-width="8" stroke-linecap="round"/>
+<circle cx="320" cy="235" r="24" fill="#FFCB95"/>
+<circle cx="165" cy="157" r="12" fill="#96F9DB"/><circle cx="477" cy="155" r="12" fill="#96F9DB"/><circle cx="142" cy="464" r="10" fill="#8FA9FA"/><circle cx="502" cy="464" r="10" fill="#8FA9FA"/>
+<path d="M177 171L307 231M463 168L333 231M155 454L270 414M488 454L367 414" stroke="#4AC9C0" stroke-width="5" stroke-dasharray="7 11"/>
+</svg>
