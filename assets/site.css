@@ -28,3 +28,7 @@ html{overflow-x:hidden}body{overflow-x:hidden}.page-shell{isolation:isolate}.sit
 .knowledge-visual:has(img){padding:0;background:#102431;display:block;position:relative}
 .knowledge-visual>img{width:100%;height:100%;display:block;object-fit:cover}
 .knowledge-visual-label{position:absolute;left:12px;bottom:12px;padding:7px 11px;background:rgba(8,22,32,.8);border:1px solid rgba(131,235,220,.45);color:#d4fff1;border-radius:7px;font-size:.62rem;font-weight:780;letter-spacing:.11em}
+.knowledge-visual.knowledge-proof-preview{cursor:pointer}
+.knowledge-visual[href]:hover img{filter:brightness(.8) saturate(1.1)}
+.knowledge-visual .knowledge-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:rgba(229,255,248,.97);color:#163344;display:flex;align-items:center;justify-content:center;font-size:1.2rem;padding-left:4px;box-shadow:0 0 0 10px rgba(240,255,253,.16);pointer-events:none}
+.knowledge-visual[href]:hover .knowledge-play{background:#b2ffe8;box-shadow:0 0 0 13px rgba(240,255,253,.19)}
