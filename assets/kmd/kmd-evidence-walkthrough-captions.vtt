@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.500
+KnowMoreDiRT: inspecting actual indexed evidence from fictional documents.
+
+00:00:04.500 --> 00:00:11.500
+The recorded model-backed question returns Mira Chen and the supporting original sentence.
+
+00:00:11.500 --> 00:00:19.500
+Explore real source files, text chunks, candidate referents, and discourse contexts.
+
+00:00:19.500 --> 00:00:31.000
+Follow links and inspect the original source record, including its validated source hash.
+
+00:00:31.000 --> 00:00:40.000
+The document collection is fictional; the graph records are produced by the actual KMD implementation.
+
+00:00:40.000 --> 00:00:51.541
+Recorded proof from a bounded test. This is not a claim of general production readiness.
