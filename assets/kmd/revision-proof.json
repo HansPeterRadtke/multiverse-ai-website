@@ -1,0 +1,35 @@
+{
+  "schema": "kmd_source_revision_proof_v1",
+  "label": "Two separate fictional one-file source snapshots, same exact question, recorded real KMD public API outputs; switching is NOT an inference request",
+  "question": "Who reviewed the Falcon Test Plan?",
+  "cases": [
+    {
+      "id": "original",
+      "label": "First source snapshot",
+      "answer": "Mira Chen",
+      "rel_path": "field_report.txt",
+      "evidence_text": "Fictional test document.\nMira Chen reviewed the Falcon Test Plan on 12 November 2026.",
+      "validation": "Accepted by independent local model verifier",
+      "source_sha256": null
+    },
+    {
+      "id": "changed",
+      "label": "Changed source snapshot",
+      "answer": "Elena Frost",
+      "rel_path": "field_report.txt",
+      "evidence_text": "Fictional test document.\nElena Frost reviewed the Falcon Test Plan on 12 November 2026.",
+      "validation": "Fresh independent local model verifier accepted the new answer",
+      "source_sha256": "0fd61b93521bb1ab6d37a00a13e176aa3f307f8e8ff1c8030eb3bf91c8e945a0"
+    }
+  ],
+  "controls": {
+    "same_question": true,
+    "source_file_content_changed": true,
+    "revised_source_drs_generated_and_materialized": true,
+    "cached_query_drs_reused": true,
+    "new_answer_verification_fresh": true,
+    "both_outputs_from_real_public_kmd_question_api": true,
+    "production_ready": false
+  },
+  "limitations": "Small synthetic test corpora; second full test used cached model source DRS after the revised file was successfully processed earlier. No assertion of universal, cross-file or uncached performance."
+}
