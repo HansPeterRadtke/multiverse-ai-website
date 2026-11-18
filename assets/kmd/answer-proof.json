@@ -1,0 +1,24 @@
+{
+  "kind": "actual_kmd_bounded_graph_execution_using_cached_q4_source_drs_and_cached_q8_query_drs",
+  "status": "bounded_result_verified_against_exact_synthetic_original; end_to_end_public_question_API_still_under_test",
+  "question": "Who reviewed the Falcon Test Plan?",
+  "answer": "Mira Chen",
+  "source": "field_report.txt",
+  "source_excerpt": "Fictional test document.\nMira Chen reviewed the Falcon Test Plan on 12 November 2026.",
+  "source_char_range": [
+    0,
+    85
+  ],
+  "source_excerpt_sha256": "69a678bf7466192bb8b0c92c95ced9cfdba421811937f335b2a0f9eb3bd7f07e",
+  "model_roles": {
+    "ingestion": "qwen38-q4-default, accepted model DRS",
+    "query_planning": "qwen38-27b-q8-full-262k, accepted constrained query DRS"
+  },
+  "proof": {
+    "no_fake_answer": true,
+    "bounded_dspg_code_executed": true,
+    "source_span_present": true,
+    "public_api_verified": false
+  },
+  "note": "This separate one-document experiment is not the three-document raw-source graph displayed elsewhere on the page."
+}
