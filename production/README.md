@@ -50,3 +50,19 @@ nice -n 15 /data/venv/bin/python scripts/kmd_zimage_nitro.py --concept context-c
 The script preserves existing output files and checks available CPU/CUDA RAM during inference. All outputs are generated *art*, not footage or proof of KMD retrieval behavior. The specific two images at `assets/kmd/concepts/evidence-archive.webp` and `assets/kmd/concepts/context-chambers.webp` were reviewed, optimized for the web, published to GitHub Pages, and HTTP-checked. The raw generated images remain in Nitro runtime, not in the public image-source repository.
 
 **Remaining:** full-length high-quality local video is not solved by this image-generation success. Jetson's five-frame Wan pipeline is proven only as a minimal inference test; longer runs need a safer memory-bounded strategy. Real KnowMoreDiRT source-cited retrieval footage is the highest-value next commercial demonstration.
+
+## November 18 — real KMD source-provenance capture and interactive viewer
+
+A dedicated externally hosted provenance explorer is live at
+`https://hanspeterradtke.github.io/multiverse-ai-website/kmd/evidence/`.
+It is linked from the KMD presentation page.
+
+**Verifiable basis:** on Raspi, an isolated KMD initialize() call ingested three new, expressly fictional source documents in
+`/data/var/multiverse-kmd/real-kmd-demo-20261118/corpus/`.
+The actual code revision was `1696136`. KMD indexed 3 documents, 10 text chunks, 29 source spans, 19 mentions, 11 **candidate** referents, 3 contexts and 20 context assignments. Its SQLite graph integrity check returned `ok`. SHA-256 of all source files was independently compared with KMD's stored hashes and matched.
+
+The serialized output `assets/kmd/demo-graph.json` contains actual source/span/mention/referent/context records, not invented graph edges or customer records. The viewer's link drawing uses actual relations from KMD's exported store: files to chunks, chunks to candidate referents, and chunks to contexts. JavaScript is in `assets/kmd/evidence.js`, styling in `assets/kmd/evidence.css`, and the responsive page in `kmd/evidence/index.html`. Verified on the publicly deployed GitHub Pages site, with 27 actual graph nodes and no browser JS exceptions; clicking a candidate referent correctly displays source-file references.
+
+**Important limitations:** this bounded indexing capture intentionally set `KMD_LLM_DRS_INGEST=0` and `KMD_LLM_INGEST=0`; it does not claim that model-driven DRS ingestion was validated. A separate real model-backed public API test on the same fictional corpus used an isolated localhost-only relay to Thor's Qwen3.8-27B Q8 model. The first query reached `query_drs_start` and `bounded_query_start` but did not yield a public answer before a 240-second bounded timeout. **No generated answer was fabricated or published.** The owner-visible web viewer states that question answering is evaluated separately. The temporary localhost relay was stopped after the test; there are no active synthetic-demo query processes.
+
+To continue: coordinate with the active KMD research worker; diagnose model-assisted question latency and structured response limits with an isolated benchmark (do not alter the shared production service), achieve a correctly verified answer with evidence in the public API, and only then record real on-screen question/answer/source-jump behavior. The present working explorer already supplies truthful live visual evidence of KMD's indexing and provenance architecture, and is suitable for use as a demonstrative slide or clip only if labeled a separate read-only visualization of real KMD records.
