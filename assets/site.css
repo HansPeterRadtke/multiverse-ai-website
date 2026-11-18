@@ -24,3 +24,7 @@ html{overflow-x:hidden}body{overflow-x:hidden}.page-shell{isolation:isolate}.sit
 @media(prefers-reduced-motion:reduce){.agent-path i:nth-child(2){animation:none}.hero-media,.hero-play,.opps-rows a{transition:none}}
 /* Keep atmospheric decoration inside the scrollable viewport. */
 .ambient-one{right:0}.ambient-two{left:0}
+/* KMD art is explicitly labeled as concept artwork. */
+.knowledge-visual:has(img){padding:0;background:#102431;display:block;position:relative}
+.knowledge-visual>img{width:100%;height:100%;display:block;object-fit:cover}
+.knowledge-visual-label{position:absolute;left:12px;bottom:12px;padding:7px 11px;background:rgba(8,22,32,.8);border:1px solid rgba(131,235,220,.45);color:#d4fff1;border-radius:7px;font-size:.62rem;font-weight:780;letter-spacing:.11em}
