@@ -1,0 +1,973 @@
+{
+  "kind": "Actual KMD source-span indexing demonstration on independently authored fictional files. No LLM DRS ingestion was enabled for this bounded capture. It is not a live chat interface or customer dataset.",
+  "source_commit": "1696136",
+  "stats": {
+    "documents": 3,
+    "chunks": 10,
+    "source_spans": 29,
+    "mentions": 19,
+    "referents": 11,
+    "mention_referents": 19,
+    "identity_hypotheses": 1,
+    "contexts": 3,
+    "context_carriers": 19,
+    "context_assignments": 20,
+    "frames": 4,
+    "frame_arguments": 8,
+    "drs_boxes": 0,
+    "drs_referents": 0,
+    "drs_conditions": 0,
+    "drs_condition_arguments": 0,
+    "drs_identity_hypotheses": 0,
+    "temporal_edges": 0,
+    "relations": 4,
+    "metadata_records": 78,
+    "model_attempts": 0
+  },
+  "documents": [
+    {
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "rel_path": "field-reports/initial.txt",
+      "content_hash": "0267d7643c9f82874248d993f61fa9f281636281a71daa8995f62c4e213a3308",
+      "size_bytes": 282,
+      "char_count": 282,
+      "content": "Fictional demonstration: Falcon Test Plan.\nOn 12 November 2026 the initial Falcon Test Plan remained unapproved because the sensor calibration was incomplete.\nMira Chen reviewed the Falcon Test Plan and requested a calibration retest.\nThe plan was not approved on 12 November 2026.\n",
+      "content_validated_sha256": true
+    },
+    {
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "rel_path": "follow-up/final-note",
+      "content_hash": "878c2f6f894e34fc7c78ad655c15d3b0aa1777ca406806e9e22a0a9537f979e6",
+      "size_bytes": 280,
+      "char_count": 280,
+      "content": "Fictional demonstration: final Falcon Test Plan note.\nOn 13 November 2026, the calibration retest passed.\nElena Frost approved the Falcon Test Plan on 13 November 2026 after reviewing the completed calibration evidence.\nMira Chen was the initial reviewer, not the final approver.\n",
+      "content_validated_sha256": true
+    },
+    {
+      "document_id": "doc_fddd26325cfae1ba5682db7c",
+      "rel_path": "notes.txt",
+      "content_hash": "fa7e525cd51f3bfa4760b4f5500b144d16e2aada4e07caed5a29ab1ef174e6b6",
+      "size_bytes": 141,
+      "char_count": 141,
+      "content": "Fictional demonstration archive. The Falcon Test Plan is a synthetic engineering example, not a real company project or customer case study.\n",
+      "content_validated_sha256": true
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chunk_bf32e9b1699797bab76c3f08",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_order": 0,
+      "char_start": 0,
+      "char_end": 53,
+      "text": "Fictional demonstration: final Falcon Test Plan note."
+    },
+    {
+      "chunk_id": "chunk_b544b1f465299f45aaa82f5a",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_order": 1,
+      "char_start": 54,
+      "char_end": 105,
+      "text": "On 13 November 2026, the calibration retest passed."
+    },
+    {
+      "chunk_id": "chunk_8453cc16b0ea441c20c94e6f",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_order": 2,
+      "char_start": 106,
+      "char_end": 219,
+      "text": "Elena Frost approved the Falcon Test Plan on 13 November 2026 after reviewing the completed calibration evidence."
+    },
+    {
+      "chunk_id": "chunk_fba3a6b969c1bf098eb08817",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_order": 3,
+      "char_start": 220,
+      "char_end": 279,
+      "text": "Mira Chen was the initial reviewer, not the final approver."
+    },
+    {
+      "chunk_id": "chunk_e82dc76ae722d723dd87860e",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_order": 0,
+      "char_start": 0,
+      "char_end": 42,
+      "text": "Fictional demonstration: Falcon Test Plan."
+    },
+    {
+      "chunk_id": "chunk_6889dc4914bdd8fc8703535a",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_order": 1,
+      "char_start": 43,
+      "char_end": 158,
+      "text": "On 12 November 2026 the initial Falcon Test Plan remained unapproved because the sensor calibration was incomplete."
+    },
+    {
+      "chunk_id": "chunk_57c68501a1942aceee15bf79",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_order": 2,
+      "char_start": 159,
+      "char_end": 234,
+      "text": "Mira Chen reviewed the Falcon Test Plan and requested a calibration retest."
+    },
+    {
+      "chunk_id": "chunk_09773b80cc218b9afa8d59c6",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_order": 3,
+      "char_start": 235,
+      "char_end": 281,
+      "text": "The plan was not approved on 12 November 2026."
+    },
+    {
+      "chunk_id": "chunk_a1b533289d1c1c712eca0cec",
+      "document_id": "doc_fddd26325cfae1ba5682db7c",
+      "chunk_order": 0,
+      "char_start": 0,
+      "char_end": 32,
+      "text": "Fictional demonstration archive."
+    },
+    {
+      "chunk_id": "chunk_0dbe00c9fb191eb91bec9463",
+      "document_id": "doc_fddd26325cfae1ba5682db7c",
+      "chunk_order": 1,
+      "char_start": 33,
+      "char_end": 140,
+      "text": "The Falcon Test Plan is a synthetic engineering example, not a real company project or customer case study."
+    }
+  ],
+  "source_spans": [
+    {
+      "span_id": "span_75eb4c4422c8289487b102da",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_id": "chunk_bf32e9b1699797bab76c3f08",
+      "char_start": 0,
+      "char_end": 53,
+      "surface": "Fictional demonstration: final Falcon Test Plan note.",
+      "span_kind": "sentence"
+    },
+    {
+      "span_id": "span_dc1876b79385d4daae73085c",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_id": "chunk_bf32e9b1699797bab76c3f08",
+      "char_start": 0,
+      "char_end": 9,
+      "surface": "Fictional",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_a3a4c26c1f33cd14d6f2a637",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_id": "chunk_bf32e9b1699797bab76c3f08",
+      "char_start": 31,
+      "char_end": 47,
+      "surface": "Falcon Test Plan",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_9bf973470c969c85d0616182",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_id": "chunk_b544b1f465299f45aaa82f5a",
+      "char_start": 54,
+      "char_end": 105,
+      "surface": "On 13 November 2026, the calibration retest passed.",
+      "span_kind": "sentence"
+    },
+    {
+      "span_id": "span_958187e45656d28e415389ca",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_id": "chunk_b544b1f465299f45aaa82f5a",
+      "char_start": 54,
+      "char_end": 56,
+      "surface": "On",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_2690ecd6e889f3770ad04634",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_id": "chunk_b544b1f465299f45aaa82f5a",
+      "char_start": 60,
+      "char_end": 68,
+      "surface": "November",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_a8de4dcf73a73eb47c2f434f",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_id": "chunk_8453cc16b0ea441c20c94e6f",
+      "char_start": 106,
+      "char_end": 219,
+      "surface": "Elena Frost approved the Falcon Test Plan on 13 November 2026 after reviewing the completed calibration evidence.",
+      "span_kind": "sentence"
+    },
+    {
+      "span_id": "span_9f095de9864454e271fcd0ed",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_id": "chunk_8453cc16b0ea441c20c94e6f",
+      "char_start": 106,
+      "char_end": 117,
+      "surface": "Elena Frost",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_bfa97e5fde5129f415e560db",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_id": "chunk_8453cc16b0ea441c20c94e6f",
+      "char_start": 131,
+      "char_end": 147,
+      "surface": "Falcon Test Plan",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_d661b392b6ed3228a72a7cfa",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_id": "chunk_8453cc16b0ea441c20c94e6f",
+      "char_start": 154,
+      "char_end": 162,
+      "surface": "November",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_e403941df5da2379f9f70ebe",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_id": "chunk_fba3a6b969c1bf098eb08817",
+      "char_start": 220,
+      "char_end": 279,
+      "surface": "Mira Chen was the initial reviewer, not the final approver.",
+      "span_kind": "sentence"
+    },
+    {
+      "span_id": "span_76c705db680c37bfa44e7512",
+      "document_id": "doc_17e8516dc4014f89e138cab9",
+      "chunk_id": "chunk_fba3a6b969c1bf098eb08817",
+      "char_start": 220,
+      "char_end": 229,
+      "surface": "Mira Chen",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_6da38a22b262b2f312d9f51f",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_e82dc76ae722d723dd87860e",
+      "char_start": 0,
+      "char_end": 42,
+      "surface": "Fictional demonstration: Falcon Test Plan.",
+      "span_kind": "sentence"
+    },
+    {
+      "span_id": "span_e76eb10f3f3226e34fddb026",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_e82dc76ae722d723dd87860e",
+      "char_start": 0,
+      "char_end": 9,
+      "surface": "Fictional",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_c00ba497f7687ea7b8a28783",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_e82dc76ae722d723dd87860e",
+      "char_start": 25,
+      "char_end": 41,
+      "surface": "Falcon Test Plan",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_f6a2483a0123cb6acb4b7164",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_6889dc4914bdd8fc8703535a",
+      "char_start": 43,
+      "char_end": 158,
+      "surface": "On 12 November 2026 the initial Falcon Test Plan remained unapproved because the sensor calibration was incomplete.",
+      "span_kind": "sentence"
+    },
+    {
+      "span_id": "span_3cdc667e03acdef24c77a717",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_6889dc4914bdd8fc8703535a",
+      "char_start": 43,
+      "char_end": 45,
+      "surface": "On",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_12852ede52dd47efadf26b29",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_6889dc4914bdd8fc8703535a",
+      "char_start": 49,
+      "char_end": 57,
+      "surface": "November",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_754f5ee0609c33ca254ada17",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_6889dc4914bdd8fc8703535a",
+      "char_start": 75,
+      "char_end": 91,
+      "surface": "Falcon Test Plan",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_362e41419d3610c49d2432db",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_57c68501a1942aceee15bf79",
+      "char_start": 159,
+      "char_end": 234,
+      "surface": "Mira Chen reviewed the Falcon Test Plan and requested a calibration retest.",
+      "span_kind": "sentence"
+    },
+    {
+      "span_id": "span_e8bc01cd8a061c90c6c2cb13",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_57c68501a1942aceee15bf79",
+      "char_start": 159,
+      "char_end": 168,
+      "surface": "Mira Chen",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_c895686b7615ca59e9a24a74",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_57c68501a1942aceee15bf79",
+      "char_start": 182,
+      "char_end": 198,
+      "surface": "Falcon Test Plan",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_acfdb3f2917bc8382567923e",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_09773b80cc218b9afa8d59c6",
+      "char_start": 235,
+      "char_end": 281,
+      "surface": "The plan was not approved on 12 November 2026.",
+      "span_kind": "sentence"
+    },
+    {
+      "span_id": "span_bf2a570ed6df2b6d8ed52999",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_09773b80cc218b9afa8d59c6",
+      "char_start": 235,
+      "char_end": 238,
+      "surface": "The",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_9cc13712f9ec0855d0ceaa32",
+      "document_id": "doc_f6d18e96439c7126b1ca64f3",
+      "chunk_id": "chunk_09773b80cc218b9afa8d59c6",
+      "char_start": 267,
+      "char_end": 275,
+      "surface": "November",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_b58e157856c58bbd55ab0b5d",
+      "document_id": "doc_fddd26325cfae1ba5682db7c",
+      "chunk_id": "chunk_a1b533289d1c1c712eca0cec",
+      "char_start": 0,
+      "char_end": 32,
+      "surface": "Fictional demonstration archive.",
+      "span_kind": "sentence"
+    },
+    {
+      "span_id": "span_4bb69676c7528768ade05d2f",
+      "document_id": "doc_fddd26325cfae1ba5682db7c",
+      "chunk_id": "chunk_a1b533289d1c1c712eca0cec",
+      "char_start": 0,
+      "char_end": 9,
+      "surface": "Fictional",
+      "span_kind": "mention"
+    },
+    {
+      "span_id": "span_f00f6db9f05f753f884f2abe",
+      "document_id": "doc_fddd26325cfae1ba5682db7c",
+      "chunk_id": "chunk_0dbe00c9fb191eb91bec9463",
+      "char_start": 33,
+      "char_end": 140,
+      "surface": "The Falcon Test Plan is a synthetic engineering example, not a real company project or customer case study.",
+      "span_kind": "sentence"
+    },
+    {
+      "span_id": "span_244dc048ee6ee6e0b80e7002",
+      "document_id": "doc_fddd26325cfae1ba5682db7c",
+      "chunk_id": "chunk_0dbe00c9fb191eb91bec9463",
+      "char_start": 33,
+      "char_end": 53,
+      "surface": "The Falcon Test Plan",
+      "span_kind": "mention"
+    }
+  ],
+  "mentions": [
+    {
+      "mention_id": "men_035a9e015226508795940adf",
+      "span_id": "span_e76eb10f3f3226e34fddb026",
+      "surface": "Fictional",
+      "entity_type": "entity"
+    },
+    {
+      "mention_id": "men_a98c8c7493cc1f724917511e",
+      "span_id": "span_c00ba497f7687ea7b8a28783",
+      "surface": "Falcon Test Plan",
+      "entity_type": "name"
+    },
+    {
+      "mention_id": "men_e06291ba6d8e9457980a073e",
+      "span_id": "span_3cdc667e03acdef24c77a717",
+      "surface": "On",
+      "entity_type": "entity"
+    },
+    {
+      "mention_id": "men_018026fc2526456b9c9d7d31",
+      "span_id": "span_12852ede52dd47efadf26b29",
+      "surface": "November",
+      "entity_type": "entity"
+    },
+    {
+      "mention_id": "men_abd732ed72576ff19049c622",
+      "span_id": "span_754f5ee0609c33ca254ada17",
+      "surface": "Falcon Test Plan",
+      "entity_type": "name"
+    },
+    {
+      "mention_id": "men_b6500c77bcfda5283b0230e2",
+      "span_id": "span_e8bc01cd8a061c90c6c2cb13",
+      "surface": "Mira Chen",
+      "entity_type": "name"
+    },
+    {
+      "mention_id": "men_056663db74c2ec3822ac7b9f",
+      "span_id": "span_c895686b7615ca59e9a24a74",
+      "surface": "Falcon Test Plan",
+      "entity_type": "name"
+    },
+    {
+      "mention_id": "men_41ecdda8e339eb98b86e58ea",
+      "span_id": "span_bf2a570ed6df2b6d8ed52999",
+      "surface": "The",
+      "entity_type": "entity"
+    },
+    {
+      "mention_id": "men_0df7ac49ac7aa7b673a948fa",
+      "span_id": "span_9cc13712f9ec0855d0ceaa32",
+      "surface": "November",
+      "entity_type": "entity"
+    },
+    {
+      "mention_id": "men_982f6ae3d97867ed837c9a5c",
+      "span_id": "span_dc1876b79385d4daae73085c",
+      "surface": "Fictional",
+      "entity_type": "entity"
+    },
+    {
+      "mention_id": "men_8c6cc2a936572cc291085887",
+      "span_id": "span_a3a4c26c1f33cd14d6f2a637",
+      "surface": "Falcon Test Plan",
+      "entity_type": "name"
+    },
+    {
+      "mention_id": "men_14a0a1c126ef2becb406474e",
+      "span_id": "span_958187e45656d28e415389ca",
+      "surface": "On",
+      "entity_type": "entity"
+    },
+    {
+      "mention_id": "men_429270f0e3c3d932a21c3815",
+      "span_id": "span_2690ecd6e889f3770ad04634",
+      "surface": "November",
+      "entity_type": "entity"
+    },
+    {
+      "mention_id": "men_21211dee406cc8d6bd2b3399",
+      "span_id": "span_9f095de9864454e271fcd0ed",
+      "surface": "Elena Frost",
+      "entity_type": "name"
+    },
+    {
+      "mention_id": "men_b557a69d4cd0ea477922ad15",
+      "span_id": "span_bfa97e5fde5129f415e560db",
+      "surface": "Falcon Test Plan",
+      "entity_type": "name"
+    },
+    {
+      "mention_id": "men_8e7acf6ab62c0aad946d141d",
+      "span_id": "span_d661b392b6ed3228a72a7cfa",
+      "surface": "November",
+      "entity_type": "entity"
+    },
+    {
+      "mention_id": "men_c770a7c3cdfc41a51ae338ac",
+      "span_id": "span_76c705db680c37bfa44e7512",
+      "surface": "Mira Chen",
+      "entity_type": "name"
+    },
+    {
+      "mention_id": "men_a057e7167bfffe602f635a58",
+      "span_id": "span_4bb69676c7528768ade05d2f",
+      "surface": "Fictional",
+      "entity_type": "entity"
+    },
+    {
+      "mention_id": "men_eec8e95b82ce494c4f7ba2bc",
+      "span_id": "span_244dc048ee6ee6e0b80e7002",
+      "surface": "The Falcon Test Plan",
+      "entity_type": "name"
+    }
+  ],
+  "referents": [
+    {
+      "referent_id": "ref_edb11e485befe0a76e12f1d6",
+      "canonical_label": "Fictional",
+      "entity_type": "entity",
+      "status": "candidate"
+    },
+    {
+      "referent_id": "ref_2c79cdfc343c78819fedc8d2",
+      "canonical_label": "Falcon Test Plan",
+      "entity_type": "name",
+      "status": "candidate"
+    },
+    {
+      "referent_id": "ref_ab64d78680beaa89776c1694",
+      "canonical_label": "Fictional demonstration",
+      "entity_type": "unknown",
+      "status": "candidate"
+    },
+    {
+      "referent_id": "ref_0113888a48e0529fddc5b82b",
+      "canonical_label": "Falcon Test Plan",
+      "entity_type": "unknown",
+      "status": "candidate"
+    },
+    {
+      "referent_id": "ref_16b0935934bc03bb6c99aefe",
+      "canonical_label": "On",
+      "entity_type": "entity",
+      "status": "candidate"
+    },
+    {
+      "referent_id": "ref_0fb168c8e7222c20c1312cc0",
+      "canonical_label": "November",
+      "entity_type": "entity",
+      "status": "candidate"
+    },
+    {
+      "referent_id": "ref_862d84bebad837dee04c24ad",
+      "canonical_label": "Mira Chen",
+      "entity_type": "name",
+      "status": "candidate"
+    },
+    {
+      "referent_id": "ref_ce426893bef3bec7f34cffd7",
+      "canonical_label": "The",
+      "entity_type": "entity",
+      "status": "candidate"
+    },
+    {
+      "referent_id": "ref_d84678e8ccb5781c899040e6",
+      "canonical_label": "final Falcon Test Plan note",
+      "entity_type": "unknown",
+      "status": "candidate"
+    },
+    {
+      "referent_id": "ref_49628d050a8abce90439b75e",
+      "canonical_label": "Elena Frost",
+      "entity_type": "name",
+      "status": "candidate"
+    },
+    {
+      "referent_id": "ref_fb4f61e59c353895df2e42b6",
+      "canonical_label": "The Falcon Test Plan",
+      "entity_type": "name",
+      "status": "candidate"
+    }
+  ],
+  "contexts": [
+    {
+      "context_id": "ctx_4e325896bfe895a64624a29b",
+      "kind": "quality:meaningful_discourse",
+      "holder_surface": "field-reports/initial.txt",
+      "parent_context_id": null
+    },
+    {
+      "context_id": "ctx_8d60b00b38e0749dd59cb25d",
+      "kind": "quality:word_salad",
+      "holder_surface": "notes.txt",
+      "parent_context_id": null
+    },
+    {
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "kind": "asserted",
+      "holder_surface": null,
+      "parent_context_id": null
+    }
+  ],
+  "mention_referents": [
+    {
+      "mention_id": "men_035a9e015226508795940adf",
+      "referent_id": "ref_edb11e485befe0a76e12f1d6",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_a98c8c7493cc1f724917511e",
+      "referent_id": "ref_2c79cdfc343c78819fedc8d2",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_e06291ba6d8e9457980a073e",
+      "referent_id": "ref_16b0935934bc03bb6c99aefe",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_018026fc2526456b9c9d7d31",
+      "referent_id": "ref_0fb168c8e7222c20c1312cc0",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_abd732ed72576ff19049c622",
+      "referent_id": "ref_2c79cdfc343c78819fedc8d2",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_b6500c77bcfda5283b0230e2",
+      "referent_id": "ref_862d84bebad837dee04c24ad",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_056663db74c2ec3822ac7b9f",
+      "referent_id": "ref_2c79cdfc343c78819fedc8d2",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_41ecdda8e339eb98b86e58ea",
+      "referent_id": "ref_ce426893bef3bec7f34cffd7",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_0df7ac49ac7aa7b673a948fa",
+      "referent_id": "ref_0fb168c8e7222c20c1312cc0",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_982f6ae3d97867ed837c9a5c",
+      "referent_id": "ref_edb11e485befe0a76e12f1d6",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_8c6cc2a936572cc291085887",
+      "referent_id": "ref_2c79cdfc343c78819fedc8d2",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_14a0a1c126ef2becb406474e",
+      "referent_id": "ref_16b0935934bc03bb6c99aefe",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_429270f0e3c3d932a21c3815",
+      "referent_id": "ref_0fb168c8e7222c20c1312cc0",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_21211dee406cc8d6bd2b3399",
+      "referent_id": "ref_49628d050a8abce90439b75e",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_b557a69d4cd0ea477922ad15",
+      "referent_id": "ref_2c79cdfc343c78819fedc8d2",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_8e7acf6ab62c0aad946d141d",
+      "referent_id": "ref_0fb168c8e7222c20c1312cc0",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_c770a7c3cdfc41a51ae338ac",
+      "referent_id": "ref_862d84bebad837dee04c24ad",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_a057e7167bfffe602f635a58",
+      "referent_id": "ref_edb11e485befe0a76e12f1d6",
+      "link_status": "candidate",
+      "confidence": 1.0
+    },
+    {
+      "mention_id": "men_eec8e95b82ce494c4f7ba2bc",
+      "referent_id": "ref_fb4f61e59c353895df2e42b6",
+      "link_status": "candidate",
+      "confidence": 1.0
+    }
+  ],
+  "context_assignments": [
+    {
+      "assignment_id": "ctx_assign_16813e68bf018542f0152210",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "chunk",
+      "applies_to_id": "chunk_e82dc76ae722d723dd87860e",
+      "source_span_id": "span_6da38a22b262b2f312d9f51f",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_de6f469501928f56e30f7027",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "source_span",
+      "applies_to_id": "span_6da38a22b262b2f312d9f51f",
+      "source_span_id": "span_6da38a22b262b2f312d9f51f",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_1caa1d4a82ff3169664133c5",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "chunk",
+      "applies_to_id": "chunk_6889dc4914bdd8fc8703535a",
+      "source_span_id": "span_f6a2483a0123cb6acb4b7164",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_46efdf5358711327d63c1e85",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "source_span",
+      "applies_to_id": "span_f6a2483a0123cb6acb4b7164",
+      "source_span_id": "span_f6a2483a0123cb6acb4b7164",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_7dff791eb617e4f4c1833728",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "chunk",
+      "applies_to_id": "chunk_57c68501a1942aceee15bf79",
+      "source_span_id": "span_362e41419d3610c49d2432db",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_58a18ce6f63c0d10960dac27",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "source_span",
+      "applies_to_id": "span_362e41419d3610c49d2432db",
+      "source_span_id": "span_362e41419d3610c49d2432db",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_e9f1258cd7f6f1dc286e84e8",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "chunk",
+      "applies_to_id": "chunk_09773b80cc218b9afa8d59c6",
+      "source_span_id": "span_acfdb3f2917bc8382567923e",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_46e0cd3facd213364c8f87b5",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "source_span",
+      "applies_to_id": "span_acfdb3f2917bc8382567923e",
+      "source_span_id": "span_acfdb3f2917bc8382567923e",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_10975d9fad0a90a7c8e0e559",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "chunk",
+      "applies_to_id": "chunk_bf32e9b1699797bab76c3f08",
+      "source_span_id": "span_75eb4c4422c8289487b102da",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_378c53a428f9187864f5f830",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "source_span",
+      "applies_to_id": "span_75eb4c4422c8289487b102da",
+      "source_span_id": "span_75eb4c4422c8289487b102da",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_8f0e7dd3092ca159e3bd84c1",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "chunk",
+      "applies_to_id": "chunk_b544b1f465299f45aaa82f5a",
+      "source_span_id": "span_9bf973470c969c85d0616182",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_923fba35e468c9ae49aa7b7b",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "source_span",
+      "applies_to_id": "span_9bf973470c969c85d0616182",
+      "source_span_id": "span_9bf973470c969c85d0616182",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_65f4d8d1a9aaa3ab272ca826",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "chunk",
+      "applies_to_id": "chunk_8453cc16b0ea441c20c94e6f",
+      "source_span_id": "span_a8de4dcf73a73eb47c2f434f",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_f5aadb2307290e1b50173953",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "source_span",
+      "applies_to_id": "span_a8de4dcf73a73eb47c2f434f",
+      "source_span_id": "span_a8de4dcf73a73eb47c2f434f",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_28d2cfc6881664d5e1f46af0",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "chunk",
+      "applies_to_id": "chunk_fba3a6b969c1bf098eb08817",
+      "source_span_id": "span_e403941df5da2379f9f70ebe",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_07028dd38f1f3e9b7082bab9",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "source_span",
+      "applies_to_id": "span_e403941df5da2379f9f70ebe",
+      "source_span_id": "span_e403941df5da2379f9f70ebe",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_bd95f008816eb469a1d77c96",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "chunk",
+      "applies_to_id": "chunk_a1b533289d1c1c712eca0cec",
+      "source_span_id": "span_b58e157856c58bbd55ab0b5d",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_fed7059c33b17f7a83aa3e08",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "source_span",
+      "applies_to_id": "span_b58e157856c58bbd55ab0b5d",
+      "source_span_id": "span_b58e157856c58bbd55ab0b5d",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_41aa677cedaee2711033fec6",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "chunk",
+      "applies_to_id": "chunk_0dbe00c9fb191eb91bec9463",
+      "source_span_id": "span_f00f6db9f05f753f884f2abe",
+      "confidence": 0.9
+    },
+    {
+      "assignment_id": "ctx_assign_f0348ad714ab2524c5f8e8b6",
+      "run_id": "run_fa92535deee4306c93245663",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "applies_to_type": "source_span",
+      "applies_to_id": "span_f00f6db9f05f753f884f2abe",
+      "source_span_id": "span_f00f6db9f05f753f884f2abe",
+      "confidence": 0.9
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "rel_1814eb7342f09eda430e7926",
+      "run_id": "run_fa92535deee4306c93245663",
+      "relation_type": "speaker_turn",
+      "subject": "Fictional demonstration",
+      "subject_norm": "fictional demonstration",
+      "predicate": "utterance",
+      "predicate_norm": "utterance",
+      "object": "",
+      "object_norm": "",
+      "value": "Falcon Test Plan",
+      "value_norm": "falcon test plan",
+      "source_span_id": "span_6da38a22b262b2f312d9f51f",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "confidence": 0.82,
+      "metadata_json": "{\"record_group\": \"sentence_group_e82dc76ae722d723dd87860e\", \"sentence_group\": \"sentence_group_e82dc76ae722d723dd87860e\", \"speaker_label\": \"Fictional demonstration\", \"surface_format\": \"labeled_turn\"}"
+    },
+    {
+      "relation_id": "rel_47481cbf67ec3ea0ec66bb9b",
+      "run_id": "run_fa92535deee4306c93245663",
+      "relation_type": "label_value",
+      "subject": "Fictional demonstration",
+      "subject_norm": "fictional demonstration",
+      "predicate": "label",
+      "predicate_norm": "label",
+      "object": "",
+      "object_norm": "",
+      "value": "Falcon Test Plan",
+      "value_norm": "falcon test plan",
+      "source_span_id": "span_6da38a22b262b2f312d9f51f",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "confidence": 0.84,
+      "metadata_json": "{\"record_group\": \"sentence_group_e82dc76ae722d723dd87860e\", \"sentence_group\": \"sentence_group_e82dc76ae722d723dd87860e\"}"
+    },
+    {
+      "relation_id": "rel_90b4595073cbe3fa6f37b1db",
+      "run_id": "run_fa92535deee4306c93245663",
+      "relation_type": "speaker_turn",
+      "subject": "Fictional demonstration",
+      "subject_norm": "fictional demonstration",
+      "predicate": "utterance",
+      "predicate_norm": "utterance",
+      "object": "",
+      "object_norm": "",
+      "value": "final Falcon Test Plan note",
+      "value_norm": "final falcon test plan note",
+      "source_span_id": "span_75eb4c4422c8289487b102da",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "confidence": 0.82,
+      "metadata_json": "{\"record_group\": \"sentence_group_bf32e9b1699797bab76c3f08\", \"sentence_group\": \"sentence_group_bf32e9b1699797bab76c3f08\", \"speaker_label\": \"Fictional demonstration\", \"surface_format\": \"labeled_turn\"}"
+    },
+    {
+      "relation_id": "rel_0792773424775d55b307372c",
+      "run_id": "run_fa92535deee4306c93245663",
+      "relation_type": "label_value",
+      "subject": "Fictional demonstration",
+      "subject_norm": "fictional demonstration",
+      "predicate": "label",
+      "predicate_norm": "label",
+      "object": "",
+      "object_norm": "",
+      "value": "final Falcon Test Plan note",
+      "value_norm": "final falcon test plan note",
+      "source_span_id": "span_75eb4c4422c8289487b102da",
+      "context_id": "ctx_b65739881e4083a30b80ec88",
+      "confidence": 0.84,
+      "metadata_json": "{\"record_group\": \"sentence_group_bf32e9b1699797bab76c3f08\", \"sentence_group\": \"sentence_group_bf32e9b1699797bab76c3f08\"}"
+    }
+  ]
+}
