@@ -1,6 +1,6 @@
 {
-  "kind": "actual_kmd_bounded_graph_execution_using_cached_q4_source_drs_and_cached_q8_query_drs",
-  "status": "bounded_result_verified_against_exact_synthetic_original; end_to_end_public_question_API_still_under_test",
+  "kind": "actual_KMD_public_API_model_verified_answer_in_bounded_hybrid_local_Qwen_test",
+  "status": "public_question_API_returned_source_grounded_answer_using_isolated_test_branch",
   "question": "Who reviewed the Falcon Test Plan?",
   "answer": "Mira Chen",
   "source": "field_report.txt",
@@ -18,7 +18,18 @@
     "no_fake_answer": true,
     "bounded_dspg_code_executed": true,
     "source_span_present": true,
-    "public_api_verified": false
+    "public_api_verified": true,
+    "public_api_test_scope": "one synthetic original file, Q4 source DRS, Q8 query DRS and independent verification, cached plan, isolated source branch",
+    "independent_local_model_verifier_accepted": true,
+    "normal_single_model_uncached_production_readiness_verified": false
   },
-  "note": "This separate one-document experiment is not the three-document raw-source graph displayed elsewhere on the page."
+  "note": "The public KMD question API returned the answer from a one-file fictional test on an isolated improvement branch with mixed local models. It is not a general production certification or the three-file indexing graph shown separately.",
+  "test_branch": "fix/raspi-kmd-source-exact-person-20261118",
+  "model_verification": {
+    "accepted": true,
+    "reason": "The evidence directly states that Mira Chen reviewed the Falcon Test Plan, satisfying the person answer type and reviewed relation.",
+    "observed_test_seconds": 63.596,
+    "cache_used_for_source_drs": true,
+    "cache_used_for_query_drs": true
+  }
 }
