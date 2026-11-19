@@ -1,1 +1,49 @@
-(()=>{const t=document.querySelector('.mobile-toggle'),nav=document.querySelector('.mobile-nav');if(t&&nav){t.addEventListener('click',()=>{let open=t.getAttribute('aria-expanded')==='true';t.setAttribute('aria-expanded',String(!open));nav.classList.toggle('open',!open)});}const form=document.getElementById('inquiry-form');if(form){form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const d=new FormData(form);const safe=n=>String(d.get(n)||'').trim().slice(0,2600);const body=['Name: '+safe('name'),'Email: '+safe('email'),'Company: '+safe('company'),'','Problem / desired outcome:',''+safe('problem'),'','Business impact: '+safe('impact'),'Budget: '+safe('budget'),'Timeframe: '+safe('timeline'),'','Sent from the Multiverse website contact form.'].join('\n');const subj='Multiverse business inquiry — '+(safe('company')||safe('name'));document.getElementById('form-status').textContent='Your email application should open with a prepared message. Review it and choose Send there. If nothing opens, email multiverse3dhpr@gmail.com directly.';window.location.href='mailto:multiverse3dhpr@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);});}})();
+/* Shared navigation and a contact form that prepares a local email draft only. */
+(() => {
+  const menu = document.querySelector('.mobile-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+  if (menu && mobileNav) {
+    menu.addEventListener('click', () => {
+      const opening = menu.getAttribute('aria-expanded') !== 'true';
+      menu.setAttribute('aria-expanded', String(opening));
+      mobileNav.classList.toggle('open', opening);
+    });
+  }
+
+  const form = document.getElementById('inquiry-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const values = new FormData(form);
+    const get = (field, limit) => String(values.get(field) || '').trim().slice(0, limit);
+    const name = get('name', 120);
+    const email = get('email', 200);
+    const company = get('company', 160);
+    const problem = get('problem', 2100);
+    const systems = get('systems', 260);
+
+    const subject = 'Multiverse technology inquiry' + (company ? ' — ' + company : '');
+    const lines = [
+      'Contact name: ' + name,
+      'Reply address: ' + email,
+      ...(company ? ['Organization: ' + company] : []),
+      '',
+      'Current problem and desired result:',
+      problem,
+      ...(systems ? ['', 'Relevant software or systems: ' + systems] : []),
+      '',
+      'Prepared from the Multiverse website. Please review before sending.'
+    ];
+    const uri = 'mailto:multiverse3dhpr@gmail.com?subject=' +
+      encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    const status = document.getElementById('form-status');
+    if (status) status.textContent =
+      'Your email application should open with a draft. Review it and choose Send there. If it does not open, use the direct email link on this page.';
+    // This navigation opens a mail application; it does not transmit the form
+    // to the website, store it in browser storage, or confirm the message was sent.
+    window.location.href = uri;
+  });
+})();

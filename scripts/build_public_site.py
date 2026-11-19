@@ -12,6 +12,7 @@ scripts=[
  'rebuild_software_page.py',
  'render_software_portfolio.py',
  'build_swaag_landing.py',
+ 'build_commercial_path.py',
  'align_software_navigation.py',
  'refresh_public_seo.py',
 ]
