@@ -138,4 +138,6 @@ source = re.sub(r'<title>.*?</title>', '<title>Multiverse | Independent Software
 source = re.sub(r'<meta content="[^"]*" name="description"/>', '<meta content="Multiverse is an independent development business with a published Wix Stores order-monitoring application, AI document-search research, software engineering, and separate 3D digital assets." name="description"/>', source, count=1)
 source = re.sub(r'<meta content="[^"]*" property="og:description"/>', '<meta content="Learn what Multiverse builds, who each project is for, and which software is published versus experimental." property="og:description"/>', source, count=1)
 (ROOT / 'index.html').write_text(source)
+from render_software_portfolio import replace_home
+replace_home()
 print('Rebuilt homepage from verified source status: Wix published, KMD prototype, 3D separate')

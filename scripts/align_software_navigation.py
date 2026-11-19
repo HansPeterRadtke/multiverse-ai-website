@@ -17,6 +17,11 @@ for p in sorted(R.rglob('index.html')):
     nav.clear()
     for label,href,typ in items:
      a=s.new_tag('a',href=href);a['class']=['nav-link']+(['active'] if active==typ else []);a.string=label;nav.append(a)
+    github=s.new_tag('a',href='https://github.com/HansPeterRadtke')
+    github['class']=['nav-link','nav-external']
+    github['target']='_blank';github['rel']=['noopener','noreferrer']
+    github['aria-label']='GitHub profile (opens in new tab)'
+    github.string='GitHub ↗';nav.append(github)
   cta=header.select_one('a.header-cta')
   if cta and rel in ('index.html','technology/index.html','projects/index.html','3d/index.html','kmd/index.html','kmd/evidence/index.html'):
    cta.clear();cta.string='See software example';cta['href']=base+'#software-proof'
@@ -30,5 +35,8 @@ for p in sorted(R.rglob('index.html')):
   for label,href,_ in items:
    a=s.new_tag('a',href=href);a.string=label;footer.append(a)
   a=s.new_tag('a',href=base+'projects/');a.string='All projects';footer.append(a)
+  github=s.new_tag('a',href='https://github.com/HansPeterRadtke')
+  github['target']='_blank';github['rel']=['noopener','noreferrer']
+  github.string='Public GitHub code ↗';footer.append(github)
  p.write_text(str(s).rstrip()+'\n')
  print('NAV',rel,active)

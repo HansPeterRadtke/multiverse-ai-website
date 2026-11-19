@@ -22,4 +22,6 @@ s=re.sub(r'<title>.*?</title>','<title>Software & AI Projects | Multiverse</titl
 s=re.sub(r'<meta content="[^"]*" name="description"/>','<meta content="Published Wix order-monitoring software, source-backed document AI research, and workflow and testing automation expertise." name="description"/>',s,count=1)
 if '/multiverse-ai-website/assets/software-first.css' not in s:s=s.replace('</head>','<link href="/multiverse-ai-website/assets/software-first.css" rel="stylesheet"/></head>',1)
 file.write_text(s)
+from render_software_portfolio import replace_technology
+replace_technology()
 print('WROTE',file)

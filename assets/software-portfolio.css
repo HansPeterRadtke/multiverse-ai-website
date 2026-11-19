@@ -1,0 +1,44 @@
+/* Human-readable public project inventory. GitHub code does not imply a release. */
+.mv-projects-section{padding:87px 0 95px;background:radial-gradient(circle at 91% 0%,rgba(40,109,122,.17),transparent 42%),linear-gradient(130deg,#0b1b2c,#112839);color:#eaf5f8;border-top:1px solid #355462;border-bottom:1px solid #2f5362;scroll-margin-top:22px}
+.mv-projects-alt{background:linear-gradient(135deg,#0b2031,#123647)}
+.mv-projects-heading{max-width:1180px;margin-bottom:31px}
+.mv-projects-eyebrow{color:#94f1d9;font-size:.72rem;letter-spacing:.13em;line-height:1.5;font-weight:780;text-transform:uppercase;margin:0 0 8px}
+.mv-projects-heading h2{font-size:clamp(2.1rem,3.9vw,3.55rem);line-height:1.15;letter-spacing:-.053em;font-weight:770;margin:10px 0 16px}
+.mv-projects-heading>p:last-child{color:#c3d8df;font-size:.98rem;max-width:900px;line-height:1.7;margin:0}
+.mv-project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:18px}
+.mv-project-card{background:linear-gradient(150deg,#153443,#102838);border:1px solid #406574;border-radius:16px;padding:22px 23px 23px;display:flex;flex-direction:column;min-width:0;gap:11px}
+.mv-project-card:nth-child(3n+2){background:linear-gradient(140deg,#163646,#11283d)}
+.mv-project-topline{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:7px 11px}
+.mv-project-category{font-size:.69rem;letter-spacing:.10em;color:#a4f2e2;font-weight:800;text-transform:uppercase;line-height:1.45}
+.mv-project-status{font-size:.69rem;color:#d0e0e7;background:#294954;border:1px solid #60818a;border-radius:99px;padding:4px 9px;line-height:1.35;font-weight:650}
+.mv-project-card h3{font-size:1.49rem;line-height:1.17;letter-spacing:-.042em;font-weight:770;margin:6px 0 0}
+.mv-project-purpose{color:#f1f8f8;font-size:.95rem;line-height:1.6;font-weight:540;margin:0}
+.mv-project-benefit{color:#c0d4de;font-size:.87rem;line-height:1.65;margin:0}
+.mv-project-benefit b,.mv-project-process b{color:#d5fbed}
+.mv-project-process{font-size:.84rem;line-height:1.6;color:#b8cfd8;margin:0}
+.mv-project-details{margin-top:auto;padding-top:11px;border-top:1px solid #486879;color:#bfd2dc}
+.mv-project-details summary{font-size:.78rem;font-weight:730;color:#badcd5;cursor:pointer;line-height:1.55}
+.mv-project-details p{margin:10px 0 0;font-size:.8rem;line-height:1.57;color:#c9dbe0}
+.mv-project-links{margin-top:2px;min-height:26px;display:flex;align-items:center}
+.mv-source-link{font-size:.88rem;color:#a7f9df;font-weight:770;line-height:1.5}
+.mv-source-link:hover,.mv-github-link:hover{text-decoration:underline;text-underline-offset:4px}
+.mv-source-missing{color:#9bb5c2;font-size:.79rem;line-height:1.5}
+.mv-projects-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:29px}
+.mv-primary-link{display:inline-flex;min-height:47px;padding:11px 20px;border-radius:9px;background:#baf6e5;color:#102c34;font-size:.89rem;font-weight:770;align-items:center;justify-content:center}
+.mv-primary-link:hover{background:#ddfff4}
+.mv-github-link{color:#b8f8e5;font-weight:730;font-size:.9rem;line-height:1.6}
+.sw-home-other-projects{display:block;font-size:.84rem;line-height:1.52;color:#b9f6e4;margin:7px 4px;font-weight:700}
+.sw-home-other-projects:hover{text-decoration:underline;text-underline-offset:4px}
+.mv-legacy-anchor{display:block;position:relative;top:-20px;height:0}
+.mv-about-github{display:flex;gap:50px;align-items:center;justify-content:space-between;padding:66px 0 85px;border-top:1px solid #385767}
+.mv-about-github>div:first-child{max-width:770px}
+.mv-about-github h2{font-size:clamp(1.75rem,3vw,2.7rem);font-weight:760;letter-spacing:-.04em;line-height:1.17;margin:10px 0 19px}
+.mv-about-github p{font-size:.98rem;line-height:1.67;color:#bed0db}
+.mv-about-github p a{color:#b3fae2;text-decoration:underline;text-underline-offset:3px}
+.mv-about-github-links{display:flex;flex-direction:column;gap:15px;min-width:220px}
+.mv-about-github-links a{display:inline-flex;font-size:.88rem;color:#b4f8e7;font-weight:735;line-height:1.5}
+.mv-about-github-links a:hover{text-decoration:underline;text-underline-offset:3px}
+.mv-projects-section :focus-visible,.mv-about-github :focus-visible,.sw-home-other-projects:focus-visible{outline:3px solid #c9ffe8;outline-offset:3px}
+@media(max-width:1020px){.mv-project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mv-project-card{padding:22px}.mv-about-github{gap:28px}}
+@media(max-width:700px){.mv-projects-section{padding:62px 0 70px}.mv-projects-heading{margin-bottom:23px}.mv-projects-heading h2{font-size:clamp(2rem,6vw,2.8rem)}.mv-project-grid{grid-template-columns:1fr}.mv-project-card{padding:22px}.mv-projects-actions{flex-direction:column;align-items:stretch}.mv-primary-link{width:100%}.mv-github-link{align-self:start}.mv-about-github{display:block;padding:49px 0 65px}.mv-about-github-links{margin-top:24px}}
+@media(max-width:470px){.mv-projects-section{padding:50px 0 61px}.mv-projects-heading h2{font-size:2.12rem}.mv-project-card{padding:19px}.mv-project-card h3{font-size:1.37rem}.mv-project-topline{display:block}.mv-project-status{display:table;margin-top:9px}.mv-projects-heading>p:last-child{font-size:.93rem}}

@@ -32,3 +32,10 @@ html{overflow-x:hidden}body{overflow-x:hidden}.page-shell{isolation:isolate}.sit
 .knowledge-visual[href]:hover img{filter:brightness(.8) saturate(1.1)}
 .knowledge-visual .knowledge-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:rgba(229,255,248,.97);color:#163344;display:flex;align-items:center;justify-content:center;font-size:1.2rem;padding-left:4px;box-shadow:0 0 0 10px rgba(240,255,253,.16);pointer-events:none}
 .knowledge-visual[href]:hover .knowledge-play{background:#b2ffe8;box-shadow:0 0 0 13px rgba(240,255,253,.19)}
+/* Six clearly labeled top-level links, including external GitHub: avoid
+   clipping the call-to-action at intermediate desktop widths. */
+@media (min-width:951px) and (max-width:1100px){
+  .header-inside{gap:20px}
+  .desktop-nav{gap:25px}
+  .header-cta{padding:10px 12px}
+}

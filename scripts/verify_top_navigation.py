@@ -3,7 +3,7 @@
 from pathlib import Path
 from bs4 import BeautifulSoup
 R=Path(__file__).resolve().parents[1]
-expected=['Software & AI','3D models','Business','About','Contact']
+expected=['Software & AI','3D models','Business','About','Contact','GitHub ↗']
 for file in sorted(R.rglob('index.html')):
  if '.git' in file.parts:continue
  page=BeautifulSoup(file.read_text(),'html.parser')
@@ -16,6 +16,8 @@ for file in sorted(R.rglob('index.html')):
    assert not a['href'].split('/')[-1].startswith('#'),(file,selector,a['href'])
    assert '#' not in a['href'],(file,'top menu item must open a page',a['href'])
   assert anchors[1]['href']=='/multiverse-ai-website/3d/',(file,anchors[1]['href'])
+  assert anchors[-1]['href']=='https://github.com/HansPeterRadtke' and anchors[-1]['target']=='_blank'
+  assert anchors[-1].get('rel') == ['noopener','noreferrer']
 new=BeautifulSoup((R/'3d/index.html').read_text(),'html.parser')
 assert 'Industrial 3D models' in new.select_one('main h1').get_text(' ',strip=True)
 assert len(new.select('main .pf-card'))>=3
