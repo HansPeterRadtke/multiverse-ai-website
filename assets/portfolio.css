@@ -94,3 +94,6 @@
 .pf-orient-img{display:block;width:82px;height:56px;object-fit:cover;border-radius:8px;background:#21394c;border:1px solid #43616a}
 .pf-orientation>a strong,.pf-orientation>a small{overflow-wrap:anywhere}
 @media(max-width:620px){.pf-orientation>a{grid-template-columns:72px minmax(0,1fr) 17px;gap:10px}.pf-orient-img{width:72px;height:51px}}
+
+.pf-card-body>a.pf-text-link+a.pf-text-link{margin-top:5px;padding-top:0}
+.pf-secondary-catalog>a.pf-text-link{margin:0 0 18px;display:inline-flex}
