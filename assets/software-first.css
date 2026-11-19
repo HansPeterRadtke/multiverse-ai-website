@@ -219,3 +219,15 @@
  .sw-home-example>span:not(.sw-proof-status){grid-column:2;grid-row:3;font-size:.81rem;line-height:1.48}
  .sw-home-example>small{grid-column:2;grid-row:4;font-size:.76rem;line-height:1.4;margin:0}
 }
+/* User purpose, workflow and intended benefits are distinct from KMD internals. */
+.sw-kmd-user-value{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:27px 0 15px}
+.sw-kmd-user-value>div{border:1px solid #45717a;background:#143445;border-radius:12px;padding:20px 18px;min-width:0;display:flex;flex-direction:column;gap:9px}
+.sw-kmd-user-value span{color:#96e6d9;font-size:.67rem;font-weight:780;line-height:1.45;letter-spacing:.1em}
+.sw-kmd-user-value strong{color:#f4fbfa;font-size:1.03rem;font-weight:740;line-height:1.38;letter-spacing:-.018em}
+.sw-kmd-user-value small{color:#b3cbd0;font-size:.81rem;line-height:1.55}
+.sw-research-links .sw-textlink{display:block;margin-top:12px}
+@media(max-width:780px){.sw-kmd-user-value{grid-template-columns:1fr 1fr}.sw-kmd-user-value>div:last-child{grid-column:span 2}}
+@media(max-width:570px){.sw-kmd-user-value{grid-template-columns:1fr;gap:9px}.sw-kmd-user-value>div:last-child{grid-column:auto}.sw-kmd-user-value>div{padding:16px}.sw-kmd-user-value strong{font-size:.96rem}}
+.sw-sub-test-details{margin:13px 0 20px;background:#193a49;border:1px solid #476977;border-radius:10px;padding:14px 18px;color:#dff6ed}
+.sw-sub-test-details summary{cursor:pointer;color:#bef4de;font-size:.92rem;font-weight:740;line-height:1.5}
+.sw-sub-test-details p{font-size:.89rem!important;margin:12px 0 0!important;line-height:1.6!important}

@@ -42,8 +42,8 @@ main = f'''<main id="main">
     <a class="sw-home-example sw-home-example-ai" href="#research-proof">
       <img class="sw-home-example-image sw-research-visual" src="{url('assets/kmd/kmd-evidence-walkthrough-poster.webp')}" alt="Preview of the KnowMoreDiRT source-evidence research viewer" width="1280" height="800" loading="eager">
       <span class="sw-proof-status">AI RESEARCH · NOT A FINISHED PRODUCT</span>
-      <strong>KnowMoreDiRT — answers from documents</strong>
-      <span>An experimental system for finding answers in documents and checking the original evidence.</span>
+      <strong>KnowMoreDiRT — ask your own files</strong>
+      <span>Designed for people with folders of reports, notes and logs: ask a question rather than hunt through every file. The goal is an answer backed by original text. Still research, not a finished app.</span>
       <small>See the project and a limited test <span aria-hidden="true">↗</span></small>
     </a>
     <a class="sw-home-3d-link" href="{url('projects/#industrial-catalog')}">Also: a separate catalog of animated industrial 3D models <span aria-hidden="true">↗</span></a>
@@ -90,10 +90,11 @@ main = f'''<main id="main">
 <section class="sw-research" id="research-proof"><div class="container">
   <div class="sw-research-head"><div>
     <p class="sw-kicker">02 / AI PROJECT · DOCUMENT ANSWERS WITH SOURCES</p>
-    <h2>KnowMoreDiRT — <em>find answers and check their sources.</em></h2>
-    <p>A company may have thousands of documents. KnowMoreDiRT explores how local AI could find an answer and point to the exact passage in the original file. The aim is to make answers easier to check, rather than simply trusting the AI.</p>
+    <h2>KnowMoreDiRT — <em>ask questions about your documents.</em></h2>
+    <p>Imagine you have many folders of reports, notes, logs and transcripts. Instead of opening files one by one, the goal is to point KnowMoreDiRT at a folder, ask a question in everyday language, and receive a short answer. The system keeps source evidence internally so results can be investigated rather than blindly trusted.</p>
     <p>So far, this page shows evidence from a <strong>limited test using fictional documents</strong>. It is not a production-ready search service or an AI system running new queries directly on this website.</p>
   </div><span class="sw-state">RESEARCH PROTOTYPE · NOT FOR SALE AS A FINISHED APP</span></div>
+  <div class="sw-kmd-user-value"><div><span>WHAT YOU DO</span><strong>Choose a folder and ask a question.</strong><small>Current interface: two Python functions, not a finished web app.</small></div><div><span>WHAT IT AIMS TO SAVE</span><strong>Time searching through scattered files.</strong><small>Intended benefit; large real-world collections are not yet validated.</small></div><div><span>WHY IT MAY BE MORE TRUSTWORTHY</span><strong>The answer has source records behind it.</strong><small>Evidence stays inside the system; public API still returns plain text.</small></div></div>
   <div class="sw-kmd-concept" aria-label="The research goal, not a claim of production readiness">
     <div><span>DOCUMENTS</span><strong>A collection of files containing facts</strong></div>
     <b aria-hidden="true">→</b>
@@ -102,7 +103,7 @@ main = f'''<main id="main">
     <div><span>ANSWER + SOURCE</span><strong>Inspect the original evidence before trusting it</strong></div>
   </div>
   <div class="sw-kmd-details">
-    <div><h3>What has actually been tested?</h3><p>A controlled one-file experiment returned the expected answer and identified the supporting text. The system used local models and cached intermediate results. That does not establish general performance across real company document collections.</p><a class="sw-button sw-primary" href="{url('kmd/evidence/#answer-proof')}">Inspect the recorded test evidence</a></div>
+    <div><h3>What has actually been tested?</h3><p>A controlled one-file experiment returned the expected answer and identified the supporting text. The system used local models and cached intermediate results. That does not establish general performance across real company document collections.</p><a class="sw-button sw-primary" href="{url('kmd/')}">See how KnowMoreDiRT is intended to work</a><a class="sw-textlink" href="{url('kmd/evidence/#answer-proof')}">Inspect the limited test evidence ↗</a></div>
     <details><summary>See the fictional test example</summary>
       <div class="sw-kmd-example"><p><strong>Question:</strong> {question}</p><p><strong>Answer returned:</strong> {answer} <span class="sw-fictional">(fictional character in a test file)</span></p><p><strong>Original passage in {source}:</strong> <q>{excerpt}</q></p><p>This example verifies one controlled case, not general reliability.</p></div>
     </details>

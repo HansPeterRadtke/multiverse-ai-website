@@ -1,0 +1,62 @@
+/* KnowMoreDiRT user experience: purpose -> usage -> benefits -> evidence -> optional internals. */
+.kmd-purpose-hero{grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:40px;align-items:center}
+.kmd-purpose-hero h1{font-size:clamp(2.8rem,5vw,4.5rem);line-height:1.07;letter-spacing:-.066em;margin:14px 0 20px}
+.kmd-purpose-hero .kmd-focus-copy>p{font-size:1.05rem;line-height:1.7;margin-bottom:16px;color:#c3d6df}
+.kmd-purpose-hero p.kmd-purpose-promise{font-size:1rem;color:#d7f4e8;margin-top:5px}
+.kmd-purpose-promise strong{color:#acffe3}
+.kmd-purpose-hero p.kmd-purpose-status{font-size:.78rem;color:#a7bfcc;max-width:650px;margin-top:17px;margin-bottom:0}
+.kmd-hero-real-proof{margin:0;min-width:0}
+.kmd-hero-real-proof .kmd-focus-hero-art{width:100%;height:auto;aspect-ratio:16/10;display:block;object-fit:contain;background:#091a2b;box-shadow:0 16px 44px rgba(0,0,0,.23)}
+.kmd-hero-real-proof figcaption{color:#9fbec7;font-size:.76rem;line-height:1.55;margin-top:12px}
+.kmd-use-section{padding:86px 0 91px;background:#edf4ef;color:#153540}
+.kmd-benefit-heading{max-width:875px;margin-bottom:32px}
+.kmd-benefit-heading .focus-product-tag{color:#257b77}
+.kmd-benefit-heading h2{font-size:clamp(2.1rem,4.4vw,3.7rem);letter-spacing:-.056em;line-height:1.11;font-weight:760;margin:13px 0 19px}
+.kmd-benefit-heading p{font-size:1.03rem;line-height:1.67;color:#4e686e;max-width:850px;margin:0}
+.kmd-use-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.kmd-use-flow>div{background:#fff;border:1px solid #bfd4cc;border-radius:16px;padding:27px 25px 23px;box-shadow:0 15px 40px rgba(22,78,69,.05);min-width:0}
+.kmd-use-flow>div>span{font-size:.7rem;font-weight:810;color:#2d8276;letter-spacing:.11em;line-height:1.5}
+.kmd-use-flow h3{font-size:1.45rem;line-height:1.19;letter-spacing:-.035em;font-weight:755;margin:15px 0 12px}
+.kmd-use-flow p{font-size:.94rem;line-height:1.68;color:#48646a;margin:0}
+.kmd-flow-note{font-size:.83rem;line-height:1.66;color:#567276;max-width:1030px;margin:21px 0 0}
+.kmd-benefits-section{background:linear-gradient(125deg,#091b2c,#123344);color:#f2f8fa;padding:87px 0 94px}
+.kmd-benefits-section .kmd-benefit-heading .focus-product-tag{color:#91eadc}
+.kmd-benefits-section .kmd-benefit-heading h2 em{color:#b8f8df}
+.kmd-benefits-section .kmd-benefit-heading p{color:#bcd2da}
+.kmd-benefit-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.kmd-benefit-cards article{border-radius:17px;border:1px solid #406774;background:#153244;min-width:0;padding:28px 25px 23px;display:flex;flex-direction:column;align-items:start}
+.kmd-benefit-type{font-size:.69rem;font-weight:800;letter-spacing:.11em;color:#a3f3df}
+.kmd-benefit-cards h3{font-size:1.5rem;letter-spacing:-.04em;line-height:1.17;font-weight:740;margin:18px 0 13px}
+.kmd-benefit-cards p{font-size:.93rem;line-height:1.68;color:#d0dfe4;margin:0 0 17px}
+.kmd-benefit-mapping{border-top:1px solid #446c75;padding-top:16px;margin-top:auto;display:flex;flex-direction:column;gap:5px;font-size:.84rem;line-height:1.56;color:#b3cbd3}
+.kmd-benefit-mapping b{font-size:.72rem;letter-spacing:.07em;color:#9bead6;text-transform:uppercase}
+.kmd-focus-watch{padding:80px 0 85px}
+.kmd-focus-watch h2{font-size:clamp(2.2rem,4vw,3.7rem);line-height:1.12;letter-spacing:-.052em}
+.kmd-focus-more .kmd-details-body pre{border-radius:11px;border:1px solid #bad3cc;background:#15303a;color:#e1f8ee;padding:19px 21px;line-height:1.65;overflow-x:auto;font-size:.85rem;white-space:pre}
+.kmd-focus-more .kmd-details-body pre code{font:inherit}
+.kmd-focus-more .kmd-details-body p{font-size:.96rem;line-height:1.65}
+.kmd-purpose-hero :focus-visible,.kmd-use-section :focus-visible,.kmd-benefits-section :focus-visible{outline:3px solid #78efcf;outline-offset:3px}
+@media(max-width:920px){.kmd-purpose-hero{grid-template-columns:1fr;gap:30px}.kmd-hero-real-proof{max-width:730px}.kmd-use-flow,.kmd-benefit-cards{grid-template-columns:1fr 1fr}.kmd-use-flow>div:last-child,.kmd-benefit-cards article:last-child{grid-column:span 2}}
+@media(max-width:690px){.kmd-purpose-hero{padding-top:46px;padding-bottom:52px}.kmd-purpose-hero h1{font-size:clamp(2.55rem,9.2vw,3.6rem)}.kmd-purpose-hero .kmd-focus-copy>p{font-size:.99rem}.kmd-use-section,.kmd-benefits-section{padding:57px 0 62px}.kmd-benefit-heading{margin-bottom:23px}.kmd-benefit-heading h2{font-size:clamp(2.15rem,8.3vw,3rem)}.kmd-benefit-heading p{font-size:.96rem}.kmd-use-flow,.kmd-benefit-cards{grid-template-columns:1fr;gap:13px}.kmd-use-flow>div:last-child,.kmd-benefit-cards article:last-child{grid-column:auto}.kmd-use-flow>div,.kmd-benefit-cards article{padding:22px}.kmd-use-flow h3,.kmd-benefit-cards h3{font-size:1.32rem;margin:11px 0 9px}.kmd-focus-watch{padding:58px 0}.kmd-focus-more .kmd-details-body pre{font-size:.73rem;padding:15px}}
+@media(prefers-reduced-motion:reduce){.kmd-use-section,.kmd-benefits-section{scroll-behavior:auto}}
+/* Longer-term semantic reasoning is clearly a goal, not a shipping feature. */
+.kmd-meaning-research{margin-top:25px;border:1px solid #477787;border-left:5px solid #a4e9d7;border-radius:14px;padding:25px 30px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;background:linear-gradient(120deg,#173b48,#102737);align-items:center}
+.kmd-meaning-research .kmd-benefit-type{color:#b0f0d8}
+.kmd-meaning-research h3{font-size:1.43rem;line-height:1.2;font-weight:750;letter-spacing:-.032em;margin:12px 0 12px}
+.kmd-meaning-research p{font-size:.9rem;line-height:1.65;color:#c9dfe4;margin:0}
+.kmd-meaning-research>p{padding:17px 19px;border-radius:9px;background:#0d2734;border:1px solid #3b6170;color:#bcd6dc}
+.kmd-meaning-research p strong{color:#d3f9e8}
+@media(max-width:780px){.kmd-meaning-research{grid-template-columns:1fr;gap:13px;padding:23px}.kmd-meaning-research>p{padding:16px}}
+/* Visual overview of the user-facing workflow, deliberately not a fake app screenshot. */
+.kmd-hero-flow-illustration{margin:0;min-width:0}
+.kmd-flow-picture{border:1px solid #427480;border-radius:20px;background:radial-gradient(circle at 70% 0%,#1f5460,#132c3d 61%,#101f32);padding:25px 31px 26px;box-shadow:0 18px 58px rgba(0,0,0,.25)}
+.kmd-picture-label{font-size:.72rem;font-weight:850;letter-spacing:.14em;color:#9ff0de;line-height:1.5;margin:0 0 15px}
+.kmd-picture-card{display:flex;flex-direction:column;gap:5px;border:1px solid #52717c;border-radius:11px;background:#173748;padding:16px 21px}
+.kmd-picture-card>span{color:#9ad7d1;font-size:.67rem;font-weight:820;letter-spacing:.12em;line-height:1.45}
+.kmd-picture-card strong{color:#f0faf7;font-size:1.22rem;line-height:1.28;font-weight:760;letter-spacing:-.026em}
+.kmd-picture-card small{font-size:.84rem;line-height:1.45;color:#bad0d9}
+.kmd-picture-files{border-color:#478785;background:#174242}
+.kmd-picture-result{border-color:#6fa9a1;background:#1e494b}
+.kmd-picture-arrow{text-align:center;font-size:1.45rem;color:#98ebd8;line-height:1.4;height:31px}
+.kmd-hero-flow-illustration figcaption{font-size:.77rem;line-height:1.55;color:#9fbec6;margin-top:11px}
+@media(max-width:690px){.kmd-flow-picture{padding:19px;border-radius:15px}.kmd-picture-card{padding:13px 16px}.kmd-picture-card strong{font-size:1.08rem}.kmd-picture-card small{font-size:.79rem}.kmd-picture-arrow{height:27px;font-size:1.24rem}}
