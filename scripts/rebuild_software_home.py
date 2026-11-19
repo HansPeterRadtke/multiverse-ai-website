@@ -26,12 +26,12 @@ main = f'''<main id="main">
 <section class="sw-hero sw-home-hero" id="top"><div class="container sw-hero-grid">
   <div class="sw-hero-copy">
     <p class="sw-kicker">MULTIVERSE · INDEPENDENT SOFTWARE & TECHNOLOGY PROJECTS</p>
-    <h1>Independent software.<br><em>Real projects.</em></h1>
-    <p class="sw-lead"><strong>Multiverse is my independent development business.</strong> I create software for practical tasks, explore AI and automation, and publish digital 3D models. See what the individual projects actually do.</p>
-    <p class="sw-home-intro-note">The examples below are independent projects. Any orders shown belong to a fictional sample Wix store—not Multiverse.</p>
-    <div class="sw-hero-actions"><a class="sw-button sw-primary" href="#software-proof">See the published software</a><a class="sw-button sw-outline" href="#research-proof">See the AI research</a></div>
+    <h1>Build AI that can use tools.<br><em>Not just answer questions.</em></h1>
+    <p class="sw-lead"><strong>Multiverse is my independent software development business.</strong> I build agent frameworks, software automation and data tools. SWAAG is the main open-source example: technology for developers connecting AI models to real computer work.</p>
+    <p class="sw-home-intro-note">The source code is public where available, so you can inspect the engineering before considering any separate technology opportunity.</p>
+    <div class="sw-hero-actions"><a class="sw-button sw-primary" href="#swaag">Why teams use SWAAG</a><a class="sw-button sw-outline" href="https://github.com/HansPeterRadtke" target="_blank" rel="noopener noreferrer">Inspect the public code ↗</a></div>
   </div>
-  <div class="sw-home-examples" aria-label="Two understandable examples of Multiverse projects">
+  <div class="sw-home-examples" aria-label="Selected SWAAG, software product and AI research projects">
     <a class="sw-home-example" href="#software-proof">
       <img class="sw-home-example-image" src="{url('assets/focus/wix-dashboard-poster.webp')}" alt="Preview of the real Late Order Monitor dashboard" width="1280" height="720" loading="eager">
       <span class="sw-proof-status">PUBLISHED SOFTWARE · FOR ONLINE SHOP OWNERS</span>

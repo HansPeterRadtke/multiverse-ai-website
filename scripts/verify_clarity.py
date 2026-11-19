@@ -14,9 +14,9 @@ home = page('index.html')
 hero = home.select_one('.sw-hero')
 assert hero is not None
 head = hero.select_one('h1')
-assert head and 'Independent software. Real projects.' in head.get_text(' ', strip=True)
+assert head and 'Build AI that can use tools. Not just answer questions.' in head.get_text(' ', strip=True)
 text = hero.get_text(' ', strip=True)
-for phrase in ('independent development business', 'Late Order Monitor for Wix Stores', 'shop owner', 'orders already placed', 'research', 'not Multiverse'):
+for phrase in ('independent software development business', 'SWAAG', 'developer', 'Late Order Monitor for Wix Stores', 'shop owner', 'orders already placed', 'research'):
     assert phrase.lower() in text.lower(), ('Missing homepage introduction:', phrase)
 assert 'Mira Chen' not in text, 'A fictional test person cannot headline the business homepage'
 assert len(hero.select('.sw-home-example-image')) == 2, 'Project imagery must be shown inside explicitly labelled cards'

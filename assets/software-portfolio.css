@@ -88,3 +88,15 @@
 @media(max-width:990px){.mv-swaag-spotlight{padding:65px 0}.mv-swaag-whenhow{grid-template-columns:1fr 1fr;gap:13px}.mv-swaag-need,.mv-swaag-process{padding:22px}.mv-swaag-bottom{gap:26px}.mv-swaag-compact .container{display:block}.mv-swaag-compact .mv-swaag-actions{flex-direction:row;margin-top:21px}.mv-source-proof-layout{gap:29px}}
 @media(max-width:720px){.mv-swaag-spotlight{padding:51px 0 61px}.mv-swaag-title{margin-bottom:23px}.mv-swaag-title h2{font-size:clamp(2.15rem,6vw,3.2rem)}.mv-swaag-whenhow{grid-template-columns:1fr}.mv-swaag-need,.mv-swaag-process{padding:24px}.mv-swaag-bottom{display:block}.mv-swaag-actions{margin-top:22px;min-width:0}.mv-source-proof{padding:53px 0}.mv-source-proof-layout{grid-template-columns:1fr}.mv-source-proof-links{align-items:stretch}.mv-swaag-compact .mv-swaag-actions{flex-direction:column}.mv-swaag-compact .mv-swaag-title h2{font-size:2.12rem}}
 @media(max-width:480px){.mv-hero-swaag-link{padding:15px 18px}.mv-hero-swaag-link strong{font-size:1.12rem}.mv-swaag-title h2{font-size:clamp(2rem,8.5vw,2.65rem)}.mv-swaag-title>p:last-child{font-size:.96rem}.mv-swaag-need,.mv-swaag-process{padding:20px}.mv-swaag-bottom .mv-primary-link{width:100%}.mv-source-proof h2{font-size:2rem}}
+/* Source-backed buyer rationale versus proof, with no invented benchmark outcomes. */
+.mv-swaag-scenario-note{display:block;color:#9ebfc6;font-size:.77rem;line-height:1.55;margin-top:15px}
+.mv-swaag-outcomes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px;margin-top:19px}
+.mv-swaag-outcomes>div{background:#153745;border:1px solid #406b76;border-radius:15px;padding:26px 29px;min-width:0}
+.mv-swaag-outcomes span{display:block;color:#a4f2df;font-size:.69rem;letter-spacing:.11em;font-weight:790;line-height:1.5}
+.mv-swaag-outcomes h3{font-size:1.32rem;font-weight:745;line-height:1.27;letter-spacing:-.035em;color:#f1fcf8;margin:14px 0 12px}
+.mv-swaag-outcomes p{font-size:.9rem;line-height:1.67;color:#c2d5df;margin:0}
+.mv-swaag-bottom{margin-top:23px}
+.mv-swaag-bottom .mv-swaag-actions{min-width:275px;gap:11px}
+.mv-swaag-bottom .mv-swaag-actions .mv-github-link{line-height:1.5;font-size:.86rem}
+@media(max-width:850px){.mv-swaag-outcomes{grid-template-columns:1fr;gap:13px}.mv-swaag-outcomes>div{padding:22px}.mv-swaag-bottom .mv-swaag-actions{min-width:0}}
+@media(max-width:480px){.mv-swaag-outcomes>div{padding:19px}.mv-swaag-outcomes h3{font-size:1.2rem}.mv-swaag-need h3{font-size:1.4rem}}

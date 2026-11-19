@@ -40,9 +40,12 @@ for name,expected in [('index.html',0),('technology/index.html',len(projects)),(
   spotlight=soup.select_one('section#swaag')
   assert spotlight is not None
   copy=spotlight.get_text(' ',strip=True)
-  for fragment in ('WHEN WOULD YOU NEED IT','WHAT SWAAG PROVIDES','What could this help you build?','developers','local-first'):
+  for fragment in ('THE SITUATION','THE INFRASTRUCTURE SWAAG PROVIDES','WHY THIS MAY BE USEFUL','WHAT MAKES IT WORTH INSPECTING','developers','MIT-licensed','not being advertised as an exclusive product'):
    assert fragment.lower() in copy.lower(),fragment
   assert spotlight.select_one('a[href="https://github.com/HansPeterRadtke/swaag"]')
+  assert len(spotlight.select('.mv-swaag-outcomes > div'))==2, 'Separate buyer value from public source proof'
+  assert 'Illustrative use case' in copy and 'not a claimed customer deployment' in copy
+  assert 'No verified customer time savings' in copy
   assert soup.select_one('.mv-source-proof'), 'Credibility proof should be compact, not a 9-card catalog'
  if name=='technology/index.html':
   assert soup.select_one('section#swaag.mv-swaag-compact')
