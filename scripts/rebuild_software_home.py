@@ -1,33 +1,138 @@
 #!/usr/bin/env python3
-"""Software-first, evidence-backed Multiverse homepage. No new functionality is fabricated."""
+"""Build a self-explanatory business homepage with scoped source-backed examples.
+
+This is a portfolio of independently developed work, not a store checkout,
+not an employer-affiliated site, and not a production claim for KMD.
+"""
 from pathlib import Path
 from html import escape
-import json,re
-ROOT=Path(__file__).resolve().parents[1]
-PREFIX='/multiverse-ai-website/'
-URL=lambda x:PREFIX+x
-proof=json.loads((ROOT/'assets/kmd/answer-proof.json').read_text())
-assert proof['question']=='Who reviewed the Falcon Test Plan?'
-assert proof['answer']=='Mira Chen'
-assert 'Mira Chen reviewed the Falcon Test Plan' in proof['source_excerpt']
-q=escape(proof['question']);a=escape(proof['answer']);source=escape(proof['source']);ex=escape(proof['source_excerpt'].splitlines()[1])
+import json
+import re
 
-main=f'''<main id="main">
-<section class="sw-hero" id="top"><div class="container sw-hero-grid"><div class="sw-hero-copy"><p class="sw-kicker">MULTIVERSE · INDEPENDENT SOFTWARE DEVELOPMENT</p><h1>Software that solves <em>specific problems.</em></h1><p class="sw-lead">For example: find unfulfilled orders in a Wix store, or trace an AI-generated document answer back to its source. The Wix app is published; the document system is a research prototype.</p><div class="sw-hero-actions"><a class="sw-button sw-primary" href="#software-proof">See a working software example</a><a class="sw-button sw-outline" href="{URL('opportunities/')}">Discuss an existing technology</a></div></div><div class="sw-hero-proof" aria-label="Actual software examples"><a class="sw-hero-demo" href="#software-proof"><img src="{URL('assets/focus/wix-dashboard-poster.webp')}" width="1280" height="720" alt="Real Late Order Monitor app with paid order list and filters" loading="eager"><div><span class="sw-proof-status">PUBLISHED APPLICATION</span><strong>Which paid orders still need attention?</strong><small>See the Wix Stores app in action <span aria-hidden="true">↗</span></small></div></a><a class="sw-hero-source" href="#research-proof"><span class="sw-proof-status">AI RESEARCH · VERIFIED TEST</span><span class="sw-hero-question">{q}</span><strong>{a}</strong><small>Returned in a controlled one-document test, with an original source link <span aria-hidden="true">↗</span></small></a></div></div></section>
-<section class="sw-scope"><div class="container sw-scope-inner"><span><strong>Published product</strong> · real working app</span><span><strong>Research prototype</strong> · verified limited test</span><span><strong>Industrial 3D</strong> · separate product line</span></div></section>
-<section class="sw-software" id="software-proof"><div class="container"><div class="sw-section-heading"><p class="sw-kicker sw-ink-kicker">01 / PUBLISHED SOFTWARE PRODUCT</p><h2>Paid orders are waiting to ship.<br><em>Which need follow-up first?</em></h2><p>Late Order Monitor is an application for Wix Stores. It shows paid orders that still need fulfilment, helps filter them by age, and exports a list for follow-up. The app does not change or fulfil orders.</p></div><div class="sw-software-grid"><div class="sw-video-wrap"><div class="sw-video-heading"><span>REAL APPLICATION RECORDING</span><span>26 seconds · silent, with captions</span></div><video aria-label="Actual Late Order Monitor Wix application demonstration with synthetic test orders" controls muted playsinline preload="metadata" poster="{URL('assets/focus/wix-dashboard-poster.webp')}" width="1280" height="720"><source src="{URL('assets/focus/wix-late-order-monitor-silent.mp4')}" type="video/mp4"><track kind="captions" src="{URL('assets/late-order-captions.vtt')}" srclang="en" label="English captions" default>Your browser cannot play the video.</video></div><div class="sw-software-steps"><p class="sw-mini-tag">WHAT THE APP DOES</p><div><span>1</span><p><strong>Find pending work</strong><small>Show paid orders that have not been fulfilled.</small></p></div><div><span>2</span><p><strong>Find the oldest</strong><small>Filter the list to focus on the orders needing attention.</small></p></div><div><span>3</span><p><strong>Export for follow-up</strong><small>Create a CSV list without changing the store's orders.</small></p></div><a class="sw-button sw-dark" href="https://multiverse-salvatorquaro1-0a0e.wix-site-host.com/" target="_blank" rel="noopener noreferrer">See the published Wix app <span aria-hidden="true">↗</span></a></div></div></div></section>
-<section class="sw-research" id="research-proof"><div class="container"><div class="sw-research-head"><div><p class="sw-kicker">02 / AI RESEARCH PROTOTYPE</p><h2>Answers to document questions.<br><em>With evidence you can inspect.</em></h2><p>KnowMoreDiRT is an experimental document-knowledge system. A controlled test demonstrated an answer traced back to the text of the original file. This is not yet a general commercial deployment.</p></div><span class="sw-state">RESEARCH · NOT A FINISHED PRODUCT</span></div><div class="sw-proof-flow"><div class="sw-proof-box"><span class="sw-proof-label">THE QUESTION</span><strong>{q}</strong><span class="sw-proof-bottom">Asked against a fictional test document</span></div><div class="sw-flow-arrow" aria-hidden="true">→</div><div class="sw-proof-box sw-answer-box"><span class="sw-proof-label">THE ANSWER RETURNED</span><strong>{a}</strong><span class="sw-proof-bottom">Accepted by an independent local model verifier</span></div><div class="sw-flow-arrow" aria-hidden="true">→</div><div class="sw-proof-box sw-source-box"><span class="sw-proof-label">THE ORIGINAL SOURCE · {source}</span><q>{ex}</q><span class="sw-proof-bottom">Actual recorded test evidence, not a fabricated output</span></div></div><div class="sw-research-footer"><p><strong>What this proves:</strong> the public question API returned the named person and matching source in a bounded, one-file fictional test using local models and cached intermediate results. It does <strong>not</strong> establish production-wide reliability or that a new inference runs when this page opens.</p><div class="sw-research-links"><a class="sw-button sw-primary" href="{URL('kmd/evidence/#answer-proof')}">Inspect the test and source evidence</a><a class="sw-textlink" href="{URL('kmd/')}">Understand the research project <span aria-hidden="true">↗</span></a></div></div></div></section>
-<section class="sw-engineering" id="engineering"><div class="container sw-engineering-layout"><div><p class="sw-kicker sw-ink-kicker">03 / ADDITIONAL SOFTWARE ENGINEERING</p><h2>Automation across tools and systems.</h2><p>Other work includes agents that use browser actions, APIs and local AI models, plus tools for validating data and software behavior. These are engineering projects—not a single packaged AI assistant or a promise of unattended production operation.</p></div><div class="sw-workflow"><p class="sw-mini-tag">EXAMPLE OF AN AUTOMATION PROBLEM</p><div><strong>Read input</strong><span>Task or incoming data</span></div><i aria-hidden="true">↓</i><div><strong>Use software tools</strong><span>Programs, APIs or browsers</span></div><i aria-hidden="true">↓</i><div><strong>Check the result</strong><span>Validate before reporting success</span></div><small>Illustrative engineering workflow, not a recording of a deployed customer system.</small><a class="sw-textlink sw-ink-link" href="{URL('technology/')}">See software engineering areas <span aria-hidden="true">↗</span></a></div></div></section>
-<section class="sw-commercial"><div class="container sw-commercial-layout"><div><p class="sw-kicker">COMMERCIAL OPPORTUNITIES</p><h2>Have a costly software problem?</h2><p>We can discuss an existing tool or component, potential technology acquisition or licensing, or a narrowly scoped adaptation with clear deliverables. No open-ended staffing or maintenance commitment is implied.</p><a class="sw-button sw-primary" href="{URL('contact/')}">Describe your problem</a></div><div class="sw-commercial-steps"><p>WHAT TO INCLUDE IN AN INQUIRY</p><span>What task takes too much time or creates risk?</span><span>Which tools or systems are involved?</span><span>What outcome would make it worth solving?</span></div></div></section>
-<section class="sw-other" id="industrial-assets"><div class="container sw-other-layout"><img src="{URL('assets/portfolio/forklift.webp')}" width="640" height="360" alt="Rendered 3D model of an industrial forklift" loading="lazy"><div><p class="sw-kicker">SEPARATE PRODUCT LINE</p><h2>Industrial 3D assets</h2><p>I also publish animated 3D models such as forklifts, conveyors and warehouse equipment. They are digital visualization assets, separate from the business software and AI research above.</p><a class="sw-textlink" href="{URL('projects/#industrial-catalog')}">Browse 3D product listings and animations <span aria-hidden="true">↗</span></a></div></div></section>
+ROOT = Path(__file__).resolve().parents[1]
+BASE = '/multiverse-ai-website/'
+url = lambda relative: BASE + relative
+
+proof = json.loads((ROOT / 'assets/kmd/answer-proof.json').read_text())
+assert proof['question'] == 'Who reviewed the Falcon Test Plan?'
+assert proof['answer'] == 'Mira Chen'
+assert 'Mira Chen reviewed the Falcon Test Plan' in proof['source_excerpt']
+question = escape(proof['question'])
+answer = escape(proof['answer'])
+source = escape(proof['source'])
+excerpt = escape(proof['source_excerpt'].splitlines()[1])
+
+main = f'''<main id="main">
+<section class="sw-hero sw-home-hero" id="top"><div class="container sw-hero-grid">
+  <div class="sw-hero-copy">
+    <p class="sw-kicker">MULTIVERSE · INDEPENDENT SOFTWARE & TECHNOLOGY PROJECTS</p>
+    <h1>What is <em>Multiverse?</em></h1>
+    <p class="sw-lead"><strong>Multiverse is my independent development business.</strong> I build software applications, research AI and automation, and create digital 3D assets. This website shows those projects and what stage they're at.</p>
+    <p class="sw-home-intro-note">This is a project portfolio. The orders in the Wix demonstration are sample shop data, not orders taken by Multiverse.</p>
+    <div class="sw-hero-actions"><a class="sw-button sw-primary" href="#software-proof">See the published software</a><a class="sw-button sw-outline" href="#research-proof">See the AI research</a></div>
+  </div>
+  <div class="sw-home-examples" aria-label="Two understandable examples of Multiverse projects">
+    <a class="sw-home-example" href="#software-proof">
+      <span class="sw-proof-status">PUBLISHED SOFTWARE · FOR ONLINE SHOP OWNERS</span>
+      <strong>Late Order Monitor for Wix Stores</strong>
+      <span>This app helps a shop owner review <em>orders already placed in their own Wix store</em>. It does not sell anything or take payments on this website.</span>
+      <small>See how the application works <span aria-hidden="true">↗</span></small>
+    </a>
+    <a class="sw-home-example sw-home-example-ai" href="#research-proof">
+      <span class="sw-proof-status">AI RESEARCH · NOT A FINISHED PRODUCT</span>
+      <strong>KnowMoreDiRT — document search research</strong>
+      <span>An experimental system that explores answering questions about documents and showing which passage supports the answer.</span>
+      <small>See the project and a limited test <span aria-hidden="true">↗</span></small>
+    </a>
+    <a class="sw-home-3d-link" href="{url('projects/#industrial-catalog')}">Also: a separate catalog of animated industrial 3D models <span aria-hidden="true">↗</span></a>
+  </div>
+</div></section>
+<section class="sw-scope" aria-label="Project readiness"><div class="container sw-scope-inner">
+  <span><strong>Software app</strong> · published for Wix store owners</span>
+  <span><strong>Document AI</strong> · experimental research</span>
+  <span><strong>3D assets</strong> · separately listed products</span>
+</div></section>
+<section class="sw-software" id="software-proof"><div class="container">
+  <div class="sw-section-heading">
+    <p class="sw-kicker sw-ink-kicker">01 / PUBLISHED SOFTWARE · FOR WIX STORE OWNERS</p>
+    <h2>Late Order Monitor — <em>an app for managing existing shop orders.</em></h2>
+    <p>For businesses that operate an online shop using <strong>Wix Stores</strong>. When customers place orders in that shop, the owner needs to know which paid orders have not been shipped yet. This separate, read-only app displays those orders, helps identify older ones, and lets the owner export a follow-up list.</p>
+    <p class="sw-not-a-store"><strong>Important:</strong> Multiverse does not take customer orders here. The screenshot below is from a sample Wix shop's order dashboard, not a Multiverse checkout.</p>
+  </div>
+  <div class="sw-owner-flow" aria-label="How the published Wix application is used">
+    <div><span>1 · EXISTING SHOP</span><strong>Customer orders arrive in a Wix store</strong></div>
+    <b aria-hidden="true">→</b>
+    <div><span>2 · LATE ORDER MONITOR</span><strong>The app displays paid, unfulfilled orders</strong></div>
+    <b aria-hidden="true">→</b>
+    <div><span>3 · SHOP OPERATOR</span><strong>Reviews the list and exports it for follow-up</strong></div>
+  </div>
+  <div class="sw-software-grid">
+    <figure class="sw-video-wrap">
+      <figcaption class="sw-video-heading"><span>REAL DEMO · SAMPLE WIX STORE ORDER DATA</span><span>26 seconds · silent with captions</span></figcaption>
+      <video aria-label="Late Order Monitor read-only Wix Stores app showing existing sample orders and filters" controls muted playsinline preload="metadata" poster="{url('assets/focus/wix-dashboard-poster.webp')}" width="1280" height="720">
+        <source src="{url('assets/focus/wix-late-order-monitor-silent.mp4')}" type="video/mp4">
+        <track kind="captions" src="{url('assets/late-order-captions.vtt')}" srclang="en" label="English captions" default>
+        Your browser cannot play the video.
+      </video>
+    </figure>
+    <div class="sw-software-steps">
+      <p class="sw-mini-tag">WHAT THE SHOP OWNER CAN DO</p>
+      <div><span>1</span><p><strong>See unfulfilled orders</strong><small>Read orders already recorded by their Wix store.</small></p></div>
+      <div><span>2</span><p><strong>Spot older orders</strong><small>Filter by age to decide which need follow-up.</small></p></div>
+      <div><span>3</span><p><strong>Export a CSV list</strong><small>Keep a follow-up list without changing order status.</small></p></div>
+      <p class="sw-readonly-note">The app cannot place orders, take payment, or ship anything.</p>
+      <a class="sw-button sw-dark" href="https://multiverse-salvatorquaro1-0a0e.wix-site-host.com/" target="_blank" rel="noopener noreferrer">Read about the published Wix app <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</div></section>
+<section class="sw-research" id="research-proof"><div class="container">
+  <div class="sw-research-head"><div>
+    <p class="sw-kicker">02 / EXPERIMENTAL AI SOFTWARE · DOCUMENT SEARCH</p>
+    <h2>KnowMoreDiRT — <em>research into answers with verifiable sources.</em></h2>
+    <p>Imagine a company has thousands of documents and wants to find a specific fact without manually reading them all. KnowMoreDiRT explores using local AI to answer a question about those documents and identify the original passage behind the answer.</p>
+    <p>So far, this page shows evidence from a <strong>limited test using fictional documents</strong>. It is not a production-ready search service or an AI system running new queries directly on this website.</p>
+  </div><span class="sw-state">RESEARCH PROTOTYPE · NOT FOR SALE AS A FINISHED APP</span></div>
+  <div class="sw-kmd-concept" aria-label="The research goal, not a claim of production readiness">
+    <div><span>DOCUMENTS</span><strong>A collection of files containing facts</strong></div>
+    <b aria-hidden="true">→</b>
+    <div><span>QUESTION</span><strong>Ask the research system about those files</strong></div>
+    <b aria-hidden="true">→</b>
+    <div><span>ANSWER + SOURCE</span><strong>Inspect the original evidence before trusting it</strong></div>
+  </div>
+  <div class="sw-kmd-details">
+    <div><h3>What has actually been tested?</h3><p>A controlled one-file experiment returned the expected answer and identified the supporting text. The system used local models and cached intermediate results. That does not establish general performance across real company document collections.</p><a class="sw-button sw-primary" href="{url('kmd/evidence/#answer-proof')}">Inspect the recorded test evidence</a></div>
+    <details><summary>Show the exact fictional test question and answer</summary>
+      <div class="sw-kmd-example"><p><strong>Question:</strong> {question}</p><p><strong>Answer returned:</strong> {answer} <span class="sw-fictional">(fictional character in a test file)</span></p><p><strong>Original passage in {source}:</strong> <q>{excerpt}</q></p><p>This example verifies one controlled case, not general reliability.</p></div>
+    </details>
+  </div>
+</div></section>
+<section class="sw-engineering" id="engineering"><div class="container sw-engineering-layout">
+  <div><p class="sw-kicker sw-ink-kicker">03 / SOFTWARE ENGINEERING WORK</p><h2>Automation and AI development.</h2><p>Other projects include software that connects applications and APIs, performs defined computer tasks, and checks the results. There is also work on local language models, data processing and software testing. These are separate engineering efforts—not a claim that one finished AI product can already do everything.</p><p>For a business project, the next step would be to identify a concrete task and assess what existing code can actually be reused or adapted.</p></div>
+  <div class="sw-workflow"><p class="sw-mini-tag">EXAMPLE ENGINEERING TASK, NOT A PRODUCT DEMO</p>
+    <div><strong>Receive a defined task</strong><span>Specific input and expected result</span></div><i aria-hidden="true">↓</i>
+    <div><strong>Run the required software</strong><span>Use an API, application or automation tool</span></div><i aria-hidden="true">↓</i>
+    <div><strong>Check what happened</strong><span>Verify before reporting completion</span></div>
+    <small>Illustrative workflow. No customer deployment is claimed.</small>
+    <a class="sw-textlink sw-ink-link" href="{url('technology/')}">Explore the software engineering work <span aria-hidden="true">↗</span></a>
+  </div>
+</div></section>
+<section class="sw-commercial"><div class="container sw-commercial-layout"><div>
+  <p class="sw-kicker">TECHNOLOGY & COMMERCIAL OPPORTUNITIES</p><h2>Interested in a specific software project?</h2>
+  <p>Multiverse can discuss an existing software component, technology acquisition, or a clearly scoped adaptation where the requirements, available technology and responsibilities can be agreed in advance.</p>
+  <a class="sw-button sw-primary" href="{url('contact/')}">Contact Multiverse</a>
+</div><div class="sw-commercial-steps"><p>A USEFUL INQUIRY EXPLAINS</p><span>The existing task or process</span><span>What software or data is involved</span><span>The result the business needs</span></div></div></section>
+<section class="sw-other" id="industrial-assets"><div class="container sw-other-layout">
+  <img src="{url('assets/portfolio/forklift.webp')}" width="640" height="360" alt="A 3D model of an industrial forklift" loading="lazy">
+  <div><p class="sw-kicker">A SEPARATE PRODUCT CATEGORY</p><h2>Industrial 3D models and animations</h2><p>Multiverse also publishes downloadable 3D models of machinery and warehouse equipment for use in visualizations and digital scenes. These have their own listings and are not connected to the Wix application or KnowMoreDiRT.</p><a class="sw-textlink" href="{url('projects/#industrial-catalog')}">Browse the 3D product catalog <span aria-hidden="true">↗</span></a></div>
+</div></section>
 </main>'''
-source=(ROOT/'index.html').read_text()
-start=source.index('<main id="main">');end=source.index('</main>',start)+len('</main>')
-source=source[:start]+main+source[end:]
-source=re.sub(r'<title>.*?</title>','<title>Business Software & AI Research | Multiverse</title>',source,count=1)
-source=re.sub(r'<meta content="[^"]*" name="description"/>','<meta content="Multiverse develops practical business software and research systems. Explore a published Wix Stores application and a source-verified document AI research test." name="description"/>',source,count=1)
-source=source.replace('<link href="'+URL('assets/actual-demos.css')+'" rel="stylesheet"/>','<link href="'+URL('assets/software-first.css')+'" rel="stylesheet"/>')
-source=source.replace('<script defer src="'+URL('assets/actual-demos.js')+'"></script>','')
-source=source.replace('href="'+URL('#demos')+'">Watch demonstrations</a>','href="'+URL('#software-proof')+'">See working software</a>')
-(ROOT/'index.html').write_text(source)
-print('WROTE SOFTWARE-FIRST HOMEPAGE:',len(main),'chars')
+
+source = (ROOT / 'index.html').read_text()
+start = source.index('<main id="main">')
+end = source.index('</main>', start) + len('</main>')
+source = source[:start] + main + source[end:]
+source = re.sub(r'<title>.*?</title>', '<title>Multiverse | Independent Software, AI Research & Digital Products</title>', source, count=1)
+source = re.sub(r'<meta content="[^"]*" name="description"/>', '<meta content="Multiverse is an independent development business with a published Wix Stores order-monitoring application, AI document-search research, software engineering, and separate 3D digital assets." name="description"/>', source, count=1)
+source = re.sub(r'<meta content="[^"]*" property="og:description"/>', '<meta content="Learn what Multiverse builds, who each project is for, and which software is published versus experimental." property="og:description"/>', source, count=1)
+(ROOT / 'index.html').write_text(source)
+print('Rebuilt homepage from verified source status: Wix published, KMD prototype, 3D separate')
