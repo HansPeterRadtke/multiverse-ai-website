@@ -46,7 +46,7 @@ main = f'''<main id="main">
       <span>Designed for people with folders of reports, notes and logs: ask a question rather than hunt through every file. The goal is an answer backed by original text. Still research, not a finished app.</span>
       <small>See the project and a limited test <span aria-hidden="true">↗</span></small>
     </a>
-    <a class="sw-home-3d-link" href="{url('projects/#industrial-catalog')}">Also: a separate catalog of animated industrial 3D models <span aria-hidden="true">↗</span></a>
+    <a class="sw-home-3d-link" href="{url('3d/')}">Also: a separate catalog of animated industrial 3D models <span aria-hidden="true">↗</span></a>
   </div>
 </div></section>
 <section class="sw-scope" aria-label="Project readiness"><div class="container sw-scope-inner">
@@ -126,7 +126,7 @@ main = f'''<main id="main">
 </div><div class="sw-commercial-steps"><p>A USEFUL INQUIRY EXPLAINS</p><span>The existing task or process</span><span>What software or data is involved</span><span>The result the business needs</span></div></div></section>
 <section class="sw-other" id="industrial-assets"><div class="container sw-other-layout">
   <img src="{url('assets/portfolio/forklift.webp')}" width="640" height="360" alt="A 3D model of an industrial forklift" loading="lazy">
-  <div><p class="sw-kicker">A SEPARATE PRODUCT CATEGORY</p><h2>Industrial 3D models and animations</h2><p>Multiverse also publishes downloadable 3D models of machinery and warehouse equipment for use in visualizations and digital scenes. These have their own listings and are not connected to the Wix application or KnowMoreDiRT.</p><a class="sw-textlink" href="{url('projects/#industrial-catalog')}">Browse the 3D product catalog <span aria-hidden="true">↗</span></a></div>
+  <div><p class="sw-kicker">A SEPARATE PRODUCT CATEGORY</p><h2>Industrial 3D models and animations</h2><p>Multiverse also publishes downloadable 3D models of machinery and warehouse equipment for use in visualizations and digital scenes. These have their own listings and are not connected to the Wix application or KnowMoreDiRT.</p><a class="sw-textlink" href="{url('3d/')}">Browse the 3D product catalog <span aria-hidden="true">↗</span></a></div>
 </div></section>
 </main>'''
 

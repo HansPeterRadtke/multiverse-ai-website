@@ -1,0 +1,16 @@
+/* Dedicated 3D category landing page; navigation always opens at the top. */
+.pf-3d-index{color:#eef5f5}
+.pf-3d-hero{padding-top:72px;padding-bottom:45px}
+.pf-3d-hero h1{font-size:clamp(2.7rem,5vw,4.6rem);font-weight:760;line-height:1.08;letter-spacing:-.059em;max-width:880px;margin:15px 0 21px}
+.pf-3d-hero h1 em{color:#aef8e2}
+.pf-3d-hero .pf-lead{margin-bottom:25px;max-width:800px}
+.pf-3d-products{padding-top:54px;padding-bottom:85px;scroll-margin-top:24px}
+.pf-3d-products .pf-section-top{max-width:900px}
+.pf-3d-products .pf-section-top h2{line-height:1.2}
+.pf-3d-products .pf-secondary-catalog{margin-top:39px}
+.pf-3d-end{border-top:1px solid #38545e;padding-top:60px;padding-bottom:83px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.pf-3d-end h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:750;letter-spacing:-.04em;margin:0 0 12px}
+.pf-3d-end p{color:#bed0d8;line-height:1.65;max-width:650px;margin:0}
+.pf-3d-end>.pf-action{min-width:200px}
+@media(max-width:760px){.pf-3d-hero{padding-top:53px;padding-bottom:35px}.pf-3d-products{padding-top:40px;padding-bottom:60px}.pf-3d-end{padding-top:44px;padding-bottom:68px;flex-direction:column;align-items:flex-start}}
+@media(max-width:540px){.pf-3d-hero{padding-top:39px}.pf-3d-hero h1{font-size:clamp(2.45rem,9.6vw,3.35rem)}.pf-3d-end>.pf-action{width:100%}}
