@@ -8,7 +8,7 @@ items=[('Software & AI',base+'technology/','software'),('3D models',base+'3d/','
 for p in sorted(R.rglob('index.html')):
  s=BeautifulSoup(p.read_text(),'html.parser')
  rel=str(p.relative_to(R))
- active='software' if rel in ('technology/index.html','kmd/index.html','kmd/evidence/index.html') else ('assets' if rel in ('3d/index.html','projects/index.html') else ('business' if rel=='opportunities/index.html' else ('about' if rel=='about/index.html' else ('contact' if rel=='contact/index.html' else ''))))
+ active='software' if rel in ('technology/index.html','swaag/index.html','kmd/index.html','kmd/evidence/index.html') else ('assets' if rel in ('3d/index.html','projects/index.html') else ('business' if rel=='opportunities/index.html' else ('about' if rel=='about/index.html' else ('contact' if rel=='contact/index.html' else ''))))
  header=s.select_one('header.site-header')
  if header:
   for selector in ('.desktop-nav','.mobile-nav'):

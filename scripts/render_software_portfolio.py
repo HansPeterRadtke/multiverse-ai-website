@@ -25,6 +25,7 @@ def source_link(p):
 def card(p,detailed=False):
  workflow=f'<p class="mv-project-process"><b>How it works:</b> {e(p["workflow"])}</p>' if detailed else ''
  limits=f'<details class="mv-project-details"><summary>Current limitations</summary><p>{e(p["limits"])}</p></details>'
+ more = '<a class="mv-source-link" href="/multiverse-ai-website/swaag/">Understand the SWAAG use case <span aria-hidden="true">↗</span></a>' if p['id']=='swaag' else ''
  return f'''<article class="mv-project-card" id="project-{e(p['id'])}">
   <div class="mv-project-topline"><span class="mv-project-category">{e(p['category'])}</span><span class="mv-project-status">{e(p['status'])}</span></div>
   <h3>{e(p['title'])}</h3>
@@ -32,7 +33,7 @@ def card(p,detailed=False):
   <p class="mv-project-benefit"><b>Why it matters:</b> {e(p['benefit'])}</p>
   {workflow}
   {limits}
-  <div class="mv-project-links">{source_link(p)}</div>
+  <div class="mv-project-links">{more}{source_link(p)}</div>
  </article>'''
 
 def soup_section(markup):return BeautifulSoup(markup,'html.parser').find('section')
@@ -61,6 +62,9 @@ def replace_home():
   else:hero.insert(0,banner)
  style='/multiverse-ai-website/assets/software-portfolio.css'
  if not s.select_one(f'link[href="{style}"]'):s.head.append(s.new_tag('link',href=style,rel='stylesheet'))
+ swaag=s.select_one('section#swaag .mv-swaag-actions')
+ if swaag and not swaag.select_one('a[href="/multiverse-ai-website/swaag/"]'):
+  x=s.new_tag('a',href='/multiverse-ai-website/swaag/');x['class']=['mv-github-link'];x.string='Detailed SWAAG overview ↗';swaag.append(x)
  p.write_text(str(s).rstrip()+'\n')
  print('HOME featured SWAAG use case, supporting code evidence; no equal-weight catalog')
 
@@ -88,6 +92,9 @@ def replace_technology():
  style='/multiverse-ai-website/assets/software-portfolio.css'
  if not s.select_one(f'link[href="{style}"]'):
   s.head.append(s.new_tag('link',href=style,rel='stylesheet'))
+ swaag=s.select_one('section#swaag .mv-swaag-actions')
+ if swaag and not swaag.select_one('a[href="/multiverse-ai-website/swaag/"]'):
+  x=s.new_tag('a',href='/multiverse-ai-website/swaag/');x['class']=['mv-github-link'];x.string='Read the SWAAG overview ↗';swaag.append(x)
  p.write_text(str(s).rstrip()+'\n')
  print('TECHNOLOGY',len(items),'detailed project entries')
 

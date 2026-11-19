@@ -31,7 +31,7 @@ for name,expected in [('index.html',0),('technology/index.html',len(projects)),(
   assert 'Why it matters' in node.get_text(' ',strip=True),(name,key)
   if data['source_url']:
    assert node.select_one(f'a[href="{data["source_url"]}"]'),(name,key,'missing source link')
-   assert node.select_one('.mv-source-link')['target']=='_blank', (name,key,'external opens new tab')
+   assert node.select_one(f'a[href="{data['source_url']}"]')['target']=='_blank', (name,key,'external opens new tab')
   else:
    assert not node.select_one('.mv-source-link'),(name,key,'invented public source')
  if name=='index.html':

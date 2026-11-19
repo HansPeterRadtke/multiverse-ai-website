@@ -1,0 +1,59 @@
+/* SWAAG landing: visitor need, actual architecture, license, and source evidence. */
+.sa-main{color:#ebf6f7}
+.sa-hero{padding:74px 0 80px;background:radial-gradient(circle at 88% 3%,rgba(34,138,129,.20),transparent 43%),linear-gradient(135deg,#071728,#102d3c);border-bottom:1px solid #385c65}
+.sa-hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:58px;align-items:center}
+.sa-eyebrow{display:block;color:#9bf3df;font-size:.71rem;font-weight:805;letter-spacing:.13em;line-height:1.5;text-transform:uppercase;margin:0 0 14px}
+.sa-hero h1{font-size:clamp(2.75rem,4.7vw,4.65rem);line-height:1.085;letter-spacing:-.065em;font-weight:770;margin:0 0 25px;max-width:850px}
+.sa-hero h1 em{color:#b7ffe5}
+.sa-lead{font-size:1.11rem;color:#c9dce1;line-height:1.69;max-width:760px;margin:0}
+.sa-hero-actions,.sa-end-actions{display:flex;flex-wrap:wrap;align-items:center;gap:11px;margin-top:28px}
+.sa-button{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:47px;padding:12px 19px;border-radius:9px;border:1px solid transparent;font-size:.89rem;line-height:1.4;font-weight:750}
+.sa-main-button{color:#112e35;border-color:#bff8e7;background:#bff8e7}.sa-main-button:hover{background:#e3fff5}
+.sa-quiet-button{color:#e7f6f2;border-color:#507680;background:#1d4050}.sa-quiet-button:hover{background:#28576a}
+.sa-expectation{font-size:.79rem;color:#abc6cd;line-height:1.55;margin:19px 0 0}
+.sa-process{margin:0;padding:25px 28px;background:linear-gradient(145deg,#163b48,#0c2636);border:1px solid #497680;border-radius:18px;box-shadow:0 18px 54px rgba(1,14,22,.17)}
+.sa-process-title{color:#b6f3df;font-size:.68rem;font-weight:820;letter-spacing:.1em;line-height:1.5;margin:0 0 15px}
+.sa-process-item{padding:15px 19px;border-radius:10px;border:1px solid #4a7180;background:#18394a;display:flex;flex-direction:column;gap:5px}
+.sa-process-item span{color:#a4ebdd;font-size:.68rem;letter-spacing:.095em;font-weight:810;line-height:1.4}
+.sa-process-item strong{font-size:1.13rem;font-weight:730;line-height:1.32;letter-spacing:-.027em}
+.sa-process-item small{font-size:.77rem;color:#b9d3db;line-height:1.4}
+.sa-process-middle{background:#1d514f;border-color:#6eaaa1}
+.sa-process-arrow{color:#97f1d6;text-align:center;font-size:1.25rem;height:29px;line-height:29px}
+.sa-concept-notice{margin:13px 0 0;color:#adbfce;font-size:.75rem;line-height:1.52}
+.sa-use{background:#f2f7f3;padding:81px 0 87px;color:#19313a}
+.sa-dark-label{color:#277a70}
+.sa-use h2,.sa-proven h2,.sa-proof h2,.sa-faq h2,.sa-end h2{font-size:clamp(2.12rem,3.45vw,3.2rem);line-height:1.16;letter-spacing:-.05em;font-weight:755;margin:9px 0 19px;max-width:1000px}
+.sa-use-lead{color:#425e66;font-size:1.04rem;line-height:1.7;max-width:940px;margin:0}
+.sa-need-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin-top:32px}
+.sa-need-grid article{padding:26px;border:1px solid #c4dcd2;border-radius:13px;background:#fff;min-width:0;box-shadow:0 12px 36px rgba(25,76,66,.06)}
+.sa-need-grid article span{font-size:.69rem;letter-spacing:.1em;line-height:1.4;color:#28746f;font-weight:830}
+.sa-need-grid h3{font-size:1.38rem;letter-spacing:-.03em;font-weight:740;line-height:1.25;margin:14px 0 12px}
+.sa-need-grid p{font-size:.91rem;line-height:1.68;color:#4d6670;margin:0}
+.sa-small-note{font-size:.81rem;line-height:1.58;color:#597078;margin:21px 0 0}
+.sa-proven{background:#0c2537;padding:78px 0 85px;border-top:1px solid #345664;border-bottom:1px solid #345664}
+.sa-cap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin-top:33px}
+.sa-cap-grid>div{border-radius:13px;background:#153648;border:1px solid #477382;padding:23px 25px}
+.sa-cap-grid h3{font-weight:750;font-size:1.31rem;letter-spacing:-.03em;margin:0 0 9px;line-height:1.28}
+.sa-cap-grid p{color:#cadde2;font-size:.92rem;line-height:1.66;margin:0 0 15px}
+.sa-cap-grid span{display:block;color:#b2f2e1;font-size:.83rem;line-height:1.58;border-top:1px solid #466675;padding-top:12px}
+.sa-note{color:#b4cad3;font-size:.84rem;line-height:1.67;margin:21px 0 0;max-width:960px}
+.sa-proof{background:#eaf3ed;color:#19343a;padding:86px 0}
+.sa-proof-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:62px;align-items:center}
+.sa-proof p:not(.sa-eyebrow){font-size:.98rem;line-height:1.68;color:#465f63;max-width:790px}
+.sa-proof p strong{color:#153b42}
+.sa-proof-links{display:flex;flex-direction:column;gap:9px;min-width:0}
+.sa-proof-links a{display:block;padding:14px 18px;color:#174b4b;background:#f9fcf9;border:1px solid #b8d3c8;border-radius:9px;font-size:.9rem;line-height:1.4;font-weight:710}
+.sa-proof-links a:hover{background:#def3e9;border-color:#70aea0}
+.sa-faq{padding:84px 0 93px;background:#0d2030}
+.sa-faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:30px;align-items:start}
+.sa-faq details{border:1px solid #3d626f;border-radius:12px;background:#142e41;padding:20px 23px;min-width:0}
+.sa-faq summary{font-size:1rem;font-weight:735;line-height:1.42;color:#dcf7ed;cursor:pointer;outline-offset:4px}
+.sa-faq details p{font-size:.89rem;line-height:1.65;color:#bdd2db;margin:14px 0 0}
+.sa-end{background:linear-gradient(130deg,#163f49,#0f2b3c);border-top:1px solid #3e6a75;padding:67px 0 76px}
+.sa-end-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.sa-end p:not(.sa-eyebrow){font-size:.98rem;color:#c5d8df;line-height:1.68;max-width:760px;margin:0}
+.sa-end-actions{display:flex;flex-direction:column;align-items:stretch;gap:11px;margin:0}
+.sa-main :focus-visible{outline:3px solid #bbffdf;outline-offset:3px}
+@media(max-width:1050px){.sa-hero-grid{gap:30px}.sa-hero h1{font-size:clamp(2.4rem,4.45vw,4.0rem)}.sa-process{padding:21px}.sa-proof-grid{gap:26px}}
+@media(max-width:800px){.sa-hero{padding:55px 0}.sa-hero-grid{grid-template-columns:1fr}.sa-hero h1{font-size:clamp(2.7rem,6.9vw,4.2rem)}.sa-process{max-width:690px}.sa-need-grid{grid-template-columns:1fr}.sa-need-grid article{padding:21px}.sa-proof-grid{grid-template-columns:1fr}.sa-end-grid{grid-template-columns:1fr}.sa-end-actions{max-width:560px}}
+@media(max-width:600px){.sa-hero{padding:40px 0 49px}.sa-hero h1{font-size:clamp(2.4rem,9.5vw,3.5rem);margin-bottom:19px}.sa-lead{font-size:.99rem}.sa-hero-actions{display:flex;flex-direction:column;align-items:stretch}.sa-process{padding:17px}.sa-process-item{padding:13px}.sa-process-item strong{font-size:1.04rem}.sa-use,.sa-proven,.sa-proof,.sa-faq,.sa-end{padding-top:54px;padding-bottom:62px}.sa-use h2,.sa-proven h2,.sa-proof h2,.sa-faq h2,.sa-end h2{font-size:clamp(1.9rem,8vw,2.7rem)}.sa-cap-grid,.sa-faq-grid{grid-template-columns:1fr}.sa-need-grid{gap:12px}.sa-cap-grid>div,.sa-faq details{padding:19px}.sa-proof-links{gap:9px}}
