@@ -19,7 +19,7 @@ for project in projects:
   assert project['source_label'],project['id']
  else:
   assert not project['source_label'],project['id']
-for name,expected in [('index.html',sum(bool(x['featured']) for x in projects)),('technology/index.html',len(projects)),('projects/index.html',len(projects))]:
+for name,expected in [('index.html',0),('technology/index.html',len(projects)),('projects/index.html',len(projects))]:
  soup=BeautifulSoup((R/name).read_text(),'html.parser')
  nodes=soup.select('.mv-project-card')
  assert len(nodes)==expected,(name,len(nodes),expected)
@@ -34,6 +34,18 @@ for name,expected in [('index.html',sum(bool(x['featured']) for x in projects)),
    assert node.select_one('.mv-source-link')['target']=='_blank', (name,key,'external opens new tab')
   else:
    assert not node.select_one('.mv-source-link'),(name,key,'invented public source')
+ if name=='index.html':
+  hero=soup.select_one('.sw-home-examples')
+  assert hero.select_one('.mv-hero-swaag-link[href="#swaag"]')
+  spotlight=soup.select_one('section#swaag')
+  assert spotlight is not None
+  copy=spotlight.get_text(' ',strip=True)
+  for fragment in ('WHEN WOULD YOU NEED IT','WHAT SWAAG PROVIDES','What could this help you build?','developers','local-first'):
+   assert fragment.lower() in copy.lower(),fragment
+  assert spotlight.select_one('a[href="https://github.com/HansPeterRadtke/swaag"]')
+  assert soup.select_one('.mv-source-proof'), 'Credibility proof should be compact, not a 9-card catalog'
+ if name=='technology/index.html':
+  assert soup.select_one('section#swaag.mv-swaag-compact')
  assert soup.select_one('a[href="https://github.com/HansPeterRadtke"]'),name
  assert soup.select_one('link[href="/multiverse-ai-website/assets/software-portfolio.css"]'),name
  print('VALID',name,expected,'real project descriptions')

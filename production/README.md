@@ -87,6 +87,10 @@ A second real KMD public API test used a separate one-file fictional source snap
 The externally hosted evidence explorer now has an interactive source-revision comparison at kmd/evidence/#source-revision. Both displayed cases are **recorded real KMD public API results** against separate fictional snapshots. The switch only displays the stored results; it does not execute an LLM. Sanitized real results and explicit limitation flags are in assets/kmd/revision-proof.json; client code is in assets/kmd/revision.js. UI toggling in both directions was tested in real Chromium, and the public page and its proof JSON passed HTTP 200. Original private run receipts are under Raspi /data/var/multiverse-kmd/kmd-source-change-20261118. The KMD branch's dated technical note documents the result and source-cache constraints.
 
 
+## Buyer-centered SWAAG positioning (November 19, 2026)
+
+The marketing source selection and reading notes are in `production/marketing-positioning-2026-11-19.md`. The homepage no longer displays nine equal-weight products: instead it highlights one buyer-relevant situation for SWAAG and uses GitHub/other projects as source-code credibility. SWAAG messages are maintained in `scripts/swaag_marketing_content.py`. The persistent renderer `scripts/render_software_portfolio.py` inserts it into both Home and Software & AI. The remaining nine project descriptions stay available in the specialist directory; they should not dominate the first buyer-facing page. The design deliberately distinguishes a *developer framework* from a verified customer deployment, and does not invent saved-time metrics or customer success stories. The research is partial and focused on marketing use cases; no claim to have fully read all private marketing books.
+
 ## Public software portfolio and GitHub source links (November 19, 2026)
 
 The source-backed projects in the homepage, Software & AI page, and general Projects directory are rendered from `production/public-software-portfolio.json`. The human-facing descriptions separate a project's practical purpose, expected benefit, basic workflow and actual release stage.

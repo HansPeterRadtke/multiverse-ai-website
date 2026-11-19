@@ -42,3 +42,49 @@
 @media(max-width:1020px){.mv-project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mv-project-card{padding:22px}.mv-about-github{gap:28px}}
 @media(max-width:700px){.mv-projects-section{padding:62px 0 70px}.mv-projects-heading{margin-bottom:23px}.mv-projects-heading h2{font-size:clamp(2rem,6vw,2.8rem)}.mv-project-grid{grid-template-columns:1fr}.mv-project-card{padding:22px}.mv-projects-actions{flex-direction:column;align-items:stretch}.mv-primary-link{width:100%}.mv-github-link{align-self:start}.mv-about-github{display:block;padding:49px 0 65px}.mv-about-github-links{margin-top:24px}}
 @media(max-width:470px){.mv-projects-section{padding:50px 0 61px}.mv-projects-heading h2{font-size:2.12rem}.mv-project-card{padding:19px}.mv-project-card h3{font-size:1.37rem}.mv-project-topline{display:block}.mv-project-status{display:table;margin-top:9px}.mv-projects-heading>p:last-child{font-size:.93rem}}
+/* Marketing hierarchy: lead with a credible buyer situation, then code as proof. */
+.mv-hero-swaag-link{border:1px solid #7fbfb3;background:linear-gradient(135deg,#154b50,#123343);border-radius:15px;padding:17px 20px;display:flex;flex-direction:column;gap:7px;box-shadow:0 15px 38px rgba(2,26,36,.2)}
+.mv-hero-swaag-link:hover{background:linear-gradient(135deg,#195c5a,#164657);border-color:#adf5df}
+.mv-hero-swaag-link span,.mv-swaag-need>span,.mv-swaag-process>span{font-size:.7rem;font-weight:800;letter-spacing:.11em;color:#9df6df;line-height:1.55;text-transform:uppercase}
+.mv-hero-swaag-link strong{color:#fbfffd;font-size:1.3rem;line-height:1.28;font-weight:760;letter-spacing:-.034em}
+.mv-hero-swaag-link small{font-size:.85rem;color:#c0f6e6;font-weight:730}
+.mv-swaag-spotlight{scroll-margin-top:10px;padding:82px 0 85px;color:#f0f8f7;background:radial-gradient(ellipse at 14% 0%,rgba(18,112,99,.17),transparent 53%),linear-gradient(130deg,#10303c,#0a2030);border-top:1px solid #345864;border-bottom:1px solid #385d65}
+.mv-swaag-title{max-width:1220px;margin-bottom:30px}
+.mv-swaag-title h2{font-weight:760;line-height:1.1;font-size:clamp(2.2rem,4.4vw,4rem);letter-spacing:-.055em;max-width:950px;margin:14px 0 19px}
+.mv-swaag-title h2 em{color:#bdf6e4}
+.mv-swaag-title>p:last-child{font-size:1.04rem;color:#c5d9db;line-height:1.68;max-width:870px;margin:0}
+.mv-swaag-title>p:last-child strong{color:#ecfffa}
+.mv-swaag-whenhow{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:20px;align-items:stretch}
+.mv-swaag-need,.mv-swaag-process{background:linear-gradient(145deg,#163c47,#102a3a);border:1px solid #477580;border-radius:15px;padding:28px 29px;min-width:0}
+.mv-swaag-need h3{font-weight:750;line-height:1.22;font-size:clamp(1.35rem,2.1vw,1.83rem);letter-spacing:-.034em;margin:15px 0 16px}
+.mv-swaag-need p{font-size:.95rem;line-height:1.7;color:#c7dce2;margin:0 0 18px}
+.mv-swaag-need>strong{display:block;color:#b2f2df;font-size:.88rem;line-height:1.55}
+.mv-swaag-process>div{display:grid;grid-template-columns:31px 1fr;gap:14px;align-items:start;margin-top:18px;padding-top:15px;border-top:1px solid #436877}
+.mv-swaag-process b{width:29px;height:29px;border-radius:50%;display:grid;place-items:center;background:#b7f3e0;color:#143d3c;font-size:.77rem}
+.mv-swaag-process p{margin:0}
+.mv-swaag-process strong{display:block;font-size:.96rem;line-height:1.38;color:#eefaf7}
+.mv-swaag-process small{display:block;font-size:.83rem;line-height:1.58;color:#b5ccd3;margin-top:5px}
+.mv-swaag-bottom{display:flex;justify-content:space-between;align-items:center;gap:45px;border-top:1px solid #3e6573;margin-top:26px;padding-top:25px}
+.mv-swaag-bottom>div:first-child{max-width:740px}
+.mv-swaag-bottom>div>strong{font-size:1.13rem;color:#dcf9ee;line-height:1.4}
+.mv-swaag-bottom>div>p{font-size:.94rem;line-height:1.65;color:#c4d8e0;margin:10px 0 0}
+.mv-swaag-bottom .mv-swaag-status{font-size:.81rem;color:#9cbbc4}
+.mv-swaag-actions{display:flex;align-items:flex-start;gap:14px;flex-direction:column;min-width:240px}
+.mv-swaag-actions .mv-primary-link{width:100%;text-align:center}
+.mv-swaag-compact{padding:55px 0}
+.mv-swaag-compact .container{display:flex;align-items:center;justify-content:space-between;gap:45px}
+.mv-swaag-compact .mv-swaag-title{margin:0}
+.mv-swaag-compact .mv-swaag-title h2{font-size:clamp(1.8rem,3.1vw,2.7rem);margin:7px 0 11px;max-width:780px}
+.mv-swaag-compact .mv-swaag-title>p:last-child{font-size:.94rem;max-width:820px}
+.mv-swaag-compact .mv-swaag-actions{min-width:260px}
+.mv-source-proof{background:#0e1e2e;color:#f0f7f5;padding:72px 0 77px;border-top:1px solid #304956;border-bottom:1px solid #304956;scroll-margin-top:30px}
+.mv-source-proof-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(230px,.6fr);gap:55px;align-items:center}
+.mv-source-proof h2{font-size:clamp(1.9rem,3vw,2.7rem);letter-spacing:-.04em;font-weight:745;line-height:1.2;margin:12px 0 17px}
+.mv-source-proof p:not(.mv-projects-eyebrow){font-size:.95rem;color:#bfd2d9;line-height:1.7;max-width:810px;margin:0}
+.mv-source-proof p strong{color:#e2fbf1}
+.mv-source-proof-links{display:flex;flex-direction:column;align-items:flex-start;gap:15px}
+.mv-source-proof-links>.mv-primary-link{min-width:230px}
+.mv-swaag-spotlight :focus-visible,.mv-source-proof :focus-visible,.mv-hero-swaag-link:focus-visible{outline:3px solid #ceffeb;outline-offset:3px}
+@media(max-width:990px){.mv-swaag-spotlight{padding:65px 0}.mv-swaag-whenhow{grid-template-columns:1fr 1fr;gap:13px}.mv-swaag-need,.mv-swaag-process{padding:22px}.mv-swaag-bottom{gap:26px}.mv-swaag-compact .container{display:block}.mv-swaag-compact .mv-swaag-actions{flex-direction:row;margin-top:21px}.mv-source-proof-layout{gap:29px}}
+@media(max-width:720px){.mv-swaag-spotlight{padding:51px 0 61px}.mv-swaag-title{margin-bottom:23px}.mv-swaag-title h2{font-size:clamp(2.15rem,6vw,3.2rem)}.mv-swaag-whenhow{grid-template-columns:1fr}.mv-swaag-need,.mv-swaag-process{padding:24px}.mv-swaag-bottom{display:block}.mv-swaag-actions{margin-top:22px;min-width:0}.mv-source-proof{padding:53px 0}.mv-source-proof-layout{grid-template-columns:1fr}.mv-source-proof-links{align-items:stretch}.mv-swaag-compact .mv-swaag-actions{flex-direction:column}.mv-swaag-compact .mv-swaag-title h2{font-size:2.12rem}}
+@media(max-width:480px){.mv-hero-swaag-link{padding:15px 18px}.mv-hero-swaag-link strong{font-size:1.12rem}.mv-swaag-title h2{font-size:clamp(2rem,8.5vw,2.65rem)}.mv-swaag-title>p:last-child{font-size:.96rem}.mv-swaag-need,.mv-swaag-process{padding:20px}.mv-swaag-bottom .mv-primary-link{width:100%}.mv-source-proof h2{font-size:2rem}}

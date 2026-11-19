@@ -42,34 +42,37 @@ def header(title,eyebrow,intro):
 
 
 def replace_home():
+ from swaag_marketing_content import section as swaag_section, small_proof, hero_link
  p=R/'index.html';s=BeautifulSoup(p.read_text(),'html.parser')
- section=s.select_one('#engineering')
- assert section is not None
- featured=[x for x in items if x['featured']]
- assert len(featured)>=5
- markup=f'''<section class="mv-projects-section" id="engineering">
-   {header('Other software I am building','MORE SOFTWARE & AI PROJECTS','SWAAG, Android tools, reusable Unity systems, file conversion and a browser typing trainer. These are separate projects at different development stages—not one universal product.')}
-   <div class="container mv-project-grid">{''.join(card(x) for x in featured)}</div>
-   <div class="container mv-projects-actions"><a class="mv-primary-link" href="/multiverse-ai-website/technology/#other-projects">See all software projects</a><a class="mv-github-link" href="{root}" target="_blank" rel="noopener noreferrer">Browse public GitHub repositories <span aria-hidden="true">↗</span></a></div>
- </section>'''
- section.replace_with(soup_section(markup))
+ old_feature=s.select_one('section#swaag')
+ if old_feature:old_feature.decompose()
+ original=s.select_one('section#engineering')
+ assert original is not None
+ original.replace_with(soup_section(small_proof()))
+ before=s.select_one('section#software-proof')
+ assert before is not None
+ before.insert_before(soup_section(swaag_section(compact=False)))
  hero=s.select_one('.sw-home-examples')
  if hero:
-  before=hero.select_one('.sw-home-other-projects')
-  if not before:
-   line=BeautifulSoup('<a class="sw-home-other-projects" href="#engineering">More software: SWAAG, Android, Unity, all2text and more <span aria-hidden="true">↗</span></a>','html.parser').find('a')
-   old=hero.select_one('.sw-home-3d-link')
-   if old:old.insert_before(line)
-   else:hero.append(line)
+  for previous in hero.select('.sw-home-other-projects,.mv-hero-swaag-link'):previous.decompose()
+  banner=BeautifulSoup(hero_link(),'html.parser').find('a')
+  first=hero.select_one('a.sw-home-example')
+  if first:first.insert_before(banner)
+  else:hero.insert(0,banner)
  style='/multiverse-ai-website/assets/software-portfolio.css'
- if not s.select_one(f'link[href="{style}"]'):
-  s.head.append(s.new_tag('link',href=style,rel='stylesheet'))
+ if not s.select_one(f'link[href="{style}"]'):s.head.append(s.new_tag('link',href=style,rel='stylesheet'))
  p.write_text(str(s).rstrip()+'\n')
- print('HOME',len(featured),'featured actual projects')
+ print('HOME featured SWAAG use case, supporting code evidence; no equal-weight catalog')
 
 
 def replace_technology():
  p=R/'technology/index.html';s=BeautifulSoup(p.read_text(),'html.parser')
+ from swaag_marketing_content import section as swaag_section
+ old_feature=s.select_one('section#swaag')
+ if old_feature:old_feature.decompose()
+ before=s.select_one('section#published')
+ assert before is not None
+ before.insert_before(soup_section(swaag_section(compact=True)))
  section=s.select_one('section#agents') or s.select_one('section#other-projects')
  assert section is not None
  markup=f'''<section class="mv-projects-section mv-projects-alt" id="other-projects"><span id="agents" class="mv-legacy-anchor" aria-hidden="true"></span>
