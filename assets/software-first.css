@@ -182,3 +182,40 @@
 /* Keep long research-readiness labels inside phone widths. */
 .sw-state{white-space:normal;max-width:100%;line-height:1.45;overflow-wrap:anywhere}
 .sw-kmd-details>div,.sw-kmd-details>details{min-width:0}
+/* Visual refinement: concrete imagery, restrained text and distinct project roles. */
+.sw-home-hero{background:radial-gradient(ellipse at 85% 18%,rgba(29,120,142,.18),transparent 48%),radial-gradient(ellipse at 4% 92%,rgba(45,81,142,.17),transparent 47%),linear-gradient(130deg,#071625,#0b1d30 65%,#102735)}
+.sw-home-hero .sw-hero-grid{grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);gap:58px;align-items:center}
+.sw-home-hero h1{font-size:clamp(3.05rem,5.5vw,5.2rem);line-height:1.035;letter-spacing:-.068em;margin-bottom:25px}
+.sw-home-hero h1 em{color:#aaf5df}
+.sw-home-hero .sw-lead{font-size:clamp(1.05rem,1.55vw,1.21rem);line-height:1.67;max-width:590px;color:#d2e4ea}
+.sw-home-intro-note{margin-top:18px;max-width:580px;color:#a6c0cc}
+.sw-home-examples{gap:15px}
+.sw-home-example{border-radius:18px;padding:0 23px 19px;background:linear-gradient(145deg,#173f4c,#0e2638);border:1px solid #497481;box-shadow:0 17px 54px rgba(0,0,0,.22);gap:7px;position:relative;overflow:hidden}
+.sw-home-example:hover{border-color:#8bded5;background:linear-gradient(145deg,#1d4d58,#123547)}
+.sw-home-example-image{display:block;width:calc(100% + 46px);height:134px;object-fit:cover;object-position:center 27%;margin:0 -23px 8px;border-bottom:1px solid rgba(158,228,222,.25);background:#112737}
+.sw-home-example-image.sw-research-visual{object-position:center 15%;filter:saturate(.89)}
+.sw-home-example>.sw-proof-status{color:#a7f8e1;letter-spacing:.09em;font-size:.67rem;margin-top:3px}
+.sw-home-example>strong{font-size:1.31rem;line-height:1.25;margin-bottom:1px}
+.sw-home-example>span:not(.sw-proof-status){font-size:.87rem;line-height:1.5;color:#cee1e9}
+.sw-home-example small{margin-top:1px;color:#b3f9e3;font-size:.82rem}
+.sw-home-example-ai{background:linear-gradient(145deg,#1a344b,#14243c)}
+.sw-home-3d-link{padding:2px 5px;font-size:.8rem;color:#aac8d0}
+.sw-hero-actions{margin-top:25px}
+.sw-software{background:linear-gradient(180deg,#f7f9f5,#ecf3f0);padding:75px 0 86px}
+.sw-research{background:radial-gradient(ellipse at 95% 0%,rgba(30,113,122,.22),transparent 45%),linear-gradient(122deg,#0a1b2e,#103746);padding:76px 0 86px}
+.sw-owner-flow>div{box-shadow:0 5px 20px rgba(28,90,77,.06)}
+.sw-video-wrap{box-shadow:0 20px 55px rgba(23,59,75,.18)}
+.sw-kmd-concept>div{border-color:#4b7882}
+.sw-kmd-details>div,.sw-kmd-details>details{background:#112d3e}
+@media(max-width:1050px){.sw-home-hero .sw-hero-grid{gap:27px}.sw-home-example{padding:0 18px 17px}.sw-home-example-image{width:calc(100% + 36px);margin-left:-18px;margin-right:-18px;height:115px}.sw-home-example>strong{font-size:1.19rem}}
+@media(max-width:780px){.sw-home-hero .sw-hero-grid{grid-template-columns:1fr}.sw-home-examples{grid-template-columns:1fr 1fr;gap:12px}.sw-home-example-image{height:130px}}
+@media(max-width:570px){.sw-home-hero h1{font-size:clamp(2.55rem,10.5vw,3.45rem);margin-bottom:17px}.sw-home-hero .sw-lead{font-size:1rem}.sw-home-examples{grid-template-columns:1fr}.sw-home-example{padding:0 17px 17px;border-radius:15px}.sw-home-example-image{width:calc(100% + 34px);margin-left:-17px;margin-right:-17px;height:133px}.sw-home-example>strong{font-size:1.18rem}.sw-home-example>span:not(.sw-proof-status){font-size:.85rem}.sw-software,.sw-research{padding-top:53px;padding-bottom:58px}}
+/* On phones, show the project images beside their explanations, not as tall banners. */
+@media(max-width:570px){
+ .sw-home-example{display:grid;grid-template-columns:94px minmax(0,1fr);gap:5px 12px;padding:16px;align-items:start}
+ .sw-home-example-image{grid-column:1;grid-row:1 / span 4;width:94px;height:112px;object-fit:cover;object-position:center top;margin:0;border:1px solid #4d747c;border-radius:9px;align-self:start}
+ .sw-home-example>.sw-proof-status{grid-column:2;grid-row:1;line-height:1.4;margin:0;font-size:.62rem}
+ .sw-home-example>strong{grid-column:2;grid-row:2;line-height:1.2;font-size:1.12rem}
+ .sw-home-example>span:not(.sw-proof-status){grid-column:2;grid-row:3;font-size:.81rem;line-height:1.48}
+ .sw-home-example>small{grid-column:2;grid-row:4;font-size:.76rem;line-height:1.4;margin:0}
+}

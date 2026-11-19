@@ -14,12 +14,13 @@ home = page('index.html')
 hero = home.select_one('.sw-hero')
 assert hero is not None
 head = hero.select_one('h1')
-assert head and 'What is Multiverse?' in head.get_text(' ', strip=True)
+assert head and 'Independent software. Real projects.' in head.get_text(' ', strip=True)
 text = hero.get_text(' ', strip=True)
-for phrase in ('independent development business', 'Late Order Monitor for Wix Stores', 'shop owner', 'orders already placed', 'research', 'not orders taken by Multiverse'):
+for phrase in ('independent development business', 'Late Order Monitor for Wix Stores', 'shop owner', 'orders already placed', 'research', 'not Multiverse'):
     assert phrase.lower() in text.lower(), ('Missing homepage introduction:', phrase)
 assert 'Mira Chen' not in text, 'A fictional test person cannot headline the business homepage'
-assert not hero.select('img'), 'Unexplained Wix dashboard image may not precede the product explanation'
+assert len(hero.select('.sw-home-example-image')) == 2, 'Project imagery must be shown inside explicitly labelled cards'
+assert 'document search research' not in hero.get_text(' ', strip=True).lower()
 
 wix = home.select_one('#software-proof')
 assert wix
@@ -33,7 +34,7 @@ assert 'wix-late-order-monitor-silent.mp4' in vids[0].select_one('source')['src'
 kmd = home.select_one('#research-proof')
 assert kmd
 kt = kmd.get_text(' ', strip=True)
-for phrase in ('experimental', 'fictional documents', 'not a production-ready search service', 'not for sale as a finished app'):
+for phrase in ('explores', 'fictional documents', 'not a production-ready search service', 'not for sale as a finished app'):
     assert phrase.lower() in kt.lower(), ('Missing research limits', phrase)
 assert not kmd.select('details[open]'), 'Do not put test participant names in the default homepage content'
 assert len(kmd.select('details')) == 1
