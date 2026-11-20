@@ -1,59 +1,57 @@
-"""Buyer-oriented SWAAG descriptions grounded in current public source code.
+"""User-focused SWAAG positioning from Infra source rules and owner recordings.
 
-Audience: engineering/technology teams considering tools, not consumers buying a
-turnkey AI assistant. Sources: README.md, docs/design-principles.md,
-docs/manual.md, LICENSE and tests in public HansPeterRadtke/swaag. Marketing
-research evidence is documented separately. Do not fabricate past customers.
+Semantic role boundary: the human-facing orchestrator remains available while
+workers run. Configurable idle modes do not imply enabled 24/7 autonomous work.
 """
 
 
 def section(compact=False):
     if compact:
         return '''<section class="mv-swaag-spotlight mv-swaag-compact" id="swaag">
-          <div class="container"><div class="mv-swaag-title">
-            <p class="mv-projects-eyebrow">SWAAG · OPEN-SOURCE AI AGENT RUNTIME</p>
-            <h2>Already running an AI model? What if it needs to use your tools?</h2>
-            <p>SWAAG is a framework for developers building assistants that work with software tools, coordinate multi-step tasks and preserve inspectable task state. It is a starting point for an integration, not a ready-to-use business assistant.</p>
-          </div><div class="mv-swaag-actions"><a class="mv-primary-link" href="/multiverse-ai-website/#swaag">See the use case and benefits</a><a class="mv-github-link" href="https://github.com/HansPeterRadtke/swaag" target="_blank" rel="noopener noreferrer">Inspect SWAAG code <span aria-hidden="true">↗</span></a></div></div>
+        <div class="container"><div class="mv-swaag-title">
+          <p class="mv-projects-eyebrow">SWAAG · ORCHESTRATED AI WORKERS</p>
+          <h2>One assistant to talk to. Multiple workers to manage the work.</h2>
+          <p>A persistent orchestrator keeps the conversation separate from tool-heavy jobs. Workers carry out longer tasks while the manager tracks progress, questions, resources and history. Optional authorized background continuation is configurable rather than always on.</p>
+        </div><div class="mv-swaag-actions"><a class="mv-primary-link" href="/multiverse-ai-website/swaag/">See how SWAAG organizes work</a><a class="mv-github-link" href="https://github.com/HansPeterRadtke/swaag" target="_blank" rel="noopener noreferrer">Inspect source code <span aria-hidden="true">↗</span></a></div></div>
         </section>'''
     return '''<section class="mv-swaag-spotlight" id="swaag">
       <div class="container mv-swaag-title">
-        <p class="mv-projects-eyebrow">FEATURED OPEN-SOURCE PROJECT · SWAAG</p>
-        <h2>Your AI can answer questions. <em>Can it handle the work?</em></h2>
-        <p>SWAAG is software for developers who want to connect an AI model with real programs, files and other tools. Its aim is to provide the agent infrastructure needed to manage tasks with multiple steps and preserve evidence of what happened.</p>
+        <p class="mv-projects-eyebrow">SWAAG · SELF-HOSTED AUTONOMOUS AGENT FRAMEWORK</p>
+        <h2>Keep talking to your assistant. <em>Let the workers do the work.</em></h2>
+        <p>With SWAAG, the intended experience is one persistent assistant acting as a team leader. It delegates longer work to background agents, coordinates independent and dependent tasks, and keeps their state and history available when you return.</p>
       </div>
       <div class="container mv-swaag-whenhow">
         <div class="mv-swaag-need">
-          <span>THE SITUATION</span>
-          <h3>Your engineering team runs a local AI model. A useful task needs more than a chat response.</h3>
-          <p>Imagine asking an assistant to help investigate a software change. The work may involve examining files, using permitted developer tools, running tests, analyzing errors and reporting the outcome. A language model alone does not provide reliable access, coordination or durable task records.</p>
-          <strong>Intended users: developers and engineering teams building their own AI-enabled workflows.</strong>
-          <small class="mv-swaag-scenario-note">Illustrative use case, not a claimed customer deployment or a proven autonomous code-change demonstration.</small>
+          <span>THE USER'S PROBLEM</span>
+          <h3>Why should you have to supervise every agent individually?</h3>
+          <p>Imagine several software projects needing investigation, tests, documentation and follow-up. You want to ask what is running, add another job, change priorities, or stop one worker without losing the progress of the others.</p>
+          <strong>The goal is to manage outcomes from one conversation, not babysit a collection of agent windows.</strong>
+          <small class="mv-swaag-scenario-note">Illustrative use case. A fully autonomous 24/7 deployment and measured saved operator time are not claimed.</small>
         </div>
         <div class="mv-swaag-process">
-          <span>THE INFRASTRUCTURE SWAAG PROVIDES</span>
-          <div><b>1</b><p><strong>One entry point for the task</strong><small>A persistent orchestrator decides whether and how substantive work needs workers.</small></p></div>
-          <div><b>2</b><p><strong>Workers with configured tool access</strong><small>Agent workers can call permitted capabilities, including external integrations, instead of merely describing actions.</small></p></div>
-          <div><b>3</b><p><strong>Inspectable state and progress</strong><small>Durable events, task state and recovery mechanisms provide a basis for seeing what happened and checking work.</small></p></div>
+          <span>THE ORCHESTRATED WORKFLOW</span>
+          <div><b>1</b><p><strong>One responsive conversation</strong><small>The persistent user-facing orchestrator answers status questions and receives new instructions while workers have their own lifecycles.</small></p></div>
+          <div><b>2</b><p><strong>Workers and dependencies</strong><small>Separate jobs can be delegated, scheduled, run concurrently where resources permit, and connected when one result is needed by another.</small></p></div>
+          <div><b>3</b><p><strong>Durable memory and control</strong><small>Source events, task status, notes and context projections support inspection and recovery without relying only on the model's current context window.</small></p></div>
         </div>
       </div>
       <div class="container mv-swaag-outcomes">
-        <div><span>WHY THIS MAY BE USEFUL</span><h3>Start with an agent foundation rather than building the infrastructure from zero.</h3><p>For teams already running local models, SWAAG offers implemented building blocks for tool orchestration, long-lived work and task records. That could make developing a controlled AI workflow more practical, but real results depend on the connected models, tools and tests.</p></div>
-        <div><span>WHAT MAKES IT WORTH INSPECTING?</span><h3>The implementation is public.</h3><p>Read the source, setup manual and tests instead of relying on marketing promises. SWAAG is MIT-licensed open-source software; the code is available free under that license, and it is not being advertised as an exclusive product for sale.</p></div>
+        <div><span>THE PRACTICAL BENEFIT</span><h3>Stay available for decisions while the detailed work continues.</h3><p>Inspect a worker's progress, reprioritize a task or ask another question without treating each worker as a separate chatbot. SWAAG's event records also provide a basis for history analysis, notes and contextual recall instead of losing everything when a model context fills up.</p></div>
+        <div><span>CONTINUATION, WITH USER CONTROL</span><h3>Approved work can persist beyond one conversation.</h3><p>Durable worker plans and wakeups support authorized backlogs and an optional autonomous-continue mode. Those modes are deliberate configuration choices; automatic background dispatch is disabled by default. Notes, history analysis and self-improvement are ongoing engineering objectives, not guaranteed unattended services.</p></div>
       </div>
       <div class="container mv-swaag-bottom">
-        <div><strong>Current status</strong><p>A real, evolving developer framework—not a turnkey employee, a ready-made corporate deployment or a guarantee of reliable unattended task completion.</p><p class="mv-swaag-status">No verified customer time savings, benchmark superiority or enterprise certification is claimed.</p></div>
-        <div class="mv-swaag-actions"><a class="mv-primary-link" href="https://github.com/HansPeterRadtke/swaag" target="_blank" rel="noopener noreferrer">Examine SWAAG on GitHub <span aria-hidden="true">↗</span></a><a class="mv-github-link" href="https://github.com/HansPeterRadtke/swaag/blob/main/docs/manual.md" target="_blank" rel="noopener noreferrer">Read the manual <span aria-hidden="true">↗</span></a><a class="mv-github-link" href="/multiverse-ai-website/opportunities/">Discuss a separate technology opportunity <span aria-hidden="true">↗</span></a></div>
+        <div><strong>Implementation and current boundaries</strong><p>SWAAG is a real MIT-licensed, local-first Python framework with public orchestrator, worker, scheduler and history code. It remains an evolving developer system: the quality of any autonomous result depends on the models, permissions, tools, configuration and verification.</p><p class="mv-swaag-status">No claim of universal reliability or tested superiority over Codex, Claude Code, Dots or other agent frameworks.</p></div>
+        <div class="mv-swaag-actions"><a class="mv-primary-link" href="/multiverse-ai-website/swaag/">Explore SWAAG's architecture</a><a class="mv-github-link" href="https://github.com/HansPeterRadtke/swaag" target="_blank" rel="noopener noreferrer">Read the actual source <span aria-hidden="true">↗</span></a><a class="mv-github-link" href="/multiverse-ai-website/opportunities/">Discuss a separate technology opportunity <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>'''
 
 
 def small_proof():
     return '''<section class="mv-source-proof" id="engineering"><div class="container mv-source-proof-layout">
-      <div><p class="mv-projects-eyebrow">IMPLEMENTATION EVIDENCE</p><h2>You can inspect the actual work.</h2><p>GitHub contains the source of SWAAG, <strong>all2text</strong> for preparing mixed file collections, <strong>Android applications</strong>, <strong>Unity packages</strong> and other tools. Each project has a different purpose and status. Public code is evidence of engineering work—not a guarantee that it is a finished commercial product.</p></div>
-      <div class="mv-source-proof-links"><a class="mv-primary-link" href="https://github.com/HansPeterRadtke" target="_blank" rel="noopener noreferrer">Browse public source code</a><a class="mv-github-link" href="/multiverse-ai-website/technology/#other-projects">See the other projects and their uses <span aria-hidden="true">↗</span></a></div>
+      <div><p class="mv-projects-eyebrow">SOURCE CODE, NOT A GENERIC AI CLAIM</p><h2>You can inspect the real engineering.</h2><p>Alongside SWAAG and KnowMoreDiRT, public repositories contain <strong>all2text</strong> for preparing mixed files, <strong>Android software</strong>, <strong>Unity packages</strong> and other focused tools. Public code is evidence of implementation—not a guarantee of commercial readiness.</p></div>
+      <div class="mv-source-proof-links"><a class="mv-primary-link" href="https://github.com/HansPeterRadtke" target="_blank" rel="noopener noreferrer">Browse the GitHub code</a><a class="mv-github-link" href="/multiverse-ai-website/technology/#other-projects">Explore the projects and their uses <span aria-hidden="true">↗</span></a></div>
     </div></section>'''
 
 
 def hero_link():
-    return '''<a class="mv-hero-swaag-link" href="#swaag"><span>FLAGSHIP OPEN-SOURCE DEVELOPMENT PROJECT</span><strong>SWAAG — AI agents that can work with computer tools</strong><small>Why a developer might need it <span aria-hidden="true">↗</span></small></a>'''
+    return '''<a class="mv-hero-swaag-link" href="#swaag"><span>FLAGSHIP PROJECT · BACKGROUND AGENT ORCHESTRATION</span><strong>SWAAG — one manager, multiple background workers</strong><small>Work keeps its state while you keep control <span aria-hidden="true">↗</span></small></a>'''

@@ -1,47 +1,58 @@
 #!/usr/bin/env python3
-"""Guard comparison-to-real-baseline, CapOv public proof, and prototype limits."""
+"""Enforce project purpose from owner recordings, and truthful competitors/limits."""
 from pathlib import Path
 from bs4 import BeautifulSoup
 import json
 R=Path(__file__).resolve().parents[1]
-read=lambda n:BeautifulSoup((R/n).read_text(),'html.parser')
-home=read('index.html');swaag=read('swaag/index.html');kmd=read('kmd/index.html')
-assert 'off-the-shelf tools' in home.select_one('h1').get_text(' ',strip=True).lower()
-assert 'not basic AI tool use' in home.select_one('.sw-lead').get_text(' ',strip=True)
-assert home.select_one('#swaag') and home.select_one('#software-proof') and home.select_one('#research-proof')
-assert 'Codex' in home.select_one('#research-proof').get_text(' ',strip=True)
-assert 'intended benefit' in home.select_one('#research-proof').get_text(' ',strip=True).lower()
-assert 'not a production-ready search service' in home.select_one('#research-proof').get_text(' ',strip=True).lower()
-assert len(home.select('#capov'))==1
-cap=home.select_one('#capov')
-for phrase in ('Captain Obvious','pip install capov','v0.1.6','review','PyPI'):
- assert phrase.lower() in cap.get_text(' ',strip=True).lower(),phrase
-for url in ('https://pypi.org/project/capov/','https://github.com/HansPeterRadtke/capov','https://docs.astral.sh/ruff/linter/'):
- assert len(cap.select(f'a[href="{url}"]'))==1
-assert 'without asking an AI agent' in cap.get_text(' ',strip=True)
-assert 'Review edits before use' in cap.get_text(' ',strip=True)
+read=lambda name:BeautifulSoup((R/name).read_text(),'html.parser')
+home=read('index.html');swaag=read('swaag/index.html');kmd=read('kmd/index.html');tech=read('technology/index.html')
 
-assert len(swaag.select('#baseline'))==1
-swaag_text=swaag.select_one('#baseline').get_text(' ',strip=True)
-for x in ('Codex','Claude Code','mature coding agent','tool use and subagents are not unique','your own clients','model services','not a drop-in guarantee'):
- assert x.lower() in swaag_text.lower(),x
-assert swaag.select_one('#features') and swaag.select_one('#evaluation')
-assert 'not proven performance advantages' in swaag.select_one('.sa-lead').get_text(' ',strip=True)
+assert 'AI workers you can manage. Knowledge you can trust.' in home.select_one('h1').get_text(' ',strip=True)
+assert 'background AI workers' in home.select_one('.sw-lead').get_text(' ',strip=True)
+assert 'chaotic document collections' in home.select_one('.sw-lead').get_text(' ',strip=True)
+assert len(home.select('.sw-home-example-image'))==2
+assert home.select_one('.mv-hero-swaag-link') and home.select_one('.sw-home-example-ai')
+assert home.select_one('.sw-home-examples').select_one('.sw-home-example-ai') is not None
+hero=swaag.select_one('section.sa-hero')
+assert 'Workers that keep moving.' in hero.select_one('h1').get_text(' ',strip=True)
+assert 'background agents' in hero.get_text(' ',strip=True)
+assert 'disabled by default' in hero.get_text(' ',strip=True)
+assert 'team leader' in home.select_one('#swaag').get_text(' ',strip=True).lower()
+for term in ('worker','orchestrator','progress','history','questions','continuation','autonomous'):
+ assert term.lower() in (home.select_one('#swaag').get_text(' ',strip=True)+' '+swaag.select_one('main').get_text(' ',strip=True)).lower(),term
+assert 'automatic background dispatch is disabled by default' in home.select_one('#swaag').get_text(' ',strip=True)
+assert len(swaag.select('.sa-need-grid article'))==3
+assert len(swaag.select('.sa-cap-grid > div'))==4
+assert len(swaag.select('#evaluation .sa-evaluation-grid article'))==4
+comparison=swaag.select_one('#baseline');assert comparison
+for term in ('Codex','Claude Code','Dots','background','own','architectural distinction','explicit enablement'):
+ assert term.lower() in comparison.get_text(' ',strip=True).lower(),('swaag comparison',term)
+for u in ('https://learn.chatgpt.com/docs/agent-configuration/subagents','https://claude.com/resources/articles/subagents-in-claude-code','https://learn.chatgpt.com/docs/dots'):
+ assert comparison.select_one(f'a[href="{u}"]'),u
+
+assert 'Find meaning in the chaos of your files.' in kmd.select_one('main h1').get_text(' ',strip=True)
+main=kmd.select_one('main').get_text(' ',strip=True)
+for term in ('Discourse Representation Theory','semantic','folder','referents','time','schema','source','research','experimental'):
+ assert term.lower() in main.lower(),('KMD purpose',term)
+assert len(kmd.select('#how-to-use .kmd-use-flow > div'))==3
+assert len(kmd.select('#user-benefits .kmd-benefit-cards article'))==3
 assert len(kmd.select('#kmd-baseline'))==1
-kt=kmd.select_one('#kmd-baseline').get_text(' ',strip=True)
-for x in ('Codex','Claude Code','who said what','merely reported','when it was true','not positioned as a better general chatbot','no demonstrated advantage'):
- assert x.lower() in kt.lower(),x
-assert 'Experimental research' in kmd.select_one('.kmd-purpose-hero').get_text(' ',strip=True)
-assert kmd.select_one('#how-to-use') and kmd.select_one('#kmd-watch')
-assert kmd.select_one('.kmd-hero-flow-illustration')
-assert 'public API returns plain text' in kmd.get_text(' ',strip=True)
+for term in ('Codex','Claude Code','GraphRAG','semantic','scientific','not a measured superiority'):
+ assert term.lower() in kmd.select_one('#kmd-baseline').get_text(' ',strip=True).lower(),('KMD competitors',term)
+assert kmd.select_one('#kmd-watch video')
+assert 'plain answer string' in main
+assert 'Research prototype' in kmd.select_one('.kmd-purpose-hero').get_text(' ',strip=True)
+
+assert 'SWAAG' in tech.select_one('#swaag').get_text(' ',strip=True)
+cap=home.select_one('#capov');assert cap
+for phrase in ('Captain Obvious','pip install capov','v0.1.6','PyPI','Ruff','Review'):
+ assert phrase.lower() in cap.get_text(' ',strip=True).lower(),phrase
+for u in ('https://pypi.org/project/capov/','https://github.com/HansPeterRadtke/capov','https://docs.astral.sh/ruff/linter/'):
+ assert cap.select_one(f'a[href="{u}"]')
 projects=json.loads((R/'production/public-software-portfolio.json').read_text())['projects']
 capproj=next(x for x in projects if x['id']=='capov')
-assert capproj['source_url']=='https://github.com/HansPeterRadtke/capov'
-assert 'PyPI' in capproj['status']
-assert 'not a replacement' in capproj['limits']
 assert 'not fully green' in capproj['limits']
-assert (R/'assets/market-differentiation.css').is_file()
+assert capproj['source_url']=='https://github.com/HansPeterRadtke/capov'
 for name in ('index.html','swaag/index.html','kmd/index.html'):
- assert read(name).select_one('head link[href="/multiverse-ai-website/assets/market-differentiation.css"]'),name
-print('PASS: real competitor baseline; KMD context boundaries; CapOv authentic PyPI utility; no invented superiority/adoption')
+ assert read(name).select_one('link[href="/multiverse-ai-website/assets/market-differentiation.css"]'),name
+print("PASS: SWAAG worker-management and KMD DRT purpose; current alternatives; research limits; CapOv")

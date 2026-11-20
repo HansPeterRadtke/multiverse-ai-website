@@ -14,9 +14,9 @@ home = page('index.html')
 hero = home.select_one('.sw-hero')
 assert hero is not None
 head = hero.select_one('h1')
-assert head and 'When off-the-shelf tools don\'t fit the work.' in head.get_text(' ', strip=True)
+assert head and 'AI workers you can manage. Knowledge you can trust.' in head.get_text(' ', strip=True)
 text = hero.get_text(' ', strip=True)
-for phrase in ('independent software development business', 'SWAAG', 'developer', 'Late Order Monitor for Wix Stores', 'shop owner', 'orders already placed', 'research'):
+for phrase in ('independent software development business', 'SWAAG', 'background', 'KnowMoreDiRT', 'Late Order Monitor for Wix Stores', 'shop owner', 'orders already placed', 'experimental'):
     assert phrase.lower() in text.lower(), ('Missing homepage introduction:', phrase)
 assert 'Mira Chen' not in text, 'A fictional test person cannot headline the business homepage'
 assert len(hero.select('.sw-home-example-image')) == 2, 'Project imagery must be shown inside explicitly labelled cards'
@@ -34,7 +34,7 @@ assert 'wix-late-order-monitor-silent.mp4' in vids[0].select_one('source')['src'
 kmd = home.select_one('#research-proof')
 assert kmd
 kt = kmd.get_text(' ', strip=True)
-for phrase in ('intended benefit', 'fictional documents', 'not a production-ready search service', 'not for sale as a finished app'):
+for phrase in ('semantic retrieval', 'discourse representation theory', 'fictional documents', 'not a production-ready search service', 'not for sale as a finished app'):
     assert phrase.lower() in kt.lower(), ('Missing research limits', phrase)
 assert not kmd.select('details[open]'), 'Do not put test participant names in the default homepage content'
 assert len(kmd.select('details')) == 1
@@ -46,14 +46,14 @@ assert proof['answer'] == 'Mira Chen' and proof['source'] == 'field_report.txt'
 assert proof['answer'] in kmd.select_one('details').get_text(' ', strip=True)
 
 kmd_page = page('kmd/index.html')
-assert 'When documents disagree, what should you believe?' in kmd_page.select_one('main h1').get_text(' ', strip=True)
+assert 'Find meaning in the chaos of your files.' in kmd_page.select_one('main h1').get_text(' ', strip=True)
 assert len(kmd_page.select('#how-to-use .kmd-use-flow > div')) == 3
 assert len(kmd_page.select('#user-benefits .kmd-benefit-cards article')) == 3
 assert len(kmd_page.select('.kmd-meaning-research')) == 1
 assert kmd_page.select_one('.kmd-hero-flow-illustration'), 'Make the intended workflow visible before the fictional test'
 assert not kmd_page.select_one('.kmd-purpose-hero .kmd-focus-hero-art'), 'A large fictional test screenshot should not headline the project'
 assert 'Conceptual workflow illustration' in kmd_page.select_one('.kmd-hero-flow-illustration').get_text(' ',strip=True)
-assert 'public API returns plain text' in kmd_page.get_text(' ', strip=True)
+assert 'public API still returns a plain answer string' in kmd_page.get_text(' ', strip=True)
 assert 'broad understanding' in kmd_page.get_text(' ', strip=True)
 assert kmd_page.select('main .kmd-focus-more details')
 kmd_detail = page('kmd/evidence/index.html').get_text(' ', strip=True).lower()
