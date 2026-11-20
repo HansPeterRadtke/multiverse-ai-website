@@ -14,7 +14,7 @@ home = page('index.html')
 hero = home.select_one('.sw-hero')
 assert hero is not None
 head = hero.select_one('h1')
-assert head and 'Build AI that can use tools. Not just answer questions.' in head.get_text(' ', strip=True)
+assert head and 'When off-the-shelf tools don\'t fit the work.' in head.get_text(' ', strip=True)
 text = hero.get_text(' ', strip=True)
 for phrase in ('independent software development business', 'SWAAG', 'developer', 'Late Order Monitor for Wix Stores', 'shop owner', 'orders already placed', 'research'):
     assert phrase.lower() in text.lower(), ('Missing homepage introduction:', phrase)
@@ -34,7 +34,7 @@ assert 'wix-late-order-monitor-silent.mp4' in vids[0].select_one('source')['src'
 kmd = home.select_one('#research-proof')
 assert kmd
 kt = kmd.get_text(' ', strip=True)
-for phrase in ('goal is', 'fictional documents', 'not a production-ready search service', 'not for sale as a finished app'):
+for phrase in ('intended benefit', 'fictional documents', 'not a production-ready search service', 'not for sale as a finished app'):
     assert phrase.lower() in kt.lower(), ('Missing research limits', phrase)
 assert not kmd.select('details[open]'), 'Do not put test participant names in the default homepage content'
 assert len(kmd.select('details')) == 1
@@ -46,7 +46,7 @@ assert proof['answer'] == 'Mira Chen' and proof['source'] == 'field_report.txt'
 assert proof['answer'] in kmd.select_one('details').get_text(' ', strip=True)
 
 kmd_page = page('kmd/index.html')
-assert 'Ask questions about the files you already have.' in kmd_page.select_one('main h1').get_text(' ', strip=True)
+assert 'When documents disagree, what should you believe?' in kmd_page.select_one('main h1').get_text(' ', strip=True)
 assert len(kmd_page.select('#how-to-use .kmd-use-flow > div')) == 3
 assert len(kmd_page.select('#user-benefits .kmd-benefit-cards article')) == 3
 assert len(kmd_page.select('.kmd-meaning-research')) == 1

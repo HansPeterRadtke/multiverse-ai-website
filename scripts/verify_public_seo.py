@@ -60,7 +60,7 @@ assert 'presence does not demonstrate that the latest suite passes' in swaag.sel
 assert 'Python compatibility' in swaag.select_one('.sa-evaluation-limit').get_text(' ',strip=True)
 
 copy=swaag.select_one('main').get_text(' ',strip=True)
-for term in ('MIT', 'not a ready-made digital employee','No measured time savings','no published GitHub release','not a claim of uniqueness'):
+for term in ('MIT', 'It is an evolving developer framework','No measured time savings','no published GitHub release','not a claim of uniqueness'):
  assert term.lower() in copy.lower(),('SWAAG landing missing boundary',term)
 assert not swaag.find('meta',attrs={'property':'og:image'}),'Do not attach Wix product screenshots to SWAAG metadata'
 print('PASS: all',len(pages),'public pages are indexed with consistent metadata, no fake SWAAG screenshots or missing boundaries')

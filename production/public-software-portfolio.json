@@ -3,85 +3,144 @@
   "github_profile": "https://github.com/HansPeterRadtke",
   "projects": [
     {
-      "id": "swaag", "title": "SWAAG", "category": "AI agent platform", "status": "Open-source development", "featured": true,
+      "id": "swaag",
+      "title": "SWAAG",
+      "category": "AI agent platform",
+      "status": "Open-source development",
+      "featured": true,
       "audience": "Developers exploring self-hosted AI assistants",
       "purpose": "An AI agent that can carry out computer tasks instead of only answering questions.",
       "workflow": "Give the assistant a request. Its controller can choose tools and specialized workers, track the task, and return results.",
       "benefit": "Explore automating multi-step tasks while keeping control of tools and local infrastructure.",
       "limits": "An actively developed framework, not a finished hands-off consumer assistant.",
-      "source_url": "https://github.com/HansPeterRadtke/swaag", "source_label": "View SWAAG on GitHub"
+      "source_url": "https://github.com/HansPeterRadtke/swaag",
+      "source_label": "View SWAAG on GitHub"
     },
     {
-      "id": "all2text", "title": "all2text", "category": "File & data tools", "status": "Public Python tool", "featured": true,
+      "id": "all2text",
+      "title": "all2text",
+      "category": "File & data tools",
+      "status": "Public Python tool",
+      "featured": true,
       "audience": "Developers preparing mixed file collections for analysis",
       "purpose": "Convert folders of different file types into auditable plain-text outputs.",
       "workflow": "Point the tool at a folder. It mirrors the directory structure and produces text files and a conversion manifest.",
       "benefit": "Prepare material for search, migration audits, or AI ingestion without losing track of which formats were unsupported.",
       "limits": "Some formats require optional converters; it records limitations rather than inventing extracted content.",
-      "source_url": "https://github.com/HansPeterRadtke/all2text", "source_label": "View all2text on GitHub"
+      "source_url": "https://github.com/HansPeterRadtke/all2text",
+      "source_label": "View all2text on GitHub"
     },
     {
-      "id": "voicebutton", "title": "Voice Button", "category": "Android audio app", "status": "Development build · public code", "featured": true,
+      "id": "voicebutton",
+      "title": "Voice Button",
+      "category": "Android audio app",
+      "status": "Development build · public code",
+      "featured": true,
       "audience": "People recording long voice notes on an Android phone",
       "purpose": "Record, pause, resume, play back and transfer long recordings to a server.",
       "workflow": "Record on the phone. Durable audio chunks can be synchronized and transcribed separately from recording.",
       "benefit": "Reduce the risk of losing completed audio when recording or network transfers are interrupted.",
       "limits": "Still in active device and reliability testing; not advertised as a Play Store release.",
-      "source_url": "https://github.com/HansPeterRadtke/android/tree/main/apps/voicebutton", "source_label": "View Android source"
+      "source_url": "https://github.com/HansPeterRadtke/android/tree/main/apps/voicebutton",
+      "source_label": "View Android source"
     },
     {
-      "id": "keyboard", "title": "KontextTastatur", "category": "Android keyboard", "status": "Working prototype · source not yet public", "featured": true,
+      "id": "keyboard",
+      "title": "KontextTastatur",
+      "category": "Android keyboard",
+      "status": "Working prototype · source not yet public",
+      "featured": true,
       "audience": "Android users who want personalized word suggestions",
       "purpose": "A German-English keyboard that learns from words the user confirms.",
       "workflow": "Type normally, choose a suggested word or phrase, and let local word-frequency history influence later suggestions.",
       "benefit": "Explore more relevant suggestions while keeping personal typing history on the device.",
       "limits": "Current implementation lives in a development worktree. It is not in the public Android repo or a verified Play Store release.",
-      "source_url": null, "source_label": null
+      "source_url": null,
+      "source_label": null
     },
     {
-      "id": "unity", "title": "Unity Game Systems", "category": "Game developer tools", "status": "Public package source · QA in progress", "featured": true,
+      "id": "unity",
+      "title": "Unity Game Systems",
+      "category": "Game developer tools",
+      "status": "Public package source · QA in progress",
+      "featured": true,
       "audience": "Unity developers assembling games and editor workflows",
       "purpose": "Reusable Unity modules for interactions, inventory, saving and related game mechanics.",
       "workflow": "Add the relevant package to a Unity project instead of implementing every common subsystem from scratch.",
       "benefit": "A reusable starting point for building consistent game features across multiple projects.",
       "limits": "The source and demo scenes are public; marketplace buyer-readiness is still under validation.",
-      "source_url": "https://github.com/HansPeterRadtke/games/tree/main/unity", "source_label": "View Unity code"
+      "source_url": "https://github.com/HansPeterRadtke/games/tree/main/unity",
+      "source_label": "View Unity code"
     },
     {
-      "id": "typewriter", "title": "Typewriter", "category": "Browser training game", "status": "Working prototype · public code", "featured": true,
+      "id": "typewriter",
+      "title": "Typewriter",
+      "category": "Browser training game",
+      "status": "Working prototype · public code",
+      "featured": true,
       "audience": "People practicing keyboard typing",
       "purpose": "A browser-based typing trainer with drills, text practice and a repeatable sequence challenge.",
       "workflow": "Practice current keys, measure accuracy and speed, and compare results with previous rounds.",
       "benefit": "Target weaker keys and see measurable improvement without needing an account.",
       "limits": "It runs locally from a web server; no hosted public game or store release is claimed.",
-      "source_url": "https://github.com/HansPeterRadtke/games/tree/main/typewriter", "source_label": "View Typewriter source"
+      "source_url": "https://github.com/HansPeterRadtke/games/tree/main/typewriter",
+      "source_label": "View Typewriter source"
     },
     {
-      "id": "androidvoice", "title": "Android Voice Client", "category": "Mobile AI experiments", "status": "Experimental Android code", "featured": false,
+      "id": "androidvoice",
+      "title": "Android Voice Client",
+      "category": "Mobile AI experiments",
+      "status": "Experimental Android code",
+      "featured": false,
       "audience": "Developers integrating phone audio with a self-hosted agent",
       "purpose": "Explore two-way voice conversations between an Android client and a local AI service.",
       "workflow": "A prototype records and streams speech while receiving voice responses from a connected server.",
       "benefit": "Investigate hands-free access to locally hosted AI from a phone.",
       "limits": "A technical prototype requiring server configuration, not an independently released phone assistant.",
-      "source_url": "https://github.com/HansPeterRadtke/android/tree/main/apps/android03", "source_label": "View Android voice-client code"
+      "source_url": "https://github.com/HansPeterRadtke/android/tree/main/apps/android03",
+      "source_label": "View Android voice-client code"
     },
     {
-      "id": "imageanalysis", "title": "Image Analysis Toolkit", "category": "Computer vision", "status": "Experimental public code", "featured": false,
+      "id": "imageanalysis",
+      "title": "Image Analysis Toolkit",
+      "category": "Computer vision",
+      "status": "Experimental public code",
+      "featured": false,
       "audience": "Developers managing image datasets",
       "purpose": "Classify and organize images using pretrained machine-learning models.",
       "workflow": "Run a local analysis script over images or a folder and inspect the resulting labels.",
       "benefit": "Explore automating parts of image categorization and review.",
       "limits": "Research utilities, not a validated production image-management application.",
-      "source_url": "https://github.com/HansPeterRadtke/image_analysis", "source_label": "View image-analysis source"
+      "source_url": "https://github.com/HansPeterRadtke/image_analysis",
+      "source_label": "View image-analysis source"
     },
     {
-      "id": "newsclips", "title": "KnowMoreNewsClips Workflow", "category": "Media automation", "status": "Internal production workflow · public channel", "featured": false,
+      "id": "newsclips",
+      "title": "KnowMoreNewsClips Workflow",
+      "category": "Media automation",
+      "status": "Internal production workflow · public channel",
+      "featured": false,
       "audience": "Creators processing longer recordings into short clips",
       "purpose": "Software-assisted selection, transcription, editing and preparation of short news clips.",
       "workflow": "Work with source footage, complete spoken passages, subtitles and publication-ready clip packages.",
       "benefit": "Reduce repeated editorial and media-processing steps while retaining source traceability.",
       "limits": "This is an internal production workflow. Source code is not publicly linked or offered as a software product.",
-      "source_url": "https://www.youtube.com/@knowmorenewsclips", "source_label": "See the public channel"
+      "source_url": "https://www.youtube.com/@knowmorenewsclips",
+      "source_label": "See the public channel"
+    },
+    {
+      "id": "capov",
+      "title": "CapOv — Captain Obvious",
+      "category": "Python developer utility",
+      "status": "Published on PyPI · v0.1.6",
+      "featured": false,
+      "audience": "Python developers handling simple mechanical mistakes",
+      "purpose": "A small pip-installable utility for straightforward Python import and bracket mistakes.",
+      "workflow": "Install with pip, run it on a Python file, and review the proposed fixed output or use a separate output/backup.",
+      "benefit": "Avoid interrupting a larger development task to repair some obvious syntax and import problems.",
+      "limits": "Overlaps with established linters such as Ruff; not a replacement for them. A simple published-package example worked, but an isolated bundled test run was not fully green. Review automated edits.",
+      "source_url": "https://github.com/HansPeterRadtke/capov",
+      "source_label": "Inspect CapOv source"
     }
   ]
 }
