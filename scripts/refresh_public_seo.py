@@ -65,8 +65,8 @@ for p in pages:
     # Keep snapshots truthful: no image on agent pages because no SWAAG UI
     # screenshot has been verified. Favicon alone is not an engaging OG image.
     if p==R/'3d/index.html':
-        meta(s,'og:image',ORIGIN+'assets/portfolio/forklift.webp','property')
-        meta(s,'og:image:alt','Rendered 3D model of an industrial forklift','property')
+        meta(s,'og:image',ORIGIN+'assets/3d/agent-made/warehouse-exterior.webp','property')
+        meta(s,'og:image:alt','Actual Blender Cycles render of a modeled three-bay industrial warehouse','property')
     elif p==R/'index.html' or p==R/'swaag/index.html':
         for item in s.find_all('meta',attrs={'property':'og:image'}):item.decompose()
     p.write_text(str(s).rstrip()+'\n')

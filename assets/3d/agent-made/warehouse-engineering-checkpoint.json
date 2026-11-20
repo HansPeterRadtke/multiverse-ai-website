@@ -1,0 +1,47 @@
+{
+  "title": "Industrial Blender engineering checkpoint \u2014 10 November 2026",
+  "evidence_kind": "Independent technical QA receipts for private editable Blender development scenes",
+  "status": "Specific source and geometry checks, not a commercial or photographic realism certification",
+  "recorded_utc_date": "2026-11-10",
+  "results": {
+    "forklift_wheel_ground_gap_mm_before_approx": 7.1,
+    "forklift_wheel_ground_gap_mm_after_at_most": 0.03,
+    "fixed_seed_native_cycles_stills_examined": 29,
+    "sampled_rays_through_open_loading_bay": 9,
+    "additional_modeled_cartons": 111,
+    "new_pallets": 15
+  },
+  "source_receipts": [
+    {
+      "name": "verified_warehouse.json",
+      "sha256": "a06ecfa8d1ca74f09b00d698aa958f2b5492443feb5c73c61b04bd6ccefe20d0"
+    },
+    {
+      "name": "verified_dock.json",
+      "sha256": "836d05b297a406f915c881403cfd65b1f7c5db6cc175aad49cd1cc1ba9d52a10"
+    },
+    {
+      "name": "whole_frame_checks.json",
+      "sha256": "b1e779b6affdc9f453266775568163dee4a60a6de8e928e6b68657aac79a6734"
+    },
+    {
+      "name": "forklift_contact.json",
+      "sha256": "85bb1bee33fcb893c9056c52a5b3fa78fd824090d5ee6bac497fcf0c32cdce38"
+    },
+    {
+      "name": "court.json",
+      "sha256": "24245778a106b767ef447fea4e2f8826fc4b514630cf5aeba74103608d2f6721"
+    },
+    {
+      "name": "open_bay.json",
+      "sha256": "c974fe5913d1ecf355cf2d62dccfbf74d3e8b863eed9db9052763dcf3ad9700e"
+    }
+  ],
+  "scene_and_presentation_relationship": "These QA tests apply to separate development revisions. The public gallery image(s) are from earlier presentation revisions and do not depict this exact tested scene state.",
+  "important_limitations": [
+    "The full original Blender scenes and detailed logs are in privately managed production workspaces and are not publicly downloadable here.",
+    "These samples do not certify a real forklift, real loading bay, physical forces, safety, or continuous collision freedom.",
+    "Identified geometry corrections and image changes are not proof of full-scene photorealism or owner visual acceptance.",
+    "No validated saved labor hours, autonomous end-to-end run success rate, model superiority, or finished buyer deployment is claimed."
+  ]
+}
