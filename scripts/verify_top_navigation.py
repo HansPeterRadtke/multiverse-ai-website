@@ -3,7 +3,7 @@
 from pathlib import Path
 from bs4 import BeautifulSoup
 R=Path(__file__).resolve().parents[1]
-expected=['Software & AI','3D models','Business','About','Contact','GitHub ↗']
+expected=['Software & AI','AI 3D Production','Business','About','Contact','GitHub ↗']
 for file in sorted(R.rglob('index.html')):
  if '.git' in file.parts:continue
  page=BeautifulSoup(file.read_text(),'html.parser')
@@ -21,7 +21,7 @@ for file in sorted(R.rglob('index.html')):
 new=BeautifulSoup((R/'3d/index.html').read_text(),'html.parser')
 assert 'AI-directed Blender workflows' in new.select_one('main h1').get_text(' ',strip=True)
 assert len(new.select('main .pf-card'))>=3
-assert new.select_one('nav.desktop-nav a.active').get_text(' ',strip=True)=='3D models'
+assert new.select_one('nav.desktop-nav a.active').get_text(' ',strip=True)=='AI 3D Production'
 assert len(new.select('main .pf-card a[href$=".mp4"]'))>=3
 assert new.select_one('link[href="/multiverse-ai-website/assets/3d-navigation.css"]')
 old=BeautifulSoup((R/'projects/index.html').read_text(),'html.parser')

@@ -17,6 +17,7 @@ scripts=[
  'owner_purpose_positioning.py',
  'position_3d_automation.py',
  'add_3d_evidence_case.py',
+ 'refine_home_proof_first.py',
  'align_software_navigation.py',
  'refresh_public_seo.py',
 ]

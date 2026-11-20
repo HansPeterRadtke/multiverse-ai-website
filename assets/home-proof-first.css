@@ -1,0 +1,18 @@
+/* Front-screen proof: concise, source-grounded previews of the actual projects. */
+.hp-proof-previews{gap:12px}
+.hp-proof-manager{margin-bottom:0}
+.hp-proof-card{min-width:0;gap:6px;padding-bottom:18px}
+.hp-proof-card .sw-home-example-image{height:149px;object-fit:cover}
+.hp-proof-3d .sw-home-example-image{object-position:center 55%;filter:none}
+.hp-proof-kmd .sw-home-example-image{object-position:center 17%}
+.hp-proof-card>.sw-proof-status{line-height:1.43;font-size:.64rem;letter-spacing:.08em}
+.hp-proof-card>strong{font-size:1.25rem;line-height:1.27}
+.hp-proof-card>span:not(.sw-proof-status){font-size:.84rem;line-height:1.51}
+.hp-proof-card>small{font-size:.82rem;line-height:1.5;margin-top:4px}
+.hp-proof-wix{display:block;padding:7px 4px 2px;color:#b6d8dd;font-size:.84rem;line-height:1.55;font-weight:690}
+.hp-proof-wix:hover{text-decoration:underline;text-underline-offset:3px;color:#c2f7e8}
+.hp-proof-previews :focus-visible{outline:3px solid #bbffeb;outline-offset:3px}
+@media(max-width:1050px){.hp-proof-card .sw-home-example-image{height:127px}.hp-proof-card>strong{font-size:1.15rem}}
+@media(max-width:780px){.hp-proof-manager,.hp-proof-wix{grid-column:1/-1}.hp-proof-card .sw-home-example-image{height:148px}}
+@media(max-width:570px){.hp-proof-previews{gap:11px}.hp-proof-manager,.hp-proof-wix{grid-column:auto}.hp-proof-card{display:grid;grid-template-columns:100px minmax(0,1fr);gap:4px 11px;padding:14px;align-items:start}.hp-proof-card .sw-home-example-image{grid-column:1;grid-row:1 / span 4;width:100px;height:119px;object-fit:cover;object-position:center center;margin:0;border-radius:9px;border:1px solid #426b75}.hp-proof-card>.sw-proof-status{grid-column:2;grid-row:1;font-size:.60rem;margin:0;line-height:1.37}.hp-proof-card>strong{grid-column:2;grid-row:2;font-size:1.03rem;line-height:1.21}.hp-proof-card>span:not(.sw-proof-status){grid-column:2;grid-row:3;font-size:.79rem;line-height:1.43}.hp-proof-card>small{grid-column:2;grid-row:4;font-size:.75rem;line-height:1.4;margin-top:2px}.hp-proof-wix{font-size:.79rem;padding:6px 3px}}
+@media(max-width:380px){.hp-proof-card{grid-template-columns:88px minmax(0,1fr);gap:4px 9px;padding:12px}.hp-proof-card .sw-home-example-image{width:88px;height:120px}.hp-proof-card>strong{font-size:.99rem}.hp-proof-card>span:not(.sw-proof-status){font-size:.76rem}}

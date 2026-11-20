@@ -4,7 +4,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 R=Path(__file__).resolve().parents[1]
 base='/multiverse-ai-website/'
-items=[('Software & AI',base+'technology/','software'),('3D models',base+'3d/','assets'),('Business',base+'opportunities/','business'),('About',base+'about/','about'),('Contact',base+'contact/','contact')]
+items=[('Software & AI',base+'technology/','software'),('AI 3D Production',base+'3d/','assets'),('Business',base+'opportunities/','business'),('About',base+'about/','about'),('Contact',base+'contact/','contact')]
 for p in sorted(R.rglob('index.html')):
  s=BeautifulSoup(p.read_text(),'html.parser')
  rel=str(p.relative_to(R))

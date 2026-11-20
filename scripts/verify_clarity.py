@@ -16,7 +16,7 @@ assert hero is not None
 head = hero.select_one('h1')
 assert head and 'AI workers you can manage. Knowledge you can trust.' in head.get_text(' ', strip=True)
 text = hero.get_text(' ', strip=True)
-for phrase in ('independent software development business', 'SWAAG', 'background', 'KnowMoreDiRT', 'Late Order Monitor for Wix Stores', 'shop owner', 'orders already placed', 'experimental'):
+for phrase in ('independent software development business', 'SWAAG', 'background', 'KnowMoreDiRT', 'Late Order Monitor for Wix Stores', 'experimental'):
     assert phrase.lower() in text.lower(), ('Missing homepage introduction:', phrase)
 assert 'Mira Chen' not in text, 'A fictional test person cannot headline the business homepage'
 assert len(hero.select('.sw-home-example-image')) == 2, 'Project imagery must be shown inside explicitly labelled cards'
@@ -25,7 +25,7 @@ assert 'document search research' not in hero.get_text(' ', strip=True).lower()
 wix = home.select_one('#software-proof')
 assert wix
 wt = wix.get_text(' ', strip=True)
-for phrase in ('Wix Stores', 'shop', 'read-only', 'does not take customer orders', 'CSV'):
+for phrase in ('Wix Stores', 'shop owner', 'paid, unfulfilled orders', 'read-only', 'does not take customer orders', 'CSV'):
     assert phrase.lower() in wt.lower(), ('Missing store-owner explanation', phrase)
 vids = wix.select('video')
 assert len(vids) == 1 and vids[0].has_attr('muted')
