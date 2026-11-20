@@ -39,3 +39,7 @@ html{overflow-x:hidden}body{overflow-x:hidden}.page-shell{isolation:isolate}.sit
   .desktop-nav{gap:25px}
   .header-cta{padding:10px 12px}
 }
+
+/* Navigation shares the original favicon monogram used by social assets. */
+.brand-mark{width:34px;height:34px;flex:none;display:inline-block;background:url('/multiverse-ai-website/assets/favicon.svg') center/contain no-repeat;border-radius:8px}
+.brand-mark>span{display:none}

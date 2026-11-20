@@ -59,16 +59,20 @@ for p in pages:
     meta(s,'og:description',descstr,'property')
     meta(s,'og:url',url,'property')
     meta(s,'og:type','website','property')
-    meta(s,'twitter:card','summary')
+    meta(s,'twitter:card','summary_large_image')
     meta(s,'twitter:title',title)
     meta(s,'twitter:description',descstr)
-    # Keep snapshots truthful: no image on agent pages because no SWAAG UI
-    # screenshot has been verified. Favicon alone is not an engaging OG image.
+    # Brand art is not a simulated agent screenshot. Preserve the real 3D render.
     if p==R/'3d/index.html':
-        meta(s,'og:image',ORIGIN+'assets/3d/agent-made/warehouse-exterior.webp','property')
-        meta(s,'og:image:alt','Actual Blender Cycles render of a modeled three-bay industrial warehouse','property')
-    elif p==R/'index.html' or p==R/'swaag/index.html':
-        for item in s.find_all('meta',attrs={'property':'og:image'}):item.decompose()
+        image='assets/3d/agent-made/warehouse-exterior.webp'
+        alt='Actual Blender Cycles render of a modeled three-bay industrial warehouse'
+    else:
+        image='assets/brand/multiverse-social-preview.png'
+        alt='Multiverse brand artwork: independent software and AI systems'
+    assert (R/image).is_file(),('Missing social image',image)
+    meta(s,'og:image',ORIGIN+image,'property')
+    meta(s,'og:image:alt',alt,'property')
+    meta(s,'twitter:image',ORIGIN+image)
     p.write_text(str(s).rstrip()+'\n')
     urls.append(url)
 

@@ -62,5 +62,13 @@ assert 'Python compatibility' in swaag.select_one('.sa-evaluation-limit').get_te
 copy=swaag.select_one('main').get_text(' ',strip=True)
 for term in ('MIT', 'It is an evolving developer framework','No measured time savings','no published GitHub release','not a claim of uniqueness'):
  assert term.lower() in copy.lower(),('SWAAG landing missing boundary',term)
-assert not swaag.find('meta',attrs={'property':'og:image'}),'Do not attach Wix product screenshots to SWAAG metadata'
+preview=swaag.find('meta',attrs={'property':'og:image'})
+assert preview and preview.get('content','').endswith('/assets/brand/multiverse-social-preview.png'), 'SWAAG must show brand artwork, never an invented product screenshot'
+for page in pages:
+ doc=BeautifulSoup(page.read_text(),'html.parser')
+ image=doc.find('meta',attrs={'property':'og:image'})
+ assert image and image.get('content','').startswith(ORIGIN),(page,'missing public preview')
+ assert doc.find('meta',attrs={'name':'twitter:image'}),(page,'twitter image')
+ assert doc.find('meta',attrs={'name':'twitter:card'})['content']=='summary_large_image',(page,'card type')
+
 print('PASS: all',len(pages),'public pages are indexed with consistent metadata, no fake SWAAG screenshots or missing boundaries')
