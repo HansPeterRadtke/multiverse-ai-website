@@ -13,6 +13,13 @@ s=business.select_one('main').get_text(' ',strip=True)
 for phrase in ('AI model', 'manual steps', 'technology', 'MIT', 'exclusive', 'success', 'scope'):
  assert phrase.lower() in s.lower(),('Missing opportunity explanation',phrase)
 assert len(business.select('#situations article'))==3
+proof=business.select_one('#automation-evidence')
+assert proof is not None,'Commercial buyer path needs tangible AI-work evidence'
+assert 'See AI operating real production tools.' in proof.get_text(' ',strip=True)
+assert proof.select_one('img[src="/multiverse-ai-website/assets/3d/agent-made/warehouse-exterior.webp"]')
+assert proof.select_one('a[href="/multiverse-ai-website/3d/"]')
+assert 'no unattended production-rate or cost-saving guarantee' in proof.get_text(' ',strip=True)
+
 assert business.select_one('a[href="/multiverse-ai-website/contact/"]')
 assert business.select_one('a[href="https://github.com/HansPeterRadtke/all2text"]')
 assert 'customer testimonial' not in s.lower()
