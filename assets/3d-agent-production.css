@@ -1,0 +1,72 @@
+/* Real Blender render showcase; autonomy is evidenced by workflow, not fake UI. */
+.ap-kicker{font-size:.70rem;letter-spacing:.13em;text-transform:uppercase;color:#a7efdf;font-weight:800;line-height:1.5;margin:0 0 13px}
+.ap-hero{background:#0c2130;color:#effaf8;border-bottom:1px solid #325666;overflow:hidden}
+.ap-hero-inner{display:grid;grid-template-columns:minmax(0,.91fr) minmax(0,1.09fr);gap:45px;align-items:center;padding-top:78px;padding-bottom:82px}
+.ap-hero-copy{position:relative;z-index:1}
+.ap-hero h1{font-weight:765;font-size:clamp(2.65rem,4.35vw,4.35rem);line-height:1.08;letter-spacing:-.062em;margin:0 0 22px;max-width:750px}
+.ap-hero h1 em{color:#aef3df}
+.ap-lead{font-size:clamp(.98rem,1.3vw,1.11rem);line-height:1.72;color:#c6dce3;margin:0;max-width:750px}
+.ap-hero-buttons{display:flex;flex-wrap:wrap;gap:11px;margin-top:27px}
+.ap-button{display:inline-flex;align-items:center;justify-content:center;border-radius:9px;padding:12px 18px;min-height:46px;text-align:center;font-size:.88rem;line-height:1.35;font-weight:780;max-width:100%}
+.ap-primary{color:#0f2d37;background:#b7f5e0;border:1px solid #b7f5e0}.ap-primary:hover{background:#e0fff4}
+.ap-secondary{color:#e2f9ef;border:1px solid #53818a;background:#173c4b}.ap-secondary:hover{background:#235666}
+.ap-understatement{font-size:.77rem;color:#9dbec7;line-height:1.55;margin:16px 0 0}
+.ap-hero-art{position:relative;border:1px solid #38616e;border-radius:17px;overflow:hidden;box-shadow:0 23px 50px rgba(2,13,25,.24);background:#172e37}
+.ap-hero-art img{display:block;aspect-ratio:16/9;width:100%;height:auto;object-fit:cover}
+.ap-hero-art:after{content:"";position:absolute;inset:57% 0 0;pointer-events:none;background:linear-gradient(transparent,rgba(5,21,29,.77))}
+.ap-hero-art span{position:absolute;z-index:1;left:20px;right:20px;bottom:17px;color:#edfdf5;font-size:.70rem;line-height:1.5;letter-spacing:.09em;font-weight:790}
+.ap-process{padding:82px 0 89px;background:linear-gradient(145deg,#0c2636,#123744);color:#edf9f5;border-bottom:1px solid #39606d}
+.ap-process h2,.ap-work h2,.ap-capability h2,.ap-home-feature h2{font-size:clamp(2.12rem,3.65vw,3.45rem);line-height:1.15;letter-spacing:-.051em;font-weight:760;max-width:970px;margin:5px 0 20px}
+.ap-process h2 em,.ap-work h2 em{color:#b4f7e4}
+.ap-intro{font-size:1rem;line-height:1.73;color:#c8dbe0;max-width:1000px;margin:0}
+.ap-process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-top:29px}
+.ap-process-grid article{padding:23px 21px 25px;background:#163749;border:1px solid #406d79;border-radius:13px;min-width:0}
+.ap-process-grid article>span{font-size:.67rem;letter-spacing:.09em;line-height:1.5;color:#b4eddd;font-weight:820}
+.ap-process-grid h3{font-size:1.34rem;font-weight:760;letter-spacing:-.03em;line-height:1.27;margin:13px 0 11px}
+.ap-process-grid p{font-size:.87rem;line-height:1.66;color:#bad0d9;margin:0}
+.ap-proof-note{font-size:.82rem;line-height:1.64;color:#b5ccd2;border-left:3px solid #6eb1a3;padding-left:16px;margin:25px 0 0;max-width:990px}
+.ap-work{padding:80px 0 86px;color:#eef9f5;background:#0c2233}
+.ap-showcase{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:29px}
+.ap-showcase figure{margin:0;border:1px solid #426c79;border-radius:14px;overflow:hidden;min-width:0;background:#153748}
+.ap-showcase figure.ap-main-shot{grid-column:1/-1}
+.ap-showcase img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#172f3a}
+.ap-showcase .ap-main-shot img{aspect-ratio:16/8.1;object-fit:cover;object-position:center}
+.ap-showcase figcaption{display:flex;flex-direction:column;gap:5px;padding:16px 20px 18px}
+.ap-showcase figcaption strong{font-size:1rem;line-height:1.36;color:#e9faf5}
+.ap-showcase figcaption span{font-size:.8rem;line-height:1.52;color:#b5d0d9}
+.ap-capability{background:#eaf3ed;color:#1b3439;padding:77px 0 82px}
+.ap-capability-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}
+.ap-capability .ap-kicker{color:#2b746f}
+.ap-capability h2{margin:6px 0 18px}
+.ap-capability p{font-size:.95rem;line-height:1.7;color:#455d62}
+.ap-capability-points{padding:7px 0 0}
+.ap-capability-points p{border-top:1px solid #b9d3c8;margin:0;padding:12px 0 15px}
+.ap-capability-points p strong{color:#1b5550}
+.ap-home-feature{padding:65px 0 70px;background:linear-gradient(125deg,#10303e,#0d2233);color:#ebf8f5;border-top:1px solid #385d68;border-bottom:1px solid #385d68}
+.ap-home-layout{display:grid;grid-template-columns:1.08fr .92fr;gap:43px;align-items:center}
+.ap-home-media{border:1px solid #50767f;border-radius:13px;position:relative;overflow:hidden;background:#183744}
+.ap-home-media img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+.ap-home-media span{position:absolute;bottom:0;left:0;right:0;padding:16px 19px 13px;background:linear-gradient(transparent,rgba(8,26,31,.89));color:#e9fcf5;font-size:.7rem;letter-spacing:.08em;font-weight:780}
+.ap-home-feature h2{font-size:clamp(1.85rem,3.2vw,2.7rem);margin:5px 0 17px}
+.ap-home-copy>p:not(.ap-kicker){font-size:.93rem;line-height:1.68;color:#c8d8df;margin:0 0 15px}
+.ap-home-copy p.ap-home-caveat{font-size:.82rem;color:#a9c5ce}
+.ap-home-copy .ap-button{margin-top:8px}
+.ap-hero :focus-visible,.ap-process :focus-visible,.ap-work :focus-visible,.ap-home-feature :focus-visible{outline:3px solid #c3ffea;outline-offset:3px}
+@media(max-width:1090px){.ap-hero-inner{grid-template-columns:1fr;gap:27px;padding:56px 0 66px}.ap-hero-copy{max-width:900px}.ap-hero h1{max-width:950px}.ap-hero-art{max-width:1040px}.ap-process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ap-home-layout{gap:23px}}
+@media(max-width:760px){.ap-hero-inner{padding:47px 0 53px}.ap-hero h1{font-size:clamp(2.2rem,7vw,3.35rem)}.ap-process,.ap-work,.ap-capability{padding:57px 0 65px}.ap-capability-grid,.ap-home-layout{grid-template-columns:1fr;gap:24px}.ap-showcase{grid-template-columns:1fr}.ap-showcase figure.ap-main-shot{grid-column:auto}.ap-showcase .ap-main-shot img{aspect-ratio:16/9}.ap-home-feature{padding:52px 0 59px}.ap-home-media{max-width:710px}}
+@media(max-width:470px){.ap-hero h1{font-size:clamp(2.05rem,9vw,2.7rem)}.ap-lead{font-size:.96rem}.ap-hero-buttons{display:flex;flex-direction:column;align-items:stretch}.ap-process-grid{grid-template-columns:1fr}.ap-process-grid article{padding:21px}.ap-process h2,.ap-work h2,.ap-capability h2{font-size:clamp(1.85rem,8vw,2.6rem)}.ap-showcase figcaption{padding:14px 16px}.ap-capability{padding:51px 0 60px}.ap-home-feature h2{font-size:2rem}.ap-home-copy .ap-button{width:100%}.ap-hero-art span{font-size:.62rem;left:12px;bottom:10px}}
+.ap-machines{padding:72px 0 77px;background:linear-gradient(135deg,#103040,#0c2434);color:#eaf9f4;border-bottom:1px solid #3b6471}
+.ap-machines h2,.ap-motion h2{font-size:clamp(2rem,3.5vw,3.2rem);letter-spacing:-.05em;font-weight:755;line-height:1.16;margin:7px 0 25px;max-width:960px}
+.ap-machine-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.ap-machine-grid>div{padding:22px 24px;background:#143546;border:1px solid #46727e;border-radius:12px}
+.ap-machine-grid strong{color:#d6f9ec;font-size:1.08rem;line-height:1.4;font-weight:770}
+.ap-machine-grid p{color:#bfd6dd;font-size:.88rem;line-height:1.66;margin:10px 0 0}
+.ap-machine-caveat{font-size:.8rem;color:#b2cad4;line-height:1.62;margin:20px 0 0}
+.ap-motion{background:#0e2535;color:#f0f9f6;padding:75px 0 84px;border-top:1px solid #305665;border-bottom:1px solid #305665}
+.ap-motion-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin-top:28px}
+.ap-motion-grid figure{margin:0;background:#163a49;border:1px solid #476d7b;border-radius:14px;overflow:hidden}
+.ap-motion-grid video{display:block;width:100%;aspect-ratio:16/9;background:#071824;object-fit:cover}
+.ap-motion-grid figcaption{display:flex;flex-direction:column;gap:5px;padding:15px 19px 18px}
+.ap-motion-grid figcaption strong{color:#e9faf4;font-weight:770;line-height:1.43}
+.ap-motion-grid figcaption span{color:#bcd6dd;font-size:.82rem;line-height:1.6}
+@media(max-width:690px){.ap-machines,.ap-motion{padding:56px 0 63px}.ap-machines h2,.ap-motion h2{font-size:clamp(1.86rem,7.7vw,2.6rem)}.ap-machine-grid,.ap-motion-grid{grid-template-columns:1fr;gap:12px}.ap-machine-grid>div{padding:19px}}

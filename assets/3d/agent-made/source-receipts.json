@@ -1,0 +1,41 @@
+[
+  {
+    "image": "assets/3d/agent-made/warehouse-exterior.webp",
+    "source_asset_name": "warehouse_genuine_exterior_three_docks_ground_camera_v2.png",
+    "source_sha256": "f6d1be575d32569c95d31ab2ad2db013130b7a17f9c6db6ed96ff1c82ca51abd",
+    "source_dims": [
+      1600,
+      900
+    ],
+    "result_sha256": "4e97231fe16c6c0dbfe7b5833d0f175763acf47b895c78c05b8053fc6cccd506",
+    "result_bytes": 107498,
+    "provenance": "actual Blender Cycles scene render",
+    "quality_boundary": "visual candidate; photographic realism not owner-certified"
+  },
+  {
+    "image": "assets/3d/agent-made/warehouse-forklift.webp",
+    "source_asset_name": "WAREHOUSE_V94_REAL_GROUNDED_FORKLIFT_AND_WORKING_RACKS_1920.png",
+    "source_sha256": "c3b2b87b644bedab349b66741cc75ab820cd10ad879e09989ba15fce1cf1eb5b",
+    "source_dims": [
+      1920,
+      1080
+    ],
+    "result_sha256": "e8b0b8517eadd0c6c45b5d58fb271dbadfb67362447c4ee2df75ba871f447e7d",
+    "result_bytes": 142128,
+    "provenance": "actual Blender Cycles scene render",
+    "quality_boundary": "visual candidate; photographic realism not owner-certified"
+  },
+  {
+    "image": "assets/3d/agent-made/loading-dock.webp",
+    "source_asset_name": "dock_v7_actual_light_canopy_and_raised_loading_bay.png",
+    "source_sha256": "c38f6be347b8ddfe52e08865a70c3c7cce026ec6a56b35a0fd2a5b3da3deeaee",
+    "source_dims": [
+      1440,
+      810
+    ],
+    "result_sha256": "75483a24bb9e98c48a88555c4164ad8749253353fb734b638529e372345bf965",
+    "result_bytes": 68404,
+    "provenance": "actual Blender Cycles scene render",
+    "quality_boundary": "visual candidate; photographic realism not owner-certified"
+  }
+]

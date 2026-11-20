@@ -15,6 +15,7 @@ scripts=[
  'build_commercial_path.py',
  'market_differentiation.py',
  'owner_purpose_positioning.py',
+ 'position_3d_automation.py',
  'align_software_navigation.py',
  'refresh_public_seo.py',
 ]

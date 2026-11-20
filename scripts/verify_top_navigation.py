@@ -19,7 +19,7 @@ for file in sorted(R.rglob('index.html')):
   assert anchors[-1]['href']=='https://github.com/HansPeterRadtke' and anchors[-1]['target']=='_blank'
   assert anchors[-1].get('rel') == ['noopener','noreferrer']
 new=BeautifulSoup((R/'3d/index.html').read_text(),'html.parser')
-assert 'Industrial 3D models' in new.select_one('main h1').get_text(' ',strip=True)
+assert 'AI-directed Blender workflows' in new.select_one('main h1').get_text(' ',strip=True)
 assert len(new.select('main .pf-card'))>=3
 assert new.select_one('nav.desktop-nav a.active').get_text(' ',strip=True)=='3D models'
 assert len(new.select('main .pf-card a[href$=".mp4"]'))>=3

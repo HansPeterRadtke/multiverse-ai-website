@@ -1,0 +1,36 @@
+# AI-directed 3D production: factual marketing evidence and review — 20 November 2026
+
+## The commercial message
+
+The primary purpose of the 3D page is to demonstrate **what the independently configured AI/agent production infrastructure can do**, not to list a handful of marketplace assets. Real industrial models show the visible result. The technical achievement is the self-owned workflow: agents author and call reproducible Blender/Python geometry, animation, PBR, export, rendering and validation tools, using several locally configured machines and separately connected ChatGPT-assisted workflows. This is not a one-click proprietary hosted 3D generator; it is controlled tool-using AI and deterministic engineering.
+
+**Potential buyer benefit**: a technical owner evaluating autonomous production can inspect tangible outputs created by iterative AI-directed work across specialized applications, rather than relying on generic claims that an AI can call tools. The same pattern could support other defined automation workflows, but no measured cost savings, elimination of all human work, flawless output or SLA are claimed. The buyer listings are secondary; 3D buyers can still open existing CGTrader product pages directly.
+
+## Source-verified system roles
+
+- **Nitro**: native Blender/Python construction scripts, procedural industrial geometry, PBR materials, animation, formats and clean re-import, physical/semantic QA and Cycles visuals. Read `/data/src/3d-commercial-asset-feasibility/README.md`, especially the builder/validator contract and source `factory.py`.
+- **Thor**: large local-model/render capacity and private Blender scene work where machine/resource admission allows; the multi-machine 3D worktree documents actual render and material studies, including scenes, logs and owner-private gallery QA. Not every workflow is dispatched to Thor.
+- **Jetson**: `/data/src/3d-pipeline-jetson/README.md` documents the local vision-model judge on animation contact sheets; this is a distinct optional QA component rather than the sole quality guarantee. Jetson maintains other local model/generation services.
+- **Raspi**: shared agent project exchange, infrastructure documentation, source/research library and resource broker. It does not itself imply a unified unattended Blender factory on every host.
+- **ChatGPT and local agents**: agent-generated code and instructed tool calls are reflected in the source and production handovers, and ChatGPT assists with coordination, research and tests. There are heterogeneous worktrees/services, not proof that one production command itself always orchestrates every stage with no owner participation. The owner's visual review and publication authorization remain explicit.
+
+## Why these images were selected
+
+Three **genuine local Blender-rendered** scenes, processed into compact site WebP files; source originals were not replaced. File bytes, SHA-256 source/checksum receipts and source names are in `assets/3d/agent-made/source-receipts.json`; full machine-private paths are retained outside Git under `/data/var/multiverse-kmd/3d-agent-production-source-paths-20261120.json`.
+
+1. `warehouse-exterior.webp`: October 28 actual three-bay warehouse exterior, a strong clear opening shot with authored industrial cladding, bays, paved yard and light. Original: private Cycles PNG `warehouse_genuine_exterior_three_docks_ground_camera_v2.png`. The documented October 28 marketplace image update had explicit owner approval; still not a photographic-realism certification.
+2. `warehouse-forklift.webp`: October 31 v94 forklift-and-racking Cycles render, with meaningful lift machinery, stock and warehouse. Development candidate from genuine editable packed Blender scene. Visually informative, **not an owner-approved final buyer image**.
+3. `loading-dock.webp`: October 28 raised loading-bay / canopy Cycles scene, with real modeled bay and industrial support detail. Development source; camera/material visual limitations remain.
+
+Never present AI image-generation artworks, source reference photographs, or private stock photos as evidence of actual Blender geometry. Do not call the entire scene "photorealistic" without independent matched-photo inspection and owner approval. The owner previously found warehouse interiors and dock layouts artificial or repetitive; exact original engineering reviews: `docs/full_warehouse/whole_scene_photorealism_method_20261110.md` and `/data/var/3d-quality-20261115/warehouse_floor_traffic/2026-11-15-scene-realism-checkpoint.md`. Render beauty is evaluated visually and separately from correct file formats, rigs, clearance, PBR nodes or smoke-test passes.
+
+## Genuine animation and product continuity
+
+`assets/demos/animated-forklift.mp4` and `assets/demos/warehouse-loading-dock.mp4` existed before this revision and remain unchanged. They are embedded as paused, muted, user-controlled HTML5 videos with source posters. All three previously published product catalog cards, the industrial machinery preview and external CGTrader listings remain linked; the page reframes them as tangible outputs of an AI-directed tool workflow. Product format and licensing rights are per-listing and must not be inferred from the staging photos alone.
+
+## Reproducibility and release rules
+
+- `scripts/position_3d_automation.py` runs *after* base home/software generation and *before* navigation and SEO normalization from `scripts/build_public_site.py`. It deletes only generated 3D marketing sections before rebuilding, preserving published catalog DOM. The private original images remain unchanged.
+- `scripts/verify_3d_agent_production.py` checks image hashes, actual 3D visuals, 4 source-grounded pipeline steps, 4 actual host roles, 2 original videos, catalog continuity, homepage order and no private source paths in public source receipts.
+- Site-wide content/SEO/navigation/source-link tests and desktop/mobile Chromium checks must pass. Compare actual visuals on 1440, 960, 390 and 360 CSS pixels; original videos should load when the visitor elects to play. Verify GitHub Pages production after a normal non-force push to `main`.
+- Do not silently claim an unbroken "lights-out" 3D factory, a single SWAAG runtime that made every scene, certified physical engineering, performance ROI, or owner-approved photorealism. A real, measured end-to-end agent job with independent acceptance is the next higher-grade demonstration.
