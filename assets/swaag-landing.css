@@ -57,3 +57,19 @@
 @media(max-width:1050px){.sa-hero-grid{gap:30px}.sa-hero h1{font-size:clamp(2.4rem,4.45vw,4.0rem)}.sa-process{padding:21px}.sa-proof-grid{gap:26px}}
 @media(max-width:800px){.sa-hero{padding:55px 0}.sa-hero-grid{grid-template-columns:1fr}.sa-hero h1{font-size:clamp(2.7rem,6.9vw,4.2rem)}.sa-process{max-width:690px}.sa-need-grid{grid-template-columns:1fr}.sa-need-grid article{padding:21px}.sa-proof-grid{grid-template-columns:1fr}.sa-end-grid{grid-template-columns:1fr}.sa-end-actions{max-width:560px}}
 @media(max-width:600px){.sa-hero{padding:40px 0 49px}.sa-hero h1{font-size:clamp(2.4rem,9.5vw,3.5rem);margin-bottom:19px}.sa-lead{font-size:.99rem}.sa-hero-actions{display:flex;flex-direction:column;align-items:stretch}.sa-process{padding:17px}.sa-process-item{padding:13px}.sa-process-item strong{font-size:1.04rem}.sa-use,.sa-proven,.sa-proof,.sa-faq,.sa-end{padding-top:54px;padding-bottom:62px}.sa-use h2,.sa-proven h2,.sa-proof h2,.sa-faq h2,.sa-end h2{font-size:clamp(1.9rem,8vw,2.7rem)}.sa-cap-grid,.sa-faq-grid{grid-template-columns:1fr}.sa-need-grid{gap:12px}.sa-cap-grid>div,.sa-faq details{padding:19px}.sa-proof-links{gap:9px}}
+/* Buyer evidence is a reproducible inspection path, not a fictitious test badge. */
+.sa-evaluation{padding:81px 0 85px;background:#eef5f0;color:#17343d;border-top:1px solid #b9d3c8}
+.sa-evaluation .sa-dark-label{color:#24786e}
+.sa-evaluation h2{font-size:clamp(2.08rem,3.5vw,3.25rem);font-weight:760;line-height:1.15;letter-spacing:-.05em;margin:11px 0 17px;max-width:1020px}
+.sa-evaluation-intro{font-size:1rem;line-height:1.7;color:#435e64;max-width:920px;margin:0 0 31px}
+.sa-evaluation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.sa-evaluation-grid article{border:1px solid #c1d7cd;background:#fff;border-radius:14px;padding:25px 25px 23px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0}
+.sa-evaluation-grid article>span{color:#2f776c;font-size:.69rem;letter-spacing:.1em;font-weight:830;line-height:1.5}
+.sa-evaluation-grid h3{font-size:1.33rem;font-weight:760;letter-spacing:-.034em;line-height:1.25;margin:3px 0}
+.sa-evaluation-grid p{font-size:.92rem;line-height:1.64;color:#52666a;margin:0 0 7px}
+.sa-evaluation-grid a{font-size:.86rem;color:#216d63;font-weight:750;line-height:1.5}
+.sa-evaluation-grid a:hover{text-decoration:underline;text-underline-offset:3px}
+.sa-evaluation-grid a:first-of-type{margin-top:auto}
+.sa-evaluation-limit{border:1px solid #bdd5c9;border-left:4px solid #357c73;background:#e0efe8;padding:17px 21px;border-radius:10px;margin:22px 0 0;max-width:1120px;color:#4b6467;font-size:.87rem;line-height:1.65}
+.sa-evaluation-limit strong{color:#174a47}
+@media(max-width:680px){.sa-evaluation{padding:55px 0 62px}.sa-evaluation h2{font-size:clamp(1.9rem,7.8vw,2.7rem)}.sa-evaluation-grid{grid-template-columns:1fr;gap:12px}.sa-evaluation-grid article{padding:21px}.sa-evaluation-intro{font-size:.95rem}.sa-evaluation-limit{padding:15px 17px}}

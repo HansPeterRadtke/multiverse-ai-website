@@ -42,6 +42,23 @@ assert 'SWAAG' in swaag.title.get_text(' ',strip=True)
 assert len(swaag.select('.sa-need-grid article'))==3
 assert len(swaag.select('.sa-cap-grid > div'))==4
 assert len(swaag.select('.sa-faq details'))==4
+assert len(swaag.select('#evaluation .sa-evaluation-grid article'))==4
+assert swaag.select_one('.sa-proof-links a[href="#evaluation"]'), 'Evidence section should be reachable from source links'
+source_links={
+ 'tests/test_history_replay.py',
+ 'tests/test_tools.py',
+ 'tests/test_storage_boundaries.py',
+ 'tests/test_control_authority.py',
+ 'tests/test_agent_workspace_recovery.py',
+}
+base='https://github.com/HansPeterRadtke/swaag/blob/main/'
+for file in source_links:
+ links=swaag.select(f'#evaluation a[href="{base+file}"]')
+ assert len(links)==1,(file,len(links))
+ assert links[0].get('target')=='_blank'
+assert 'presence does not demonstrate that the latest suite passes' in swaag.select_one('.sa-evaluation-limit').get_text(' ',strip=True)
+assert 'Python compatibility' in swaag.select_one('.sa-evaluation-limit').get_text(' ',strip=True)
+
 copy=swaag.select_one('main').get_text(' ',strip=True)
 for term in ('MIT', 'not a ready-made digital employee','No measured time savings','no published GitHub release','not a claim of uniqueness'):
  assert term.lower() in copy.lower(),('SWAAG landing missing boundary',term)
